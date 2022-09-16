@@ -21,7 +21,7 @@ public class Naming : MonoBehaviour
         }
         else
         {
-            WarningText.text = "이름을 한 글자 이상 입력해주세요.";
+            WarningText.text = "한 글자 이상은 적어야해요!";
         }
     }
 }
