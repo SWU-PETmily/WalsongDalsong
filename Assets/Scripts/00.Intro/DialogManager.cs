@@ -11,6 +11,7 @@ public class DialogManager : MonoBehaviour
     public Button btnNext;
 
     public GameObject boxChecking;
+    public Text txtChecking;
     public Button btnYes;
     public Button btnNo;
 
@@ -27,6 +28,7 @@ public class DialogManager : MonoBehaviour
     {
         dialogBox.SetActive(false);
         boxChecking.SetActive(true);
+        txtChecking.text = PlayerPrefs.GetString("name") + "(으)로 이름을 확정할까요?";
     }
 
     //btn yes
