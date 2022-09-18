@@ -313,11 +313,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hh: 0
-  imgBG: {fileID: 0}
-  imgTable: {fileID: 0}
-  btnFeed: {fileID: 0}
-  btnPad: {fileID: 0}
-  btnNecklace: {fileID: 0}
+  txtName: {fileID: 2098645629}
+  imgBG: {fileID: 1810867509}
+  imgTable: {fileID: 2051407584}
+  btnFeed: {fileID: 394406371}
+  btnPad: {fileID: 1165982700}
+  btnHarness: {fileID: 1041233770}
 --- !u!4 &218843884
 Transform:
   m_ObjectHideFlags: 0
@@ -751,7 +752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 76b8fb7cf6e2a5d4a82b4f151a42f34e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0bbaa87ed916a2e44884918ddab1ba47, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1800,8 +1801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220, y: 20}
-  m_SizeDelta: {x: 160, y: 80}
+  m_AnchoredPosition: {x: 340, y: 25}
+  m_SizeDelta: {x: 400, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098645627
 MonoBehaviour:
@@ -1815,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &2098645628
@@ -1830,8 +1831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 4, y: -4}
   m_UseGraphicAlpha: 1
 --- !u!114 &2098645629
 MonoBehaviour:
@@ -1846,7 +1847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.85098046, b: 0.61960787, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1855,11 +1856,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b595ea3400ddf3c4fa3b7b5de9c74fc5, type: 3}
-    m_FontSize: 38
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 50
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1

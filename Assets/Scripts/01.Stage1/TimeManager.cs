@@ -9,19 +9,20 @@ public class TimeManager : MonoBehaviour
     public DateTime nowTime;
     public int hh;
 
+    public Text txtName;
+
     // ³·¹ã ¹Ù²ð ¹è°æ ¿ä¼Ò
     public GameObject imgBG;
     public GameObject imgTable;
     public Button btnFeed;
     public Button btnPad;
     public Button btnHarness;
-
-    public 
     
 
     // Start is called before the first frame update
     void Start()
     {
+        ChangeName();
         ChangeDayNighte();
     }
 
@@ -29,6 +30,11 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void ChangeName()
+    {
+        txtName.text = PlayerPrefs.GetString("name");
     }
 
     public void ChangeDayNighte()
@@ -44,7 +50,7 @@ public class TimeManager : MonoBehaviour
         else
         {
             // ¹ãÀÌ¶ó¸é
-            imgBG.sprite = Resources.Load<Sprite>("Editor/ImgSoruce/01.Stage1/ver_night/bg_livingroom_night.png") as Sprite;
+            // imgBG.sprite = Resources.Load<Sprite>("Editor/ImgSoruce/01.Stage1/ver_night/bg_livingroom_night.png") as Sprite;
 
         }
 
