@@ -7,6 +7,6 @@ public class GameStart : MonoBehaviour
 {
     public void Change()
     {
-        SceneManager.LoadScene("MomNamingTutorialScene");
+        SceneManager.LoadScene("CalmingSignal");
     }
 }

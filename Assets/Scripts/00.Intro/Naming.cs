@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class Naming : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class Naming : MonoBehaviour
 
     public void Change()
     {
+        InputText.onValueChanged.AddListener(
+            (word) => InputText.text = Regex.Replace(word, @"[^0-9a-zA-Z°¡-ÆR]", "")
+        );
+
         if (InputText.text != "")
         {
             PlayerPrefs.DeleteKey("name");

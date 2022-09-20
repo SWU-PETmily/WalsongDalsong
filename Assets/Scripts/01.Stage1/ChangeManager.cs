@@ -14,7 +14,7 @@ public class ChangeManager : MonoBehaviour
         {
             // 먹이주기
             case "btn_feed":
-                //SceneManager.LoadScene("Door1Scene");
+                SceneManager.LoadScene("FeedingScene");
                 break;
             // 배변패드
             case "btn_pad":
