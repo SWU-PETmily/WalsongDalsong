@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class AfterMinutes : MonoBehaviour
 {
@@ -62,6 +62,8 @@ public class AfterMinutes : MonoBehaviour
             NextGuideLine();
             yield return new WaitForSeconds(1);
             Final();
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene("MomNamingTutorialScene");
         }
         else
         {

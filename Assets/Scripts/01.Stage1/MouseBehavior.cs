@@ -2,27 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class MouseBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class MouseBehavior : MonoBehaviour
 {
-    public static Vector2 defaultposition;
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        defaultposition = this.transform.position;
-    }
+    public GameObject waterbottle1;
+    public GameObject waterbottle2;
 
-    public void OnDrag(PointerEventData eventData)
-    {
-        Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        this.transform.position = currentPos;
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
+    void Start()
     {
 
-        this.transform.position = defaultposition;
-
+        waterbottle2.SetActive(false);
     }
+
+    public void ClickOn()
+    {
+        waterbottle2.SetActive(true);
+        waterbottle1.SetActive(false);
+    }
+
 }
+
 

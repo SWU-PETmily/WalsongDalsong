@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterBowl : MonoBehaviour
+public class Feeding : MonoBehaviour
 {
     public GameObject waterup;
     void Start()

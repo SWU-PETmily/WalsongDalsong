@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TimeManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Waterbottle2Move.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
