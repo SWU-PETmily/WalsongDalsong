@@ -17,7 +17,19 @@ public class TimeManager : MonoBehaviour
     public Button btnFeed;
     public Button btnPad;
     public Button btnHarness;
-    
+
+    // 바꿀 이미지
+    public Sprite img_day_bg;
+    public Sprite img_day_table;
+    public Sprite img_day_feed;
+    public Sprite img_day_pad;
+    public Sprite img_day_harness;
+    public Sprite img_night_bg;
+    public Sprite img_night_table;
+    public Sprite img_night_feed;
+    public Sprite img_night_pad;
+    public Sprite img_night_harness;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +44,13 @@ public class TimeManager : MonoBehaviour
 
     }
 
+    // 펫 이름 변경 함수
     public void ChangeName()
     {
         txtName.text = PlayerPrefs.GetString("name");
     }
 
+    // 낮밤 배경 이미지 변경 함수
     public void ChangeDayNighte()
     {
         nowTime = DateTime.Now;
@@ -46,11 +60,21 @@ public class TimeManager : MonoBehaviour
 
         {
             // 낮이라면
+            this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
+            this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_day_table;
+            this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
+            this.btnPad.GetComponent<Image>().sprite = this.img_day_pad;
+            this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
         }
         else
         {
             // 밤이라면
             // imgBG.sprite = Resources.Load<Sprite>("Editor/ImgSoruce/01.Stage1/ver_night/bg_livingroom_night.png") as Sprite;
+            this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_night_bg;
+            this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_night_table;
+            this.btnFeed.GetComponent<Image>().sprite = this.img_night_feed;
+            this.btnPad.GetComponent<Image>().sprite = this.img_night_pad;
+            this.btnHarness.GetComponent<Image>().sprite = this.img_night_harness;
 
         }
 
