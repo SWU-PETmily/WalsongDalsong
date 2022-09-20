@@ -10,7 +10,7 @@ public class AfterMinutes : MonoBehaviour
     public GameObject bad;
     public GameObject good;
     public GameObject mom;
-    public GameObject guideline;
+    
     public GameObject text1;
     public GameObject text2;
     public GameObject next;
@@ -27,7 +27,7 @@ public class AfterMinutes : MonoBehaviour
         bad.SetActive(true);
         good.SetActive(false);
         mom.SetActive(false);
-        guideline.SetActive(false);
+        
         text1.SetActive(false);
         text2.SetActive(false);
         next.SetActive(false);
@@ -107,7 +107,7 @@ public class AfterMinutes : MonoBehaviour
     private void GuideLine()
     {
         mom.SetActive(true);
-        guideline.SetActive(true);
+        
         text1.SetActive(true);
         Debug.Log("gogo");
 
