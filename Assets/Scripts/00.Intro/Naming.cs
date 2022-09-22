@@ -23,12 +23,11 @@ public class Naming : MonoBehaviour
             // 텍스트필드에 입력이 있다면
             PlayerPrefs.DeleteKey("name");      // 기존 이름 삭제
             // 이름 저장
-            if (!PlayerPrefs.HasKey("name"))    // name이 없다면 생성
+            if (!PlayerPrefs.HasKey("name"))    // name이 없다면
                 PlayerPrefs.SetString("name", InputText.text);
             // 스테이지 저장
             if (!PlayerPrefs.HasKey("stage"))
                 PlayerPrefs.SetInt("stage", 1);
-            Debug.Log(PlayerPrefs.GetInt("stage"));
             // 이름 확인 씬 시작
             SceneManager.LoadScene("NameCheckScene");
         }
