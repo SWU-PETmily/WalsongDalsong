@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class ChangeManager : MonoBehaviour
+public class RoomBtnManager : MonoBehaviour
 {
-    public void Change()
+    public void BtnClick()
     {
         string name = EventSystem.current.currentSelectedGameObject.name;
 
@@ -30,7 +30,7 @@ public class ChangeManager : MonoBehaviour
                 break;
             // 저장
             case "btn_save":
-                //SceneManager.LoadScene("Door1Scene");
+                SaveGame();
                 break;
             // 타이틀화면
             case "btn_home":
@@ -40,5 +40,10 @@ public class ChangeManager : MonoBehaviour
                 break;
         }
     }
-        
+
+    public void SaveGame()
+    {
+
+    }
 }
+
