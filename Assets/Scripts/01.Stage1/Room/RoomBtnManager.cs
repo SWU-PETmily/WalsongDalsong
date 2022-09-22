@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RoomBtnManager : MonoBehaviour
 {
+    // 버튼 클릭 이벤트
     public void BtnClick()
     {
         string name = EventSystem.current.currentSelectedGameObject.name;
@@ -30,7 +31,7 @@ public class RoomBtnManager : MonoBehaviour
                 break;
             // 저장
             case "btn_save":
-                SaveGame();
+                GameSave();
                 break;
             // 타이틀화면
             case "btn_home":
@@ -41,7 +42,15 @@ public class RoomBtnManager : MonoBehaviour
         }
     }
 
-    public void SaveGame()
+    // 게임 저장
+    public void GameSave()
+    {
+        // 저장사항
+        // 식사/배변/산책 여부
+    }
+
+    // 게임 로드
+    public void GameLoad()
     {
 
     }

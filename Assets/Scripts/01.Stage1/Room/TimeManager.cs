@@ -69,12 +69,17 @@ public class TimeManager : MonoBehaviour
         else
         {
             // π„¿Ã∂Û∏È
-            // imgBG.sprite = Resources.Load<Sprite>("Editor/ImgSoruce/01.Stage1/ver_night/bg_livingroom_night.png") as Sprite;
             this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_night_bg;
             this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_night_table;
             this.btnFeed.GetComponent<Image>().sprite = this.img_night_feed;
             this.btnPad.GetComponent<Image>().sprite = this.img_night_pad;
             this.btnHarness.GetComponent<Image>().sprite = this.img_night_harness;
+
+            this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
+            this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_day_table;
+            this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
+            this.btnPad.GetComponent<Image>().sprite = this.img_day_pad;
+            this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
 
         }
 
