@@ -35,7 +35,7 @@ public class AfterMinutes : MonoBehaviour
 
         LetsCheckAgain();//시작시간 체크
 
-        StartCoroutine(WaitForIt(2.0f));
+        StartCoroutine(WaitForIt(3.0f));
 
     }
 
