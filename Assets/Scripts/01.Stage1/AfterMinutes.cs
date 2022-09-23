@@ -16,7 +16,7 @@ public class AfterMinutes : MonoBehaviour
     public GameObject next;
     public Image gauge;
     public int t1;
-
+    public Animator anim;
     
     DateTime dt1;
     DateTime dt2;
@@ -35,6 +35,7 @@ public class AfterMinutes : MonoBehaviour
 
         LetsCheckAgain();//시작시간 체크
 
+        anim.SetBool("IsAnxious", true);
         StartCoroutine(WaitForIt(3.0f));
 
     }
@@ -49,7 +50,7 @@ public class AfterMinutes : MonoBehaviour
     IEnumerator WaitForIt(float time)
     {
 
-
+        
         bool result = TimeSpans();
         if (result == true)
         {
@@ -60,8 +61,7 @@ public class AfterMinutes : MonoBehaviour
 
             yield return new WaitForSeconds(1);
             NextGuideLine();
-            yield return new WaitForSeconds(1);
-            Final();
+           
             yield return new WaitForSeconds(1);
             SceneManager.LoadScene("MomNamingTutorialScene");
         }
@@ -98,6 +98,7 @@ public class AfterMinutes : MonoBehaviour
         {
             bad.SetActive(false);
             good.SetActive(true);
+            anim.SetBool("IsNice", true);
             gauge.fillAmount = 0.3f;
 
             return true;
@@ -111,21 +112,24 @@ public class AfterMinutes : MonoBehaviour
         mom.SetActive(true);
         
         text1.SetActive(true);
-        Debug.Log("gogo");
+        
 
+    }
+
+
+    public void NextText()
+    {
+        text2.SetActive(true);
     }
 
     private void NextGuideLine()
     {
         text1.SetActive(false);
-        text2.SetActive(true);
-
-
-    }
-    private void Final()
-    {
         next.SetActive(true);
+
     }
+   
+
 
     private void OnApplicationQuit()
     {
