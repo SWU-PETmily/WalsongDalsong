@@ -10,24 +10,25 @@ public class AfterMinutes : MonoBehaviour
     public GameObject bad;
     public GameObject good;
     public GameObject mom;
-    
+
     public GameObject text1;
     public GameObject text2;
     public GameObject next;
     public Image gauge;
     public int t1;
-    public Animator anim;
-    
+    //public Animator anim;
+    //public Animator anim2;
+
     DateTime dt1;
     DateTime dt2;
 
 
     void Start()
     {
-        bad.SetActive(true);
-        good.SetActive(false);
+        //bad.SetActive(false);
+        //good.SetActive(false);
         mom.SetActive(false);
-        
+
         text1.SetActive(false);
         text2.SetActive(false);
         next.SetActive(false);
@@ -35,7 +36,7 @@ public class AfterMinutes : MonoBehaviour
 
         LetsCheckAgain();//시작시간 체크
 
-        anim.SetBool("IsAnxious", true);
+        //anim.SetBool("IsAnxious", true);
         StartCoroutine(WaitForIt(3.0f));
 
     }
@@ -44,13 +45,13 @@ public class AfterMinutes : MonoBehaviour
     void Update()
     {
 
-        
+
 
     }
     IEnumerator WaitForIt(float time)
     {
 
-        
+
         bool result = TimeSpans();
         if (result == true)
         {
@@ -61,7 +62,7 @@ public class AfterMinutes : MonoBehaviour
 
             yield return new WaitForSeconds(1);
             NextGuideLine();
-           
+
             yield return new WaitForSeconds(1);
             SceneManager.LoadScene("MomNamingTutorialScene");
         }
@@ -69,7 +70,7 @@ public class AfterMinutes : MonoBehaviour
         {
             Debug.Log("s");
         }
-       
+
     }
 
 
@@ -85,34 +86,39 @@ public class AfterMinutes : MonoBehaviour
     {
         Debug.Log("재시작 시간 : " + System.DateTime.Now.ToString());
         dt2 = System.DateTime.Now;
-       
+
     }
 
     private bool TimeSpans()
     {
         int lasttime = PlayerPrefs.GetInt("lasttime");
-         int t1= dt2.Minute - lasttime;
-        Debug.Log(dt2.Minute);
-        Debug.Log(lasttime);
-        if (t1 >= 1)
+        int t1 = dt2.Second - lasttime;
+
+        Debug.Log("현재 분: " + dt2.Minute);
+        Debug.Log("과거 분: " + lasttime);
+        Debug.Log("시간 차: " + t1);
+
+
+        if (t1 >= 60)
         {
-            bad.SetActive(false);
+            //bad.SetActive(false);
             good.SetActive(true);
-            anim.SetBool("IsNice", true);
+            //anim2.SetBool("IsNice", true);
             gauge.fillAmount = 0.3f;
 
             return true;
         }
 
+        bad.SetActive(true);
         return false;
     }
 
     private void GuideLine()
     {
         mom.SetActive(true);
-        
+
         text1.SetActive(true);
-        
+
 
     }
 
@@ -128,13 +134,15 @@ public class AfterMinutes : MonoBehaviour
         next.SetActive(true);
 
     }
-   
+
 
 
     private void OnApplicationQuit()
     {
+        print("종료");
+
         LetsCheck();//종료시간 체크
     }
 
-    
+
 }

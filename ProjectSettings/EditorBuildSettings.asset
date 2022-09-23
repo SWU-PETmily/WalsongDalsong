@@ -39,4 +39,5 @@ EditorBuildSettings:
     path: Assets/Scenes/01.Stage1/Touch1Scene.unity
     guid: 6711b0661746a2543bd342bdb1fa573f
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 4a4bbe8f1cb5f9a4bb3fe50ac58e89a7, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 59fa1a48e8ba22546a56b655ce83ffac, type: 2}

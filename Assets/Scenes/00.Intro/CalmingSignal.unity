@@ -773,13 +773,14 @@ GameObject:
   - component: {fileID: 844399216}
   - component: {fileID: 844399218}
   - component: {fileID: 844399217}
+  - component: {fileID: 844399219}
   m_Layer: 5
   m_Name: anxious
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &844399216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -838,6 +839,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844399215}
   m_CullTransparentMesh: 1
+--- !u!95 &844399219
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844399215}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4790c206c1e337b41ac99440d56dec10, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1034433624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,13 +1182,14 @@ GameObject:
   - component: {fileID: 1544273977}
   - component: {fileID: 1544273979}
   - component: {fileID: 1544273978}
+  - component: {fileID: 1544273980}
   m_Layer: 5
   m_Name: nice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1544273977
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1226,6 +1248,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544273976}
   m_CullTransparentMesh: 1
+--- !u!95 &1544273980
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544273976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c8d6a6a01380ae47bd1d3ce2fcb1bf4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1722502970
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1351,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1722502973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1737715249}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1722502973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1708,6 +1762,8 @@ MonoBehaviour:
   next: {fileID: 1722502970}
   gauge: {fileID: 1795774359}
   t1: 0
+  anim: {fileID: 844399219}
+  anim2: {fileID: 1544273980}
 --- !u!4 &1870482196
 Transform:
   m_ObjectHideFlags: 0
