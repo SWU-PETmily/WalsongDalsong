@@ -92,14 +92,14 @@ public class AfterMinutes : MonoBehaviour
     private bool TimeSpans()
     {
         int lasttime = PlayerPrefs.GetInt("lasttime");
-        int t1 = dt2.Second - lasttime;
+        int t1 = dt2.Minute - lasttime;
 
         Debug.Log("현재 분: " + dt2.Minute);
         Debug.Log("과거 분: " + lasttime);
         Debug.Log("시간 차: " + t1);
 
 
-        if (t1 >= 60)
+        if (t1 >=1)
         {
             //bad.SetActive(false);
             good.SetActive(true);
