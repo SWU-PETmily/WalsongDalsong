@@ -322,7 +322,7 @@ MonoBehaviour:
   imgTable: {fileID: 2051407584}
   btnFeed: {fileID: 394406371}
   btnHarness: {fileID: 1041233770}
-  img_day_bg: {fileID: 21300000, guid: e5a712fbe740eac42b8fd13f44ac2e0f, type: 3}
+  img_day_bg: {fileID: 21300000, guid: 90462617f5f41e2418f26776773f3bce, type: 3}
   img_day_table: {fileID: 21300000, guid: 81190c1dd693a484bac4cb11775e015b, type: 3}
   img_day_feed: {fileID: 21300000, guid: 215d6a133a977ca4f9b8052dee55f37b, type: 3}
   img_day_harness: {fileID: 21300000, guid: f6da38b07dc7f6c41add8a835efc9b56, type: 3}
@@ -1376,6 +1376,9 @@ MonoBehaviour:
   poo2: {fileID: 3307240567945071424, guid: 8c475b6c9bb7d374fb489f39d896049c, type: 3}
   pee1: {fileID: 4009064942215190204, guid: 8ce72ee5f574e5f4a88431ff952a0320, type: 3}
   pee2: {fileID: 1822428735711327460, guid: 98a701d022ef5a745955c2c6de44d3ba, type: 3}
+  isDelay: 0
+  delayTime: 10
+  accumTime: 0
 --- !u!1 &1213791636
 GameObject:
   m_ObjectHideFlags: 0
