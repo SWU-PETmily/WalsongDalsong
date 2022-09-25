@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\Room\RoomBtnManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\TimeManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Waterbottle2Move.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
