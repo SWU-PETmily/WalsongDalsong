@@ -15,19 +15,16 @@ public class TimeManager : MonoBehaviour
     public GameObject imgBG;
     public GameObject imgTable;
     public Button btnFeed;
-    public Button btnPad;
     public Button btnHarness;
 
     // 바꿀 이미지
     public Sprite img_day_bg;
     public Sprite img_day_table;
     public Sprite img_day_feed;
-    public Sprite img_day_pad;
     public Sprite img_day_harness;
     public Sprite img_night_bg;
     public Sprite img_night_table;
     public Sprite img_night_feed;
-    public Sprite img_night_pad;
     public Sprite img_night_harness;
 
 
@@ -41,7 +38,7 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
     // 펫 이름 변경 함수
@@ -63,7 +60,6 @@ public class TimeManager : MonoBehaviour
             this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
             this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_day_table;
             this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
-            this.btnPad.GetComponent<Image>().sprite = this.img_day_pad;
             this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
         }
         else
@@ -72,16 +68,15 @@ public class TimeManager : MonoBehaviour
             this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_night_bg;
             this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_night_table;
             this.btnFeed.GetComponent<Image>().sprite = this.img_night_feed;
-            this.btnPad.GetComponent<Image>().sprite = this.img_night_pad;
             this.btnHarness.GetComponent<Image>().sprite = this.img_night_harness;
 
             this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
             this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_day_table;
             this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
-            this.btnPad.GetComponent<Image>().sprite = this.img_day_pad;
             this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
 
         }
 
     }
+
 }
