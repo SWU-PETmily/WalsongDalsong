@@ -20,7 +20,7 @@ public class PooPeeGenerator : MonoBehaviour
 
     // 코루틴
     public bool isDelay;
-    public float delayTime = 10.0f;
+    public float delayTime = 3300.0f;   // 55분 동안 딜레이
     public float accumTime;
 
     // Start is called before the first frame update
@@ -32,9 +32,7 @@ public class PooPeeGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         PooPeeTimer(); 
-
     }
 
     // 배소변 시간 계산 함수
@@ -49,11 +47,11 @@ public class PooPeeGenerator : MonoBehaviour
         // 대소변 발생
         // 7, 10, 13, 16, 19시 -> 대변
         // 8, 11, 14, 17, 20시 -> 소변
-        if (mm == 55 && ss == 0)
+        if (mm == 1 && ss == 0)
         {
             switch (hh)
             {
-                case 4:
+                case 5:
                 case 10:
                 case 13:
                 case 16:
@@ -89,16 +87,14 @@ public class PooPeeGenerator : MonoBehaviour
         if (hour % 2 == 1)
         {
             // 홀수
-            //GameObject newPoo = Instantiate(poo1, spawnPoint.position, Quaternion.identity) as GameObject;
             Instantiate(poo1, transform.position, transform.rotation);
         }
         else
         {
             // 짝수
-            //GameObject newPoo = Instantiate(poo2, spawnPoint.position, Quaternion.identity) as GameObject;
             Instantiate(poo2, transform.position, transform.rotation);
         }
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSecondsRealtime(delayTime);     //Time.timeScale 영향 받지 않는 절대적인 시간
         isDelay = false;
     }
 
@@ -108,16 +104,14 @@ public class PooPeeGenerator : MonoBehaviour
         if (hour % 2 == 1)
         {
             // 홀수
-            //GameObject newPee = Instantiate(pee1, spawnPoint.position, Quaternion.identity) as GameObject;
             Instantiate(pee1, transform.position, transform.rotation);
         }
         else
         {
             // 짝수
-            //GameObject newPee = Instantiate(pee2, spawnPoint.position, Quaternion.identity) as GameObject;
             Instantiate(pee2, transform.position, transform.rotation);
         }
-        yield return new WaitForSeconds(delayTime);
+        yield return new WaitForSecondsRealtime(delayTime);
         isDelay = false;
     }
 }
