@@ -47,11 +47,11 @@ public class PooPeeGenerator : MonoBehaviour
         // 대소변 발생
         // 7, 10, 13, 16, 19시 -> 대변
         // 8, 11, 14, 17, 20시 -> 소변
-        if (mm == 1 && ss == 0)
+        if (mm == 0 && ss == 0)
         {
             switch (hh)
             {
-                case 5:
+                case 7:
                 case 10:
                 case 13:
                 case 16:
