@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,7 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         defaultposition = this.transform.position;
-        //RotatingImage();
+        RotatingImage();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -33,8 +34,10 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     }
 
-   // public void RotatingImage()
-    //{
-        //transform.rotation = Quaternion.Euler(new Vector3(45, 0, 2 * Time.deltaTime));
-    //}
+   public void RotatingImage()
+    {
+        transform.Rotate(new Vector3(-15, -15, -10), Space.Self);
+    }
+
+   
 }
