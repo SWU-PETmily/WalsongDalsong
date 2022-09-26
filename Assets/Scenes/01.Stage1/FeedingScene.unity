@@ -212,7 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8363555b8e7578f4d9c10425dff37806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterup: {fileID: 896827731}
   foodup: {fileID: 0}
 --- !u!1 &452009938
 GameObject:
@@ -227,6 +226,7 @@ GameObject:
   - component: {fileID: 452009940}
   - component: {fileID: 452009942}
   - component: {fileID: 452009943}
+  - component: {fileID: 452009944}
   m_Layer: 5
   m_Name: waterbottle1
   m_TagString: Untagged
@@ -306,6 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterbottle1: {fileID: 452009938}
   waterbottle2: {fileID: 817998925}
+  anim: {fileID: 452009944}
 --- !u!114 &452009943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +336,26 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!95 &452009944
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452009938}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e06b28bcccb8f394eb0202a728d4b5cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &498340979
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +559,7 @@ GameObject:
   - component: {fileID: 817998927}
   - component: {fileID: 817998929}
   - component: {fileID: 817998930}
+  - component: {fileID: 817998931}
   m_Layer: 5
   m_Name: waterbottle2
   m_TagString: WaterBottle
@@ -624,7 +646,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817998925}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a24c6724e7cacde45b77efbe8dc2b741, type: 2}
   m_CullingMode: 0
@@ -636,6 +658,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &817998931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817998925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 817998930}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &822103857
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +702,7 @@ GameObject:
   - component: {fileID: 822103861}
   m_Layer: 5
   m_Name: food1
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,6 +808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterbottle1: {fileID: 822103857}
   waterbottle2: {fileID: 2079372862}
+  anim: {fileID: 0}
 --- !u!1 &896827729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1520,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079372862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36cd4c9ce018d894d816e2bf99d7652b, type: 3}
   m_Name: 

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Feeding : MonoBehaviour
 {
-    public Animator waterup;
+   // public Animator waterup;
     public Animator foodup;
 
     void Start()
     {
-        waterup.SetBool("IsWater",false);
+        //waterup.SetBool("IsWater",false);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -17,7 +17,7 @@ public class Feeding : MonoBehaviour
         if (collision.collider.gameObject.CompareTag("WaterBottle"))
         {
             Debug.Log("dd");
-            waterup.SetBool("IsWater", true);
+            //waterup.SetBool("IsWater", true);
         }
     }
 

@@ -9,10 +9,13 @@ public class MouseBehavior : MonoBehaviour
 
     public GameObject waterbottle1;
     public GameObject waterbottle2;
+    public Animator anim;
 
     void Start()
     {
-
+        
+    anim.SetBool("IsWaterBottle", false);
+        Debug.Log("dd");
         waterbottle2.SetActive(false);
     }
 
@@ -20,6 +23,7 @@ public class MouseBehavior : MonoBehaviour
     {
         waterbottle2.SetActive(true);
         waterbottle1.SetActive(false);
+
     }
 
 }
