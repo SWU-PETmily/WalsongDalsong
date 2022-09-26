@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaterAndFoodUp : MonoBehaviour
 {
+    public Animator anim;
+    public Animator anim2;
     // Start is called before the first frame update
     void Start()
     {
