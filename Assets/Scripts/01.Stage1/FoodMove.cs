@@ -7,7 +7,7 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 {
     public static Vector2 defaultposition;
     public GameObject obj;
-    public float speed = 10.0f;
+    
     private Transform imPos;
     void Start()
     {
@@ -17,7 +17,7 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         defaultposition = this.transform.position;
-        RotatingImage();
+        //RotatingImage();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -33,8 +33,8 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     }
 
-    public void RotatingImage()
-    {
-        transform.rotation = Quaternion.Euler(new Vector3(45, 45, speed * Time.deltaTime));
-    }
+   // public void RotatingImage()
+    //{
+        //transform.rotation = Quaternion.Euler(new Vector3(45, 0, 2 * Time.deltaTime));
+    //}
 }
