@@ -27,6 +27,18 @@ public class PooController : MonoBehaviour
         float r1 = 0.8f;                                // 배변 반경
         float r2 = 1.2f;                                // 쓰레기통 중심 반경
 
+
+        if (d < r1 + r2 + 1.0f)
+        {
+            // 쓰레기통 열기
+            this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage_open;
+        }
+        else
+        {
+            // 쓰레기통 닫기
+            this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage_pre;
+        }
+
         if (d < r1 + r2)
         {
             // 충돌 시 배변 삭제
