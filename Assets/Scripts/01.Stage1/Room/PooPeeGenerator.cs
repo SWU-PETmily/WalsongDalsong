@@ -47,11 +47,11 @@ public class PooPeeGenerator : MonoBehaviour
         // 대소변 발생
         // 7, 10, 13, 16, 19시 -> 대변
         // 8, 11, 14, 17, 20시 -> 소변
-        if (mm == 0 && ss == 0)
+        if (mm == 17 && ss == 0)
         {
             switch (hh)
             {
-                case 7:
+                case 23:
                 case 10:
                 case 13:
                 case 16:
@@ -87,12 +87,16 @@ public class PooPeeGenerator : MonoBehaviour
         if (hour % 2 == 1)
         {
             // 홀수
-            Instantiate(poo1, transform.position, transform.rotation);
+           //  Instantiate(poo1, transform.position, transform.rotation);
+            GameObject newPoo = Instantiate(poo1, transform.position, transform.rotation) as GameObject;
+            newPoo.transform.SetParent(GameObject.FindGameObjectWithTag("PooPee").transform, false);
         }
         else
         {
             // 짝수
-            Instantiate(poo2, transform.position, transform.rotation);
+            //Instantiate(poo1, transform.position, transform.rotation);
+            GameObject newPoo = Instantiate(poo1, transform.position, transform.rotation) as GameObject;
+            newPoo.transform.SetParent(GameObject.FindGameObjectWithTag("PooPee").transform, false);
         }
         yield return new WaitForSecondsRealtime(delayTime);     //Time.timeScale 영향 받지 않는 절대적인 시간
         isDelay = false;

@@ -1372,7 +1372,7 @@ MonoBehaviour:
   hh: 0
   mm: 0
   ss: 0
-  poo1: {fileID: 2328281144765539637, guid: f0a7ff53a9e81bd47b17d8bd3508a6ea, type: 3}
+  poo1: {fileID: 3347505725148173481, guid: 720091c62400d0d4c9722a5f2d5cae68, type: 3}
   poo2: {fileID: 3307240567945071424, guid: 8c475b6c9bb7d374fb489f39d896049c, type: 3}
   pee1: {fileID: 4009064942215190204, guid: 8ce72ee5f574e5f4a88431ff952a0320, type: 3}
   pee2: {fileID: 1822428735711327460, guid: 98a701d022ef5a745955c2c6de44d3ba, type: 3}
@@ -2030,6 +2030,7 @@ RectTransform:
   - {fileID: 1213791637}
   - {fileID: 1041233769}
   - {fileID: 848661330}
+  - {fileID: 1971016394}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2398,6 +2399,42 @@ MonoBehaviour:
   speed: 2
   isDelay: 0
   delayTime: 5
+--- !u!1 &1971016393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971016394}
+  m_Layer: 5
+  m_Name: PooParent
+  m_TagString: PooPee
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1971016394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971016393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1772173543}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2008714598
 GameObject:
   m_ObjectHideFlags: 0
