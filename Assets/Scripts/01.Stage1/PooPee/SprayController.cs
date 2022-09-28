@@ -67,5 +67,6 @@ public class SprayController : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = this.img_spray;      // 스프레이 완료 이미지
             actSpray = true;
         }
+
     }
 }
