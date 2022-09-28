@@ -76,7 +76,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Drag.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Waterbottle2Move.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SprayController.cs" />
-    <Compile Include="Assets\Scenes\01.Stage1\Pee1Scene.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\SceneManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -34,13 +34,13 @@ public class PooPeeController : MonoBehaviour
                 if(touchObject == "Poo1Prefab(Clone)" || touchObject == "Poo2Prefab(Clone)")
                 {
                     // 배변을 터치했다면
-                    SceneManager.LoadScene("Poo1Scene");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Poo1Scene");
 
                 }
                 else if(touchObject == "Pee1Prefab(Clone)" || touchObject == "Pee2Prefab(Clone)")
                 {
                     // 소변을 터치했다면
-                    SceneManager.LoadScene("Pee1Scene");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Pee1Scene");
                 }
 
             }

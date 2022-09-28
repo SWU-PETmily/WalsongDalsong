@@ -15,19 +15,19 @@ public class RoomBtnManager : MonoBehaviour
         {
             // 먹이주기
             case "btn_feed":
-                SceneManager.LoadScene("FeedingScene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("FeedingScene");
                 break;
             // 배변패드
             case "btn_pad":
-                SceneManager.LoadScene("Toilet1Scene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Toilet1Scene");
                 break;
             // 현관
             case "btn_harness":
-                SceneManager.LoadScene("Door1Scene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Door1Scene");
                 break;
             // 쓰다듬기
             case "btn_touch":
-                SceneManager.LoadScene("Touch1Scene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Touch1Scene");
                 break;
             // 저장
             case "btn_save":

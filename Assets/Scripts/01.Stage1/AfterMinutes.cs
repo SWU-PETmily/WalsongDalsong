@@ -64,7 +64,7 @@ public class AfterMinutes : MonoBehaviour
             NextGuideLine();
 
             yield return new WaitForSeconds(1);
-            SceneManager.LoadScene("MomNamingTutorialScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MomNamingTutorialScene");
         }
         else
         {

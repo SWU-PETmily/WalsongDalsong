@@ -7,6 +7,6 @@ public class NamingStart : MonoBehaviour
 {
     public void Change()
     {
-        SceneManager.LoadScene("NamingScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("NamingScene");
     }
 }

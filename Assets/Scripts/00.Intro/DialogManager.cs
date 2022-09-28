@@ -34,12 +34,12 @@ public class DialogManager : MonoBehaviour
     //btn yes
     public void StartTutorial()
     {
-        SceneManager.LoadScene("Room1Scene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
     }
 
     //btn no
     public void StartNaming()
     {
-        SceneManager.LoadScene("NamingScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("NamingScene");
     }
 }

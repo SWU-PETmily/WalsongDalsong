@@ -29,7 +29,7 @@ public class Naming : MonoBehaviour
             if (!PlayerPrefs.HasKey("stage"))
                 PlayerPrefs.SetInt("stage", 1);
             // 이름 확인 씬 시작
-            SceneManager.LoadScene("NameCheckScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("NameCheckScene");
         }
         else
         {

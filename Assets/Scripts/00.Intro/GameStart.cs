@@ -16,6 +16,6 @@ public class GameStart : MonoBehaviour
 
     public void Change()
     {
-        SceneManager.LoadScene("CalmingSignal");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("CalmingSignal");
     }
 }
