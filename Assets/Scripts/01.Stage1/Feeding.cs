@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class Feeding : MonoBehaviour
 {
-   public Animator waterup;
+    public Animator waterup;
     public Animator foodup;
 
     void Start()
     {
-        
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.gameObject.CompareTag("WaterBottle"))
+        Debug.Log("ff");
+
+        if (collision.gameObject.CompareTag("WaterBottle"))
         {
             Debug.Log("ff");
-           
         }
     }
 
