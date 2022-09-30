@@ -47,11 +47,11 @@ public class PooPeeGenerator : MonoBehaviour
         // 대소변 발생
         // 7, 10, 13, 16, 19시 -> 대변
         // 8, 11, 14, 17, 20시 -> 소변
-        if ((mm ==44 || mm==45) && (ss == 0 || ss == 30))
+        if ((mm ==57 || mm==58) && (ss == 0 || ss == 30))
         {
             switch (hh)
             {
-                case 7:
+                case 14:
                 case 10:
                 case 13:
                 case 16:
@@ -65,7 +65,7 @@ public class PooPeeGenerator : MonoBehaviour
                     break;
                 case 8:
                 case 11:
-                case 14:
+                case 1:
                 case 17:
                 case 20:
                     // 소변 코루틴 생성

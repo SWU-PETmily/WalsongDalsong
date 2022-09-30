@@ -49,11 +49,12 @@ public class SprayController : MonoBehaviour
         if (d >= d2  && actSpray==false)
         {
             // 스프레이 초록
-            gameObject.GetComponent<SpriteRenderer>().sprite = this.img_spray_pre;
+            gameObject.GetComponent<SpriteRenderer>().sprite = this.img_spray;
         }
         else
         {
             // 스프레이
+            // 제외하기
             gameObject.GetComponent<SpriteRenderer>().sprite = this.img_spray;
         }
 

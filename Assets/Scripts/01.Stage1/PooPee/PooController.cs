@@ -36,7 +36,8 @@ public class PooController : MonoBehaviour
         else
         {
             // 쓰레기통 닫기
-            this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage_pre;
+            // 삭제
+            this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage;
         }
 
         if (d < r1 + r2)
