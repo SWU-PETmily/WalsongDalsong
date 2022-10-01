@@ -8,8 +8,15 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 {
     public static Vector2 defaultposition;
     public GameObject obj;
-    
+
     private Transform imPos;
+    [SerializeField] GameObject Feed;
+    [SerializeField] GameObject Feedbowl;
+
+    
+    [SerializeField] GameObject Food1;
+    [SerializeField] GameObject Food2;
+
     void Start()
     {
         imPos = obj.GetComponent<RectTransform>();
@@ -18,7 +25,7 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         defaultposition = this.transform.position;
-        RotatingImage();
+        // RotatingImage();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -31,13 +38,27 @@ public class FoodMove : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
 
         this.transform.position = defaultposition;
+        Food1.SetActive(true);
+        Food2.SetActive(false);
+        Feed.SetActive(false);
+        
 
     }
 
-   public void RotatingImage()
+    public void RotatingImage()
     {
-        transform.Rotate(new Vector3(-15, -15, -10), Space.Self);
+        transform.eulerAngles = new Vector3(0, 0, -40);
+        // transform.Rotate(new Vector3(-15, -15, -10), Space.Self);
     }
 
-   
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("bowl"))
+        {
+            Feed.SetActive(true);
+            Feedbowl.SetActive(true);
+            RotatingImage();
+        }
+    }
+
 }

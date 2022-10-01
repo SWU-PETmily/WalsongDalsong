@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MouseBehavior : MonoBehaviour
 {
-
+    
     public GameObject waterbottle1;
     public GameObject waterbottle2;
     
@@ -23,7 +23,6 @@ public class MouseBehavior : MonoBehaviour
     {
         waterbottle2.SetActive(true);
         waterbottle1.SetActive(false);
-
     }
 
 }
