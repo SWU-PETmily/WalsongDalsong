@@ -6,15 +6,16 @@ public class PooController : MonoBehaviour
 {
 
     GameObject trashCan;
+    public GameObject spray;
 
     // 바꿀 이미지
-    public Sprite img_garbage_pre;
     public Sprite img_garbage_open;
     public Sprite img_garbage;
 
     void Start()
     {
         this.trashCan = GameObject.Find("img_garbage_pre");
+        spray.SetActive(false);
     }
 
     void Update()
@@ -28,7 +29,7 @@ public class PooController : MonoBehaviour
         float r2 = 1.2f;                                // 쓰레기통 중심 반경
 
 
-        if (d < r1 + r2 + 1.0f)
+        if (d < r1 + r2 + 1.9f)
         {
             // 쓰레기통 열기
             this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage_open;
@@ -36,7 +37,7 @@ public class PooController : MonoBehaviour
         else
         {
             // 쓰레기통 닫기
-            this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage_pre;
+            this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage;
         }
 
         if (d < r1 + r2)
@@ -44,6 +45,8 @@ public class PooController : MonoBehaviour
             // 충돌 시 배변 삭제
             Destroy(gameObject);
             this.trashCan.GetComponent<SpriteRenderer>().sprite = this.img_garbage;
+            Destroy(this.trashCan.GetComponent<SpriteRenderer>());
+            spray.SetActive(true);
 
         }
 
