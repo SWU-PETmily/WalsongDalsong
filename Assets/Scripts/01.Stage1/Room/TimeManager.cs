@@ -61,6 +61,7 @@ public class TimeManager : MonoBehaviour
             this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_day_table;
             this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
             this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
+
         }
         else
         {
@@ -70,10 +71,6 @@ public class TimeManager : MonoBehaviour
             this.btnFeed.GetComponent<Image>().sprite = this.img_night_feed;
             this.btnHarness.GetComponent<Image>().sprite = this.img_night_harness;
 
-            this.imgBG.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
-            this.imgTable.GetComponent<SpriteRenderer>().sprite = this.img_day_table;
-            this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
-            this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
         }
 
     }
