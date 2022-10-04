@@ -33,6 +33,22 @@ public class TimeManager : MonoBehaviour
     {
         ChangeName();
         ChangeDayNighte();
+
+        // 식사급수 횟수 저장
+        if (!PlayerPrefs.HasKey("feedNum"))
+            PlayerPrefs.SetInt("feedNum", 0);
+        // 배변 횟수 저장
+        if (!PlayerPrefs.HasKey("pooCleaningNum"))
+            PlayerPrefs.SetInt("pooCleaningNum", 0);
+        // 소변 횟수 저장
+        if (!PlayerPrefs.HasKey("peeCleaningNum"))
+            PlayerPrefs.SetInt("peeCleaningNum", 0);
+        // 쓰다듬기 횟수 저장
+        if (!PlayerPrefs.HasKey("touchingNum"))
+            PlayerPrefs.SetInt("touchingNum", 0);
+        // 미션 성공 여부 저장
+        if (!PlayerPrefs.HasKey("success"))
+            PlayerPrefs.SetInt("success", 0);
     }
 
     // Update is called once per frame

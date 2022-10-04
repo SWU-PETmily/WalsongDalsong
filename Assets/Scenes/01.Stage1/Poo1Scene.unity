@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 432844928}
   - component: {fileID: 432844930}
   m_Layer: 0
-  m_Name: img_stain
+  m_Name: stain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 621487585}
   - component: {fileID: 621487587}
   m_Layer: 0
-  m_Name: img_garbage_pre
+  m_Name: trashCan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,8 +690,9 @@ GameObject:
   - component: {fileID: 1105740705}
   - component: {fileID: 1105740707}
   - component: {fileID: 1105740708}
+  - component: {fileID: 1105740709}
   m_Layer: 0
-  m_Name: img_tissue_cleaning
+  m_Name: tissue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -757,7 +758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105740704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7, y: -0.61, z: -5}
+  m_LocalPosition: {x: 6.13, y: 0.09, z: -5}
   m_LocalScale: {x: 0.6673, y: 0.6673, z: 0.6673}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -802,6 +803,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.06, y: 4.64}
   m_EdgeRadius: 0
+--- !u!114 &1105740709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105740704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4939debbd817cc742994b17d950cd08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 1856572065}
+  stain: {fileID: 432844927}
+  tissueBox: {fileID: 1636668359}
 --- !u!1 &1519704432
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +832,7 @@ GameObject:
   - component: {fileID: 1519704436}
   - component: {fileID: 1519704437}
   m_Layer: 0
-  m_Name: img_poo
+  m_Name: poo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +958,7 @@ GameObject:
   - component: {fileID: 1636668362}
   - component: {fileID: 1636668363}
   m_Layer: 0
-  m_Name: img_tissue_pre
+  m_Name: tissueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,7 +1169,7 @@ GameObject:
   - component: {fileID: 1697854570}
   - component: {fileID: 1697854571}
   m_Layer: 0
-  m_Name: img_spray_pre
+  m_Name: spray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1219,7 +1235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1697854565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.42, y: -1.39, z: 0}
+  m_LocalPosition: {x: 7.79, y: -1.49, z: 0}
   m_LocalScale: {x: 0.9041391, y: 0.9041391, z: 0.9041391}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1291,7 +1307,7 @@ Animator:
   m_GameObject: {fileID: 1697854565}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 513edc45099f90948bd8587eb62a1431, type: 2}
+  m_Controller: {fileID: 9100000, guid: 51b73bd1322677543ba8662bcdc2a62e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1312,7 +1328,7 @@ GameObject:
   - component: {fileID: 1856572067}
   - component: {fileID: 1856572066}
   m_Layer: 0
-  m_Name: img_spray_water1
+  m_Name: sprayWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

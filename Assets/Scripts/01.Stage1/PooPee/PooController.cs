@@ -14,7 +14,7 @@ public class PooController : MonoBehaviour
 
     void Start()
     {
-        this.trashCan = GameObject.Find("img_garbage_pre");
+        this.trashCan = GameObject.Find("trashCan");
         spray.SetActive(false);
     }
 
