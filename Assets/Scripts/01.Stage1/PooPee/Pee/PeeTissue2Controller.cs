@@ -44,7 +44,7 @@ public class PeeTissue2Controller : MonoBehaviour
             int num = PlayerPrefs.GetInt("peeCleaningNum") + 1;
             PlayerPrefs.SetInt("peeCleaningNum", num);
             // 미션 성공 알림
-            PlayerPrefs.SetInt("success", 1);
+            PlayerPrefs.SetInt("successPooPeeClean", 1);
             // 씬 전환
             UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
 

@@ -48,7 +48,7 @@ public class TissueController : MonoBehaviour
             int num = PlayerPrefs.GetInt("pooCleaningNum")+1;
             PlayerPrefs.SetInt("pooCleaningNum", num);
             // 미션 성공 알림
-            PlayerPrefs.SetInt("success", 1);
+            PlayerPrefs.SetInt("successPooPeeClean", 1);
             // 씬 전환
             UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
         }

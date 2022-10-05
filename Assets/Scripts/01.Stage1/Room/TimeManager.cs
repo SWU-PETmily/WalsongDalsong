@@ -31,24 +31,10 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeName();
-        ChangeDayNighte();
+        ChangeName();               // 이름 설정
+        ChangeDayNighte();          // 낮밤 변경
+        CreatePlayerPrefs();        // 플레이어프렙스 생성
 
-        // 식사급수 횟수 저장
-        if (!PlayerPrefs.HasKey("feedNum"))
-            PlayerPrefs.SetInt("feedNum", 0);
-        // 배변 횟수 저장
-        if (!PlayerPrefs.HasKey("pooCleaningNum"))
-            PlayerPrefs.SetInt("pooCleaningNum", 0);
-        // 소변 횟수 저장
-        if (!PlayerPrefs.HasKey("peeCleaningNum"))
-            PlayerPrefs.SetInt("peeCleaningNum", 0);
-        // 쓰다듬기 횟수 저장
-        if (!PlayerPrefs.HasKey("touchingNum"))
-            PlayerPrefs.SetInt("touchingNum", 0);
-        // 미션 성공 여부 저장
-        if (!PlayerPrefs.HasKey("success"))
-            PlayerPrefs.SetInt("success", 0);
     }
 
     // Update is called once per frame
@@ -90,6 +76,29 @@ public class TimeManager : MonoBehaviour
 
         }
 
+    }
+
+    // PlayerPrefs 설정
+    void CreatePlayerPrefs()
+    {
+        // 식사급수 횟수 저장
+        if (!PlayerPrefs.HasKey("feedNum"))
+            PlayerPrefs.SetInt("feedNum", 0);
+        // 배변 횟수 저장
+        if (!PlayerPrefs.HasKey("pooCleaningNum"))
+            PlayerPrefs.SetInt("pooCleaningNum", 0);
+        // 소변 횟수 저장
+        if (!PlayerPrefs.HasKey("peeCleaningNum"))
+            PlayerPrefs.SetInt("peeCleaningNum", 0);
+        // 쓰다듬기 횟수 저장
+        if (!PlayerPrefs.HasKey("touchingNum"))
+            PlayerPrefs.SetInt("touchingNum", 0);
+        // 식사급수 미션 성공 여부 저장
+        if (!PlayerPrefs.HasKey("successFeed"))
+            PlayerPrefs.SetInt("successFeed", 0);
+        // 배소변 미션 성공 여부 저장
+        if (!PlayerPrefs.HasKey("successPooPeeClean"))
+            PlayerPrefs.SetInt("successPooPeeClean", 0);
     }
 
 }
