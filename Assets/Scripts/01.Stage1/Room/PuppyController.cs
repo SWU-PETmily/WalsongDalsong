@@ -14,12 +14,13 @@ public class PuppyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = puppyPos[puppyNum].transform.position;
+        //transform.position = puppyPos[puppyNum].transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         Move();     // 움직이기
 
         if (isDelay == false)
@@ -28,7 +29,7 @@ public class PuppyController : MonoBehaviour
             ChangePosition();       // 좌표 위치 바꾸기
             StartCoroutine(WaitForIt());    // 코루틴 실행
         }
-
+        */
     }
 
     // 강아지 위치 이동
