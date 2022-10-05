@@ -78,6 +78,7 @@ public class TimeManager : MonoBehaviour
             this.btnFeed.GetComponent<Image>().sprite = this.img_day_feed;
             this.btnHarness.GetComponent<Image>().sprite = this.img_day_harness;
 
+
         }
         else
         {

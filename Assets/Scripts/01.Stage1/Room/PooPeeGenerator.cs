@@ -32,7 +32,8 @@ public class PooPeeGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PooPeeTimer(); 
+        PooPeeTimer();
+
     }
 
     // 배소변 시간 계산 함수
@@ -56,64 +57,18 @@ public class PooPeeGenerator : MonoBehaviour
                 case 13:
                 case 16:
                 case 19:
-                    // 배변 코루틴 생성
-                    if (isDelay == false)
-                    {
-                        isDelay = true;
-                        StartCoroutine(PooGenerator(hh));
-                    }
+                    Instantiate(poo1, transform.position, transform.rotation);
                     break;
                 case 8:
                 case 11:
                 case 14:
                 case 17:
                 case 20:
-                    // 소변 코루틴 생성
-                    if (isDelay == false)
-                    {
-                        isDelay = true;
-                        StartCoroutine(PeeGenerator(hh));
-                    }
+                    Instantiate(pee1, transform.position, transform.rotation);
                     break;
                 default:
                     break;
             }
         }
-    }
-
-    // 배변 생성 함수
-    IEnumerator PooGenerator(int hour)
-    {
-        if (hour % 2 == 1)
-        {
-            // 홀수
-            Instantiate(poo1, transform.position, transform.rotation);
-            //GameObject newPoo = Instantiate(poo1, transform.position, transform.rotation) as GameObject;
-            //newPoo.transform.SetParent(GameObject.FindGameObjectWithTag("PooPee").transform, false);
-        }
-        else
-        {
-            // 짝수
-            Instantiate(poo2, transform.position, transform.rotation);
-        }
-        yield return new WaitForSecondsRealtime(delayTime);     //Time.timeScale 영향 받지 않는 절대적인 시간
-        isDelay = false;
-    }
-
-    // 소변 생성 함수
-    IEnumerator PeeGenerator(int hour)
-    {
-        if (hour % 2 == 1)
-        {
-            // 홀수
-            Instantiate(pee1, transform.position, transform.rotation);
-        }
-        else
-        {
-            // 짝수
-            Instantiate(pee2, transform.position, transform.rotation);
-        }
-        yield return new WaitForSecondsRealtime(delayTime);
-        isDelay = false;
     }
 }
