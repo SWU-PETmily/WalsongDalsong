@@ -56,20 +56,28 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\PooController.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue2Controller.cs" />
     <Compile Include="Assets\Scripts\00.Intro\DialogManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue1Controller.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueController.cs" />
     <Compile Include="Assets\Scenes\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\Room1Director.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\MouseBehavior.cs" />
     <Compile Include="Assets\Scripts\00.Intro\NamingStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TouchTheDog.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Naming.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\WaterAndFoodUp.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feeding.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeController.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSprayController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyController.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyMoveController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeGenerator.cs" />
