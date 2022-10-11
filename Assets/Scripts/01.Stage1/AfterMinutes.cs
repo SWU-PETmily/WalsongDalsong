@@ -9,11 +9,11 @@ public class AfterMinutes : MonoBehaviour
 {
     public GameObject bad;
     public GameObject good;
-    public GameObject mom;
 
-    public GameObject text1;
-    public GameObject text2;
-    public GameObject next;
+    public GameObject dialogBox;
+    public GameObject bgblack;
+    public Text dialogText;
+    public Button next;
     public Image gauge;
     public int t1;
     //public Animator anim;
@@ -22,17 +22,14 @@ public class AfterMinutes : MonoBehaviour
     DateTime dt1;
     DateTime dt2;
 
-
     void Start()
     {
         //bad.SetActive(false);
         //good.SetActive(false);
-        mom.SetActive(false);
-
-        text1.SetActive(false);
-        text2.SetActive(false);
-        next.SetActive(false);
-        gauge.enabled = (false);
+        gauge.fillAmount = 0.0f;
+        dialogBox.SetActive(false);
+        bgblack.SetActive(false);
+        //gauge.enabled = (false);
 
         LetsCheckAgain();//시작시간 체크
 
@@ -41,30 +38,19 @@ public class AfterMinutes : MonoBehaviour
 
     }
 
-
-    void Update()
-    {
-
-
-
-    }
     IEnumerator WaitForIt(float time)
     {
-
-
         bool result = TimeSpans();
         if (result == true)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
+            gauge.fillAmount = 0.3f;
+            PlayerPrefs.SetFloat("guage", 0.3f);
             Debug.Log(result);
 
             GuideLine();
 
-            yield return new WaitForSeconds(1);
-            NextGuideLine();
-
-            yield return new WaitForSeconds(1);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MomNamingTutorialScene");
+            yield return new WaitForSeconds(10);
         }
         else
         {
@@ -98,14 +84,15 @@ public class AfterMinutes : MonoBehaviour
         Debug.Log("과거 분: " + lasttime);
         Debug.Log("시간 차: " + t1);
 
+        // 절대값 계산
+        if (t1 < 0){
+            t1 = t1 * -1;
+        }
 
-        if (t1 >=1)
+        if (t1 >=30)
         {
-            //bad.SetActive(false);
+            //gauge.enabled = (true);
             good.SetActive(true);
-            //anim2.SetBool("IsNice", true);
-            gauge.fillAmount = 0.3f;
-
             return true;
         }
 
@@ -115,33 +102,23 @@ public class AfterMinutes : MonoBehaviour
 
     private void GuideLine()
     {
-        mom.SetActive(true);
 
-        text1.SetActive(true);
+        dialogBox.SetActive(true);
+        bgblack.SetActive(true);
 
 
     }
-
-
-    public void NextText()
-    {
-        text2.SetActive(true);
-    }
-
-    private void NextGuideLine()
-    {
-        text1.SetActive(false);
-        next.SetActive(true);
-
-    }
-
-
 
     private void OnApplicationQuit()
     {
         print("종료");
 
         LetsCheck();//종료시간 체크
+    }
+
+    public void btnClick()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MomNamingTutorialScene");
     }
 
 

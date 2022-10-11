@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/00.Intro/LogoScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
+    path: Assets/Scenes/00.Intro/MomWaitingTutorialScene.unity
+    guid: 3ff7b2c16dd1efe43a8cceec01ad7acc
+  - enabled: 1
     path: Assets/Scenes/00.Intro/CalmingSignal.unity
     guid: c8f74f2b44007ea4fb173f171b0ac992
   - enabled: 1
