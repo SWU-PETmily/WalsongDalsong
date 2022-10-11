@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcfb9b36e2d38dd4ab17ff27c12d10bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gauge: {fileID: 256042846}
+  gauge: {fileID: 256042848}
 --- !u!4 &1299904166
 Transform:
   m_ObjectHideFlags: 0

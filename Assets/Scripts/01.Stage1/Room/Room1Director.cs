@@ -7,13 +7,14 @@ using System;
 // 게이지 관리 && 자정 지나고 접속 시 변수 초기화
 public class Room1Director : MonoBehaviour
 {
-    public GameObject gauge;
+    public Image gauge;
 
     public DateTime nowTime;
 
     void Start()
     {
-        
+        Debug.Log(PlayerPrefs.GetFloat("guage"));
+        gauge.fillAmount = PlayerPrefs.GetFloat("guage");
     }
 
     void Update()
@@ -46,6 +47,8 @@ public class Room1Director : MonoBehaviour
     {
         this.gauge.GetComponent<Image>().fillAmount += 0.1f;
         PlayerPrefs.SetInt("successFeed", 0);                   // 미션완료 초기화
+        float f = PlayerPrefs.GetFloat("guage") + 0.1f;
+        PlayerPrefs.SetFloat("guage", f);
     }
 
     // 배소변 게이지 상승
@@ -53,5 +56,7 @@ public class Room1Director : MonoBehaviour
     {
         this.gauge.GetComponent<Image>().fillAmount += 0.05f;
         PlayerPrefs.SetInt("successPooPeeClean", 0);             // 미션완료 초기화
+        float f = PlayerPrefs.GetFloat("guage") + 0.1f;
+        PlayerPrefs.SetFloat("guage", f);
     }
 }
