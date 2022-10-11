@@ -13,6 +13,7 @@ public class GameStart : MonoBehaviour
             PlayerPrefs.SetInt("gameClearNumber", 0);
         if (!PlayerPrefs.HasKey("guage"))
             PlayerPrefs.SetFloat("guage", 0.0f);
+
         Debug.Log(PlayerPrefs.GetInt("gameClearNumber"));
     }
 
