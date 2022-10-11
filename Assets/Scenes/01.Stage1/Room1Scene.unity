@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDelay: 0
-  delayTime: 60
+  delayTime: 30
   accumTime: 0
 --- !u!1 &2008714598
 GameObject:

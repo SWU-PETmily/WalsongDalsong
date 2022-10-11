@@ -28,7 +28,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 6
+        time: 15
         value: {x: -4, y: -0.91, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -46,15 +46,19 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 39fcb208545c18c42b0c6ad7cb1f166a, type: 3}
-    - time: 3
+    - time: 3.75
       value: {fileID: 21300000, guid: 6951e9932f4af2c44863d7db21895c29, type: 3}
-    - time: 6
+    - time: 7.5
+      value: {fileID: 21300000, guid: 39fcb208545c18c42b0c6ad7cb1f166a, type: 3}
+    - time: 11.25
+      value: {fileID: 21300000, guid: 6951e9932f4af2c44863d7db21895c29, type: 3}
+    - time: 15
       value: {fileID: 21300000, guid: 39fcb208545c18c42b0c6ad7cb1f166a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 10
+  m_SampleRate: 4
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -79,12 +83,14 @@ AnimationClip:
     - {fileID: 21300000, guid: 39fcb208545c18c42b0c6ad7cb1f166a, type: 3}
     - {fileID: 21300000, guid: 6951e9932f4af2c44863d7db21895c29, type: 3}
     - {fileID: 21300000, guid: 39fcb208545c18c42b0c6ad7cb1f166a, type: 3}
+    - {fileID: 21300000, guid: 6951e9932f4af2c44863d7db21895c29, type: 3}
+    - {fileID: 21300000, guid: 39fcb208545c18c42b0c6ad7cb1f166a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 6.1
+    m_StopTime: 15.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -113,7 +119,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 6
+        time: 15
         value: -4
         inSlope: 0
         outSlope: 0
@@ -141,7 +147,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 6
+        time: 15
         value: -0.91
         inSlope: 0
         outSlope: 0
@@ -169,7 +175,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 6
+        time: 15
         value: 0
         inSlope: 0
         outSlope: 0
