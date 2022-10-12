@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 // 게이지 관리 && 자정 지나고 접속 시 변수 초기화
 public class Room1Director : MonoBehaviour
@@ -111,14 +112,14 @@ public class Room1Director : MonoBehaviour
             {
                 // 엔딩 1 실행
                 Debug.Log("엔딩 1로 이동.");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
             }
             else
             {
                 // 가상 부모 평가로 이동
                 Debug.Log("가상 부모 평가로 이동.");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Parent1Scene");
             }
-
-
         }
     }
 }

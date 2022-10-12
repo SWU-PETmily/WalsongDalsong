@@ -44,6 +44,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/01.Stage1/Touch1Scene.unity
     guid: 6711b0661746a2543bd342bdb1fa573f
+  - enabled: 1
+    path: Assets/Scenes/01.Stage1/Parent1Scene.unity
+    guid: 309025acdfb381143adedc9b8a36b361
+  - enabled: 1
+    path: Assets/Scenes/04.Ending/Ending1.unity
+    guid: 7e8706c18fe707c4c9e06e23fb42ca07
+  - enabled: 1
+    path: Assets/Scenes/04.Ending/Ending2.unity
+    guid: 4d438c861d0f0c6449a4e6566a237a21
+  - enabled: 1
+    path: Assets/Scenes/04.Ending/Ending3.unity
+    guid: c96e6cbdadc93f14caf62d67bccb5d6c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 4a4bbe8f1cb5f9a4bb3fe50ac58e89a7, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 59fa1a48e8ba22546a56b655ce83ffac, type: 2}
