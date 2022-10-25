@@ -10,10 +10,10 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public static Vector2 defaultposition;
     public Sprite closeWater;         // 닫은 물병 이미지
     public Sprite openWater;          // 열린 물병 이미지
-    private Animator FeedingAnimator;
+    private Animator WateringAnimator;
     public Animator BowlWaterAnimatior;
 
-    Vector3 destination = new Vector3(2000, 900, 0);         // 물병 이동 위치
+    Vector3 destination = new Vector3(1800, 1000, 0);         // 물병 이동 위치
 
     bool isFeeding = false;             // 사료 완료 확인 변수
     bool isCollision = false;           // 충돌확인 변수
@@ -85,27 +85,31 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             Debug.Log("collision!!!");
             isCollision = true;
-            //FeedingAnimator.SetBool("isWater", true);    // 사료봉투 애니메이터 실행
-            //feed1.SetActive(true);      // 사료1 떨어지기
-            //feed2.SetActive(true);      // 사료2 떨어지기
-            //BowlAnimatior.SetBool("isBowlWater", true);      // 밥그릇 애니메이터 실행
+            WateringAnimator.SetBool("isWater", true);    // 물병 애니메이터 실행
+            BowlWaterAnimatior.SetBool("isBowlWater", true);      // 물그릇 애니메이터 실행
 
-            //Invoke("ButtonActive", 4.0f);           // 버튼 활성화
-            //Destroy(gameObject, 4);                 // 사료 봉투 삭제
-            //Destroy(feed1, 4);                      // 사료1 삭제
-            //Destroy(feed2, 4);                      // 사료2 삭제
+            Invoke("ButtonActive", 4.0f);           // 버튼 활성화
+            Destroy(gameObject, 4);                 // 물병 삭제
         }
+    }
+
+    // 강아지 버튼 활성화
+    void ButtonActive()
+    {
+        btnDog.SetActive(true);
+        PlayerPrefs.SetInt("feedLevel", 3);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        WateringAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // 사료 지급과 그릇 치우기를 완료했다면
         if (PlayerPrefs.GetInt("feedLevel") == 2)
         {
             isFeeding = true;

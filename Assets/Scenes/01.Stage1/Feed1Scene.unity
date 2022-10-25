@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 767015738}
   - component: {fileID: 767015737}
   - component: {fileID: 767015736}
+  - component: {fileID: 767015740}
   m_Layer: 5
   m_Name: bowlWater
   m_TagString: bowl
@@ -849,6 +850,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767015734}
   m_CullTransparentMesh: 1
+--- !u!95 &767015740
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767015734}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffd28440c5e07774db6613e67f3712c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &954912790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1118,7 @@ GameObject:
   - component: {fileID: 1585349781}
   - component: {fileID: 1585349782}
   - component: {fileID: 1585349783}
+  - component: {fileID: 1585349784}
   m_Layer: 5
   m_Name: bottle
   m_TagString: Untagged
@@ -1224,7 +1246,27 @@ MonoBehaviour:
   btnDog: {fileID: 602369288}
   closeWater: {fileID: 21300000, guid: 5a3e6eacf177471479a21fddef777d56, type: 3}
   openWater: {fileID: 21300000, guid: 7d0850d9cb2f35c4baa47d469992dbc0, type: 3}
-  BowlWaterAnimatior: {fileID: 0}
+  BowlWaterAnimatior: {fileID: 767015740}
+--- !u!95 &1585349784
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585349777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f647684a58a7c9542ba6a2bc7459a974, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1621940413
 GameObject:
   m_ObjectHideFlags: 0
