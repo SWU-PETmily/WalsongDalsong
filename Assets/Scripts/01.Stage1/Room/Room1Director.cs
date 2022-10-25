@@ -93,6 +93,12 @@ public class Room1Director : MonoBehaviour
         exeDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
         exeTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
 
+        //
+        String i = PlayerPrefs.GetInt("quitDate").ToString();
+        String j = PlayerPrefs.GetInt("quitTime").ToString();
+        Debug.Log("종료 날짜 : " + i);
+        Debug.Log("종료 시간 : " + j);
+
         Debug.Log("시작 날짜 : " + exeDate);
         Debug.Log("시작 시간 : " + exeTime);
     }

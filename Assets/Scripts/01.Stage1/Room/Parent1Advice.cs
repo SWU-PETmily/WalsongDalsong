@@ -25,9 +25,9 @@ public class Parent1Advice : MonoBehaviour
     {
 
         // 임시 변수
-        PlayerPrefs.SetInt("goodLevel", 2);
-        PlayerPrefs.SetInt("badLevel", 2);
-        PlayerPrefs.SetInt("feedNum", 2);
+        PlayerPrefs.SetInt("goodLevel", 1);
+        PlayerPrefs.SetInt("badLevel", 1);
+        PlayerPrefs.SetInt("feedNum", 1);
         PlayerPrefs.SetInt("pooCleaningNum", 3);
         PlayerPrefs.SetInt("peeCleaningNum", 3);
 
@@ -181,5 +181,25 @@ public class Parent1Advice : MonoBehaviour
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetInt("touchingNum", 0);
+    }
+
+    // 종료시 실행
+    private void OnApplicationQuit()
+    {
+        QuitDateCheck(); //종료날짜시간 체크
+    }
+
+    // 종료 날짜 시간 체크
+    private void QuitDateCheck()
+    {
+        int quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
+        int quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
+
+        Debug.Log("종료 날짜 : " + quitDate);
+        Debug.Log("종료 시간 : " + quitTime);
+
+        PlayerPrefs.SetInt("quitDate", quitDate);
+        PlayerPrefs.SetInt("quitTime", quitTime);
+
     }
 }
