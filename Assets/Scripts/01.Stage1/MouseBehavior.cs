@@ -13,8 +13,6 @@ public class MouseBehavior : MonoBehaviour
 
     void Start()
     {
-        
-   
         Debug.Log("dd");
         waterbottle2.SetActive(false);
     }
