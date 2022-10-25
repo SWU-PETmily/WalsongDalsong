@@ -28,7 +28,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         feed2.SetActive(false);
         btnDog.SetActive(false);
         bowlWater.SetActive(false);
-        PlayerPrefs.SetInt("feedLevel", 0);     // 식사 급수 내 단계 저장. 0=아무것도 안 함. 1=식사지급완료, 2=물지급완료.
+        PlayerPrefs.SetInt("feedLevel", 0);     // 식사 급수 내 단계 저장. 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
     }
 
     public void OnBeginDrag(PointerEventData eventData)

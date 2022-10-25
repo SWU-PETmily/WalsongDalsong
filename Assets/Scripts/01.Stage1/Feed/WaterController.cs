@@ -13,54 +13,68 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Animator FeedingAnimator;
     public Animator BowlWaterAnimatior;
 
-    Vector3 destination = new Vector3(518, 900, 0);         // 물병 이동 위치
+    Vector3 destination = new Vector3(2000, 900, 0);         // 물병 이동 위치
 
-
+    bool isFeeding = false;             // 사료 완료 확인 변수
     bool isCollision = false;           // 충돌확인 변수
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (isCollision)
+        if (isFeeding)
         {
-            // 충돌이 있었다면
-            this.transform.position = destination;      // 물병 위치 고정
+            // 사료 지급을 완료했다면
+            if (isCollision)
+            {
+                // 충돌이 있었다면
+                this.transform.position = destination;      // 물병 위치 고정
+            }
+            else
+            {
+                // 충돌이 없었다면
+                defaultposition = this.transform.position;
+                this.GetComponent<Image>().sprite = openWater;
+            }
         }
-        else
-        {
-            // 충돌이 없었다면
-            defaultposition = this.transform.position;
-            this.GetComponent<Image>().sprite = openWater;
-        }
+
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (isCollision)
+        if (isFeeding)
         {
-            // 충돌이 있었다면
-            this.transform.position = destination;      // 물병 위치 고정
+            // 사료 지급을 완료했다면
+            if (isCollision)
+            {
+                // 충돌이 있었다면
+                this.transform.position = destination;      // 물병 위치 고정
+            }
+            else
+            {
+                // 충돌이 없었다면
+                Vector2 currentPos = Input.mousePosition;
+                this.transform.position = currentPos;
+                this.GetComponent<Image>().sprite = openWater;
+            }
         }
-        else
-        {
-            // 충돌이 없었다면
-            Vector2 currentPos = Input.mousePosition;
-            this.transform.position = currentPos;
-            this.GetComponent<Image>().sprite = openWater;
-        }
+       
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (isCollision)
+        if (isFeeding)
         {
-            // 충돌이 있었다면
-            this.transform.position = destination;      // 물병 위치 고정
-        }
-        else
-        {
-            // 충돌이 없었다면
-            this.transform.position = defaultposition;
-            this.GetComponent<Image>().sprite = closeWater;
+            // 사료 지급을 완료했다면
+            if (isCollision)
+            {
+                // 충돌이 있었다면
+                this.transform.position = destination;      // 물병 위치 고정
+            }
+            else
+            {
+                // 충돌이 없었다면
+                this.transform.position = defaultposition;
+                this.GetComponent<Image>().sprite = closeWater;
+            }
         }
     }
 
@@ -92,6 +106,9 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerPrefs.GetInt("feedLevel") == 2)
+        {
+            isFeeding = true;
+        }
     }
 }
