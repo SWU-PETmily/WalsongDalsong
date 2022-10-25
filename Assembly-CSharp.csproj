@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Naming.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\WaterAndFoodUp.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\CardController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feeding.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeController.cs" />
