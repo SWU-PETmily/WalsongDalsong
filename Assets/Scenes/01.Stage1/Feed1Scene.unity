@@ -1096,6 +1096,7 @@ GameObject:
   - component: {fileID: 1585349779}
   - component: {fileID: 1585349781}
   - component: {fileID: 1585349782}
+  - component: {fileID: 1585349783}
   m_Layer: 5
   m_Name: bottle
   m_TagString: Untagged
@@ -1208,6 +1209,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1585349783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585349777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43e6b5a02a763141ba369b22c2a291e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnDog: {fileID: 602369288}
+  closeWater: {fileID: 21300000, guid: 5a3e6eacf177471479a21fddef777d56, type: 3}
+  openWater: {fileID: 21300000, guid: 7d0850d9cb2f35c4baa47d469992dbc0, type: 3}
+  BowlWaterAnimatior: {fileID: 0}
 --- !u!1 &1621940413
 GameObject:
   m_ObjectHideFlags: 0
