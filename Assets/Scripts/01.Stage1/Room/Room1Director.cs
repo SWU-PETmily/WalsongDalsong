@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
 
-// 게이지 관리 && 자정 지나고 접속 시 변수 초기화
+// 게이지 관리 && 자정 지나고 접속 시 엔딩/가상부모씬으로 이동
 public class Room1Director : MonoBehaviour
 {
     public Image gauge;
