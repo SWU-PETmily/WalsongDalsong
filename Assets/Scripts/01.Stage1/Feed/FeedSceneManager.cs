@@ -4,17 +4,36 @@ using UnityEngine;
 
 public class FeedSceneManager : MonoBehaviour
 {
+    int exeTime;              // 실행한 시간
+    public GameObject bgTable;      // 배경 오브젝트
+    public Sprite imgDayBg;         // 낮 배경 이미지
+    public Sprite imgNightBg;          // 밤 배경 이미지
+
     // Start is called before the first frame update
     void Start()
     {
         // 식사 급수 미션 성공 = 0
         PlayerPrefs.SetInt("successFeed", 0);
+        // 낮/밤에 따라 배경 이미지 변경
+        ExeDateCheck();
     }
 
-    // Update is called once per frame
-    void Update()
+    // 낮/밤에 따라 배경 이미지 변경
+    private void ExeDateCheck()
     {
-        
+        exeTime = int.Parse(System.DateTime.Now.ToString("HH"));
+
+        if(exeTime >= 07 && exeTime < 19)
+        {
+            // 낮이라면
+            bgTable.GetComponent<SpriteRenderer>().sprite = imgDayBg;
+        }
+        else
+        {
+            // 밤이라면
+            bgTable.GetComponent<SpriteRenderer>().sprite = imgNightBg;
+        }
+
     }
 
     // 종료시 실행
