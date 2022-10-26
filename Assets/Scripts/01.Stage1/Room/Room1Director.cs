@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 public class Room1Director : MonoBehaviour
 {
     public Image gauge;
+    public float nowHealth;  // 현재 체력
 
-    
 
     int quitDate;             // 종료한 날짜
     int exeDate;              // 실행한 날짜
@@ -24,6 +24,8 @@ public class Room1Director : MonoBehaviour
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetFloat("guage", 0.1f);
+
+        nowHealth = PlayerPrefs.GetFloat("guage");
 
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");

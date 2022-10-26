@@ -13,7 +13,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Animator WateringAnimator;
     public Animator BowlWaterAnimatior;
 
-    Vector3 destination = new Vector3(1800, 1000, 0);         // 물병 이동 위치
+    Vector3 destination = new Vector3(1800, 970, 0);         // 물병 이동 위치
 
     bool isFeeding = false;             // 사료 완료 확인 변수
     bool isCollision = false;           // 충돌확인 변수
