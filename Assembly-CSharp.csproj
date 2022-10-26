@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSceneManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Feed\btnDogController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\PooController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue2Controller.cs" />
     <Compile Include="Assets\Scripts\00.Intro\DialogManager.cs" />
@@ -71,10 +72,12 @@
     <Compile Include="Assets\Scripts\00.Intro\NamingStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TouchTheDog.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Naming.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\WaterAndFoodUp.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\CardController.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Feed\WaterController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feeding.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeController.cs" />
@@ -86,6 +89,8 @@
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeGenerator.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\RoomBtnManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedController.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\CardClickController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\TimeManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Drag.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Waterbottle2Move.cs" />
