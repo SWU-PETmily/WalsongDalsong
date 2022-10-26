@@ -25,7 +25,7 @@ public class Parent1Advice : MonoBehaviour
     {
        
         // 임시 변수
-        PlayerPrefs.SetInt("goodLevel", 1);
+        PlayerPrefs.SetInt("goodLevel", 2);
         PlayerPrefs.SetInt("badLevel", 1);
         PlayerPrefs.SetInt("feedNum", 3);
         PlayerPrefs.SetInt("pooCleaningNum", 3);

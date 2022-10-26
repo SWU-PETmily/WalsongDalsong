@@ -10,6 +10,8 @@ public class Room1Director : MonoBehaviour
 {
     public Image gauge;
 
+    
+
     int quitDate;             // 종료한 날짜
     int exeDate;              // 실행한 날짜
     int quitTime;             // 종료한 시간
@@ -21,6 +23,7 @@ public class Room1Director : MonoBehaviour
         PlayerPrefs.SetInt("feedNum", 0);
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
+        PlayerPrefs.SetFloat("guage", 0.1f);
 
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");
@@ -57,10 +60,14 @@ public class Room1Director : MonoBehaviour
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
-        this.gauge.GetComponent<Image>().fillAmount += 0.1f;
+        float currentFill = gauge.fillAmount + 0.5f;
+        gauge.fillAmount += Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime*0.01f);
+        //this.gauge.GetComponent<Image>().fillAmount += 0.1f;
         PlayerPrefs.SetInt("successFeed", 0);                   // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.1f;
+        float f = PlayerPrefs.GetFloat("guage") + 0.5f;
         PlayerPrefs.SetFloat("guage", f);
+        Debug.Log("식사급수 게이지 상승");
+
     }
 
     // 배소변 게이지 상승
