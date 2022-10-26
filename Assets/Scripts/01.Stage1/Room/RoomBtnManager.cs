@@ -15,7 +15,7 @@ public class RoomBtnManager : MonoBehaviour
         {
             // 먹이주기
             case "btn_feed":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("FeedingScene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Feed1Scene");
                 break;
             // 배변패드
             case "btn_pad":

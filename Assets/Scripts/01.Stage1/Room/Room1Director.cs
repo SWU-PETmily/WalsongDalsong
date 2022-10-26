@@ -17,6 +17,11 @@ public class Room1Director : MonoBehaviour
 
     void Start()
     {
+        // 임시 변수
+        PlayerPrefs.SetInt("feedNum", 0);
+        PlayerPrefs.SetInt("pooCleaningNum", 0);
+        PlayerPrefs.SetInt("peeCleaningNum", 0);
+
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");
 
