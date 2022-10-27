@@ -23,11 +23,11 @@ public class Parent1Advice : MonoBehaviour
 
     void Start()
     {
-
+       
         // 임시 변수
         PlayerPrefs.SetInt("goodLevel", 1);
         PlayerPrefs.SetInt("badLevel", 1);
-        PlayerPrefs.SetInt("feedNum", 1);
+        PlayerPrefs.SetInt("feedNum", 3);
         PlayerPrefs.SetInt("pooCleaningNum", 3);
         PlayerPrefs.SetInt("peeCleaningNum", 3);
 
@@ -44,6 +44,7 @@ public class Parent1Advice : MonoBehaviour
         GoodOrBad();    // 칭찬 or 경고 분류
         showDialog();   // 첫 번째 구문 보여주기    
         ResetNum();     // 하루 변수 초기화
+        QuitDateCheck(); //종료날짜시간 체크
     }
 
     // 버튼 클릭 함수
@@ -51,7 +52,7 @@ public class Parent1Advice : MonoBehaviour
     {
         if (good == true)
         {
-            if (level == 2)
+            if (level == 1)
             {
                 Good1();
             }
@@ -62,7 +63,7 @@ public class Parent1Advice : MonoBehaviour
         }
         else
         {
-            if (level == 2)
+            if (level == 1)
             {
                 Bad1();
             }
@@ -144,7 +145,8 @@ public class Parent1Advice : MonoBehaviour
             if(level == 1)
             {
                 dialogText.text = "와~ 집이 엄청 깨끗하네? " + petName + "(이)를 잘 돌봐줬구나. 정말 대견해.";
-            }else if (level == 2)
+            }
+            else if (level == 2)
             {
                 dialogText.text = "어제 " + petName + "(이)의 밥 그릇을 보니까 싹 비워져있더라? 다 네가 잘 돌봐줘서야. 잘했어!";
             }
@@ -152,7 +154,7 @@ public class Parent1Advice : MonoBehaviour
             {
                 dialogText.text = "엄마 없을 때도 " + petName + "(이)를 잘 돌봐줬구나? 정말 잘했어~";
             }
-            PlayerPrefs.SetInt("goodLevel", level++);
+            PlayerPrefs.SetInt("goodLevel", level + 1);
         }
         // 경고라면
         else
@@ -170,7 +172,7 @@ public class Parent1Advice : MonoBehaviour
             {
                 dialogText.text = "오늘 많이 바쁘게 보냈나 보구나. 그래도 " + petName + "(이)도 신경써주렴!";
             }
-            PlayerPrefs.SetInt("badLevel", level++);
+            PlayerPrefs.SetInt("badLevel", level + 1);
         }
     }
 

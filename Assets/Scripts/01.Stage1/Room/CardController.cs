@@ -23,14 +23,10 @@ public class CardController : MonoBehaviour
         CheckLevel();
     }
 
-    public void btnClick()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
-    }
-
     void CheckLevel()
     {
         level = PlayerPrefs.GetInt("goodLevel")-1;  // 단계 저장. 이전에 단계 올려줬기 때문에 -1
+        Debug.Log("단계"+PlayerPrefs.GetInt("goodLevel").ToString());
         if (level == 1)
         {
             // 1단계 칭찬. 하품
