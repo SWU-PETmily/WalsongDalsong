@@ -62,13 +62,13 @@ public class Room1Director : MonoBehaviour
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
+        Debug.Log("식사급수 게이지 상승");
         float currentFill = gauge.fillAmount + 0.5f;
-        gauge.fillAmount += Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime*0.01f);
+        gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, 0.5f, Time.deltaTime * 10);
         //this.gauge.GetComponent<Image>().fillAmount += 0.1f;
         PlayerPrefs.SetInt("successFeed", 0);                   // 미션완료 초기화
         float f = PlayerPrefs.GetFloat("guage") + 0.5f;
         PlayerPrefs.SetFloat("guage", f);
-        Debug.Log("식사급수 게이지 상승");
 
     }
 
