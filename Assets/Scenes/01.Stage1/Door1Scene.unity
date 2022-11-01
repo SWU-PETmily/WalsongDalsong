@@ -558,7 +558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &465975779
 RectTransform:
   m_ObjectHideFlags: 0
@@ -738,6 +738,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147a9de7e9cb5bc42bd1f69af22b2e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgBlack: {fileID: 167734307}
+  dialogBox: {fileID: 465975778}
+  dialogText: {fileID: 1431918593}
+  btnBack: {fileID: 380905464}
+  btnGrip: {fileID: 241747265}
+  snell: {fileID: 1194180373}
+  footbag: {fileID: 501903367}
 --- !u!4 &951984015
 Transform:
   m_ObjectHideFlags: 0
@@ -918,6 +925,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9677174cd2c90149a2e5c2007d0a0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1335683289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1335683291}
+  - component: {fileID: 1335683290}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1335683290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335683289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd6ffc82886a174386a5cd84509e6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hh: 0
+  background: {fileID: 1958835047}
+  pet: {fileID: 1581165218}
+  img_day_bg: {fileID: 21300000, guid: d0e09737824e4034cafd2e7c9c3f075e, type: 3}
+  img_night_bg: {fileID: 21300000, guid: 14ac43d8a4509b74ca200c2734efe84e, type: 3}
+--- !u!4 &1335683291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335683289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2227.0203, y: 518.3912, z: -14.37713}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361351065
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1129,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "\uAC15\uC544\uC9C0\uAC00 \uC544\uC9C1 \uC5B4\uB824\uC11C"
+  m_Text: "\uAC15\uC544\uC9C0 \uCCAB \uC0B0\uCC45\uC740 3\uAC1C\uC6D4\uC774 \uC9C0\uB098\uAE30
+    \uC804\uC5D0 \uD558\uB294 \uAC8C \uC88B\uB2E4\uACE0 \uD558\uC9C0\uB9CC OO\uC774\uAC00
+    \uBB34\uC11C\uC6CC\uD558\uB2C8\uAE4C \uC870\uAE08 \uC2DC\uAC04\uC744 \uC8FC\uC790. "
 --- !u!222 &1431918594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1165,9 +1223,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Parent1Advice, Assembly-CSharp
-        m_MethodName: ClickBtn
+      - m_Target: {fileID: 951984014}
+        m_TargetAssemblyTypeName: Door1SceneManager, Assembly-CSharp
+        m_MethodName: BtnNextDialog
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
