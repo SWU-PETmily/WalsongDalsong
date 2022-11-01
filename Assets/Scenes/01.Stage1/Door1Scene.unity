@@ -955,6 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hh: 0
+  DoorDayNightAnimator: {fileID: 1581165221}
   background: {fileID: 1958835047}
   pet: {fileID: 1581165218}
   img_day_bg: {fileID: 21300000, guid: d0e09737824e4034cafd2e7c9c3f075e, type: 3}
