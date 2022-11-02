@@ -65,14 +65,17 @@
     <Compile Include="Assets\Scripts\00.Intro\WaitingDialogManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyControllerTrial3.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue1Controller.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Door\Door1TimeManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueController.cs" />
     <Compile Include="Assets\Scenes\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\Room1Director.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\MouseBehavior.cs" />
     <Compile Include="Assets\Scripts\00.Intro\NamingStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Door\Door1SceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TouchTheDog.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedSceneManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyDayNightController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Naming.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\WaterAndFoodUp.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\Feed\WaterController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feeding.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Door\ItemController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\Parent1Advice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSprayController.cs" />
@@ -95,6 +99,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Drag.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Waterbottle2Move.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SprayController.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\Level1Introdce.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
