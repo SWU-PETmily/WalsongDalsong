@@ -34,7 +34,9 @@ public class DialogManager : MonoBehaviour
     //btn yes
     public void StartTutorial()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+        // 이름 짓기 후 게이지 증가
+        PlayerPrefs.SetFloat("guage", 0.2f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Level1IntroduceScene");
     }
 
     //btn no

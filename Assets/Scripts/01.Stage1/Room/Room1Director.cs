@@ -47,6 +47,8 @@ public class Room1Director : MonoBehaviour
         {
             increaseGaugeByFeed();
         }
+
+        /*
         // 배변 완료했을 시, 완료 횟수가 5 이하라면
         else if (PlayerPrefs.GetInt("successPooPeeClean") == 1 && PlayerPrefs.GetInt("pooCleaningNum") <= 5)
         {
@@ -57,17 +59,15 @@ public class Room1Director : MonoBehaviour
         {
             increaseGaugeByPooPee();
         }
+        */
     }
 
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
-        Debug.Log("식사급수 게이지 상승");
-        float currentFill = gauge.fillAmount + 0.5f;
-        gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, 0.5f, Time.deltaTime * 10);
-        //this.gauge.GetComponent<Image>().fillAmount += 0.1f;
-        PlayerPrefs.SetInt("successFeed", 0);                   // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.5f;
+        this.gauge.GetComponent<Image>().fillAmount += 0.15f;
+        PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
+        float f = PlayerPrefs.GetFloat("guage") + 0.15f;
         PlayerPrefs.SetFloat("guage", f);
 
     }

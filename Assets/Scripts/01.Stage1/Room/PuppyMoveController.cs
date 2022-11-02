@@ -17,7 +17,7 @@ public class PuppyMoveController : MonoBehaviour
     {
         // 애니메이터
         this.animator = GetComponent<Animator>();
-        this.animator.SetTrigger("Walk3Trigger");
+        //this.animator.SetTrigger("Walk3Trigger");         //================주석 다시 풀기=================
     }
 
     void Update()
@@ -49,8 +49,7 @@ public class PuppyMoveController : MonoBehaviour
         if (isDelay == false)
         {
             isDelay = true;
-            StartCoroutine(Walk3());
-            // StartCoroutine(Walk5());
+            //StartCoroutine(Walk3());          //================주석 다시 풀기=================
         }
     }
 

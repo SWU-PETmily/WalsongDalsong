@@ -44,8 +44,8 @@ public class AfterMinutes : MonoBehaviour
         if (result == true)
         {
             yield return new WaitForSeconds(3);
-            gauge.fillAmount = 0.3f;
-            PlayerPrefs.SetFloat("guage", 0.3f);
+            gauge.fillAmount = 0.1f;
+            PlayerPrefs.SetFloat("guage", 0.1f);
             Debug.Log(result);
 
             GuideLine();

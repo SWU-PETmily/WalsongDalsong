@@ -1556,6 +1556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gauge: {fileID: 256042848}
+  nowHealth: 0
 --- !u!4 &1299904166
 Transform:
   m_ObjectHideFlags: 0
@@ -2354,7 +2355,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1969804949}
   - component: {fileID: 1969804948}
-  - component: {fileID: 1969804950}
   - component: {fileID: 1969804951}
   - component: {fileID: 1969804952}
   m_Layer: 0
@@ -2432,32 +2432,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1969804950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969804947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d908cba9da52e47924fe6394462f05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puppyPos:
-  - {fileID: 2008714600}
-  - {fileID: 2018473551}
-  - {fileID: 1636385923}
-  - {fileID: 1704284182}
-  - {fileID: 1955561150}
-  - {fileID: 626495758}
-  - {fileID: 1767749801}
-  - {fileID: 752331652}
-  - {fileID: 1716842}
-  - {fileID: 1666576996}
-  speed: 2
-  isDelay: 0
-  delayTime: 5
 --- !u!95 &1969804951
 Animator:
   serializedVersion: 4
@@ -2468,10 +2442,10 @@ Animator:
   m_GameObject: {fileID: 1969804947}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3dbde2f6a26ab344a46742ed99d8562, type: 2}
+  m_Controller: {fileID: 9100000, guid: 415d5d4283b291b488a2fcf2404e9920, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -2487,12 +2461,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1969804947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a14a3214db7496f40870026e1fc1e149, type: 3}
+  m_Script: {fileID: 11500000, guid: f9a9e419de514ab47a05930e972d21a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDelay: 0
-  delayTime: 30
-  accumTime: 0
 --- !u!1 &2008714598
 GameObject:
   m_ObjectHideFlags: 0
