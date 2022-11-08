@@ -42,6 +42,13 @@ public class Room1Director : MonoBehaviour
             gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime);
         }
 
+        // 게이지가 100에 도달하면
+        if(gauge.fillAmount >= 1.0f)
+        {
+            // 가을 애니메이션 보여주기
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SummerToWinterScene");
+        }
+
     }
 
     // btn
