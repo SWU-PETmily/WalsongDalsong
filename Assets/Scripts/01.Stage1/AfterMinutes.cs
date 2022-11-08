@@ -19,8 +19,8 @@ public class AfterMinutes : MonoBehaviour
     //public Animator anim;
     //public Animator anim2;
 
-    DateTime dt1;
-    DateTime dt2;
+    int dt1;
+    int dt2;
 
     void Start()
     {
@@ -63,25 +63,25 @@ public class AfterMinutes : MonoBehaviour
     private void LetsCheck()
     {
         Debug.Log("종료 시간 : " + System.DateTime.Now.ToString());
-        dt1 = System.DateTime.Now;
-        PlayerPrefs.SetInt("lasttime", dt1.Minute);
+        dt1 = int.Parse(System.DateTime.Now.ToString("HHmm"));
+        PlayerPrefs.SetInt("lasttime", dt1);
 
     }
 
     private void LetsCheckAgain()
     {
         Debug.Log("재시작 시간 : " + System.DateTime.Now.ToString());
-        dt2 = System.DateTime.Now;
+        dt2 = int.Parse(System.DateTime.Now.ToString("HHmm"));
 
     }
 
     private bool TimeSpans()
     {
         int lasttime = PlayerPrefs.GetInt("lasttime");
-        int t1 = dt2.Minute - lasttime;
+        int t1 = dt2 - lasttime;
 
-        Debug.Log("현재 분: " + dt2.Minute);
-        Debug.Log("과거 분: " + lasttime);
+        Debug.Log("현재 시간 " + dt2);
+        Debug.Log("과거 시간: " + lasttime);
         Debug.Log("시간 차: " + t1);
 
         // 절대값 계산
