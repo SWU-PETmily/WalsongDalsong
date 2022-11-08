@@ -28,13 +28,16 @@ public class SceneManager : MonoBehaviour
 
     public void BtnBack()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("PooNoScene");
+        PlayerPrefs.SetInt("successPooPeeClean", 0);     // 배소변 미션 실패
     }
 
     // 종료시 실행
     private void OnApplicationQuit()
     {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");       // 종료시 거실로 이동
         QuitDateCheck(); //종료날짜시간 체크
+        PlayerPrefs.SetInt("successPooPeeClean", 0);     // 배소변 미션 실패
     }
 
     // 종료 날짜 시간 체크

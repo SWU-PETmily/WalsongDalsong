@@ -65,7 +65,7 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             PlayerPrefs.SetInt("successPooPeeClean", 1);
 
             // 씬 전환
-            Invoke("ChangeScene1", 5.0f);           // 장면 전환
+            Invoke("ChangeScene", 5.0f);           // 장면 전환
         }
 
     }
@@ -88,9 +88,8 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     }
 
     // 장면 전환
-    void ChangeScene1()
+    void ChangeScene()
     {
-        Debug.Log("donnnnennenen222");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
     }
 
