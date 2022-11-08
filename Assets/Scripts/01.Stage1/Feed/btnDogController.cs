@@ -10,6 +10,7 @@ public class btnDogController : MonoBehaviour
     public GameObject btnBack;     // 뒤로가기 버튼
     public GameObject bgBlack;     // 검정배경
     public GameObject particle;     // 파티클
+    public GameObject txtDone;     // 완료 텍스트이미지
 
 
     public void btnDogClick()
@@ -28,6 +29,7 @@ public class btnDogController : MonoBehaviour
             btnDog.SetActive(false);
             btnBack.SetActive(false);
             bgBlack.SetActive(true);
+            txtDone.SetActive(true);
             particle.SetActive(true);
 
             PlayerPrefs.SetInt("feedLevel", 0);     // 식사 급수 내 단계 초기화. 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
