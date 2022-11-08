@@ -15,7 +15,13 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     public GameObject water;
     public GameObject stain;
     public GameObject tissueBox;
+    public GameObject btnBack;
 
+    public GameObject bgBlack;     // 검정배경
+    public GameObject particle;     // 파티클
+    public GameObject txtDone;     // 완료 텍스트이미지
+
+    Vector3 destination = new Vector3(3500, 900, 0);         // 사료봉투 이동 위치
 
     // Update is called once per frame
     void Update()
@@ -40,18 +46,26 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         if(touchNum >= totalNum)
         {
             // 게임오브젝트 삭제
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            this.transform.position = destination;
             Destroy(water);
             Destroy(stain);
             Destroy(tissueBox);
+            Destroy(btnBack);
+
+            // 성공 파티클
+            bgBlack.SetActive(true);
+            txtDone.SetActive(true);
+            particle.SetActive(true);
 
             // 하루 배변 치우기 횟수 증가
             int num = PlayerPrefs.GetInt("pooCleaningNum")+1;
             PlayerPrefs.SetInt("pooCleaningNum", num);
             // 미션 성공 알림
             PlayerPrefs.SetInt("successPooPeeClean", 1);
+
             // 씬 전환
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+            Invoke("ChangeScene1", 5.0f);           // 장면 전환
         }
 
     }
@@ -71,6 +85,13 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     public void OnEndDrag(PointerEventData eventData)
     {
         this.transform.position = defaultposition;
+    }
+
+    // 장면 전환
+    void ChangeScene1()
+    {
+        Debug.Log("donnnnennenen222");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
     }
 
 
