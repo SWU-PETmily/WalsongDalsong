@@ -17,6 +17,8 @@ public class Room1Director : MonoBehaviour
     int quitTime;             // 종료한 시간
     int exeTime;              // 실행한 시간
 
+    private float currentFill;           // 현재 게이지 
+
     void Start()
     {
         // 임시 변수
@@ -28,7 +30,8 @@ public class Room1Director : MonoBehaviour
         nowHealth = PlayerPrefs.GetFloat("guage");
 
         Debug.Log(PlayerPrefs.GetFloat("guage"));
-        gauge.fillAmount = PlayerPrefs.GetFloat("guage");
+        gauge.fillAmount = PlayerPrefs.GetFloat("guage");       // 현재 게이지 이미지 채우기
+        currentFill = PlayerPrefs.GetFloat("guage");            // 현재 게이지
 
         ExeDateCheck();       //시작 날짜시간 체크
         TimeSpans();
@@ -37,7 +40,19 @@ public class Room1Director : MonoBehaviour
     void Update()
     {
         controlGauge();     // 게이지 조정
+        if (gauge.fillAmount < currentFill)
+        {
+            gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime);
+        }
+
     }
+
+    // btn
+    public void btn()
+    {
+        increaseGaugeByFeed();
+    }
+
 
     // 게이지 변동
     void controlGauge()
@@ -65,7 +80,8 @@ public class Room1Director : MonoBehaviour
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
-        this.gauge.GetComponent<Image>().fillAmount += 0.15f;
+        //this.gauge.GetComponent<Image>().fillAmount += 0.15f;
+        currentFill = gauge.fillAmount + 0.15f;
         PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
         float f = PlayerPrefs.GetFloat("guage") + 0.15f;
         PlayerPrefs.SetFloat("guage", f);
@@ -92,7 +108,7 @@ public class Room1Director : MonoBehaviour
     {
         quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
         quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
-  
+
         Debug.Log("종료 날짜 : " + quitDate);
         Debug.Log("종료 시간 : " + quitTime);
 
@@ -122,7 +138,7 @@ public class Room1Director : MonoBehaviour
         if (quitDate != exeDate)
         {
             // 24시간 이상 미접속 했다면
-            if ((dateSpan==1 && (exeTime > quitTime)) || dateSpan>=2)
+            if ((dateSpan == 1 && (exeTime > quitTime)) || dateSpan >= 2)
             {
                 // 엔딩 1 실행
                 Debug.Log("엔딩 1로 이동.");
