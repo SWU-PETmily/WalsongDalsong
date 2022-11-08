@@ -19,19 +19,27 @@ public class TissueBoxController : MonoBehaviour
         
     }
 
+    public void ClickTissue()
+    {
+        tissue.SetActive(true);
+    }
+
     // 티슈박스 터치 시 티슈 생성
     void ActiveTissue()
     {
         if (Input.GetMouseButtonDown(0))
         {
+
             //화면의 좌표계를 월드 좌표계로 전환해주는 함수
-            Vector2 tissueBox = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(tissueBox, Vector2.zero);
+            Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(touchPos, Camera.main.transform.forward);
 
             if (hit.collider != null)
             {
                 Debug.Log(hit.collider.gameObject.name);
                 string touchObject = hit.collider.gameObject.name;      // 터치된 오브젝트명
+
+                Debug.Log(touchObject);
 
                 if (touchObject == "tissueBox" || touchObject == "tissueBox1" || touchObject == "tissueBox2")
                 {

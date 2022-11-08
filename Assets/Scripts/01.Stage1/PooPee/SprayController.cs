@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class SprayController : MonoBehaviour
+public class SprayController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-
+    public static Vector2 defaultposition;
     GameObject stain;
     public GameObject water;
     public GameObject tissue;
@@ -20,13 +22,14 @@ public class SprayController : MonoBehaviour
     bool actSpray = false;
 
     private Animator animator;
-    Vector3 destination = new Vector3(5, 2, 0);         // 스프레이 이동 위치
+    Vector3 destination = new Vector3(1990,1060, 0);         // 스프레이 이동 위치
     Vector3 rotation = new Vector3(0, 0, 40);         // 스프레이  기울기
+    bool isCollision = false;                    // 충돌 확인 변수
 
     // Start is called before the first frame update
     void Start()
     {
-        this.stain = GameObject.Find("stain");
+        this.stain = GameObject.Find("stain1");
 
         // 애니메이터
         this.animator = GetComponent<Animator>();
@@ -44,23 +47,11 @@ public class SprayController : MonoBehaviour
         float r2 = 1.2f;                                // 얼룩 중심 반경
 
 
-        /*
-        if (d >= d2  && actSpray==false)
+        if (d < r1 + r2+300.0f)
         {
-            // 스프레이 초록
-            gameObject.GetComponent<SpriteRenderer>().sprite = this.img_spray;
-        }
-        else
-        {
-            // 스프레이
-            gameObject.GetComponent<SpriteRenderer>().sprite = this.img_spray;
-        }
-        */
-
-        if (d < r1 + r2)
-        {
-            gameObject.transform.position = destination;       //스프레이 이동
-            gameObject.transform.localEulerAngles = rotation;        //스프레이 기울이기
+            isCollision = true;
+            this.transform.position = destination;       //스프레이 이동
+            this.transform.localEulerAngles = rotation;        //스프레이 기울이기
             this.animator.SetTrigger("SprayTrigger");          // 애니메이션 실행
             water.SetActive(true);      //물방울 보이기
             Invoke("Water", 1.0f);
@@ -76,7 +67,7 @@ public class SprayController : MonoBehaviour
 
     void Water()
     {
-        water.GetComponent<SpriteRenderer>().sprite = this.img_water;       // 물방울 더 보이기
+        water.GetComponent<Image>().sprite = this.img_water;       // 물방울 더 보이기
         actSpray = true;
         Destroy(gameObject, 2);                 // 스프레이 삭제
     }
@@ -84,5 +75,33 @@ public class SprayController : MonoBehaviour
     void Tissue()
     {
         tissue.SetActive(true);      // 티슈 보이기
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (!isCollision)
+        {
+            defaultposition = this.transform.position;
+        }
+
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (!isCollision)
+        {
+            Vector2 currentPos = Input.mousePosition;
+            this.transform.position = currentPos;
+        }
+
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (!isCollision)
+        {
+            this.transform.position = defaultposition;
+        }
+
     }
 }

@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class TissueController : MonoBehaviour
+public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public static Vector2 defaultposition;
 
     bool left = true;
     int touchNum = 0;       // µå·¡±× È½¼ö Ä«¿îÆ®
-    int totalNum = 7;       // µå·¡±× ÃÑ È½¼ö 
+    int totalNum = 5;       // µå·¡±× ÃÑ È½¼ö 
 
     public GameObject water;
     public GameObject stain;
@@ -23,14 +24,14 @@ public class TissueController : MonoBehaviour
         Vector3 t1 = transform.position;                // Æ¼½´ Áß½É ÁÂÇ¥
 
         // ¿ÞÂÊ¿¡ ´êÀ¸¸é
-        if(t1.x <= -1 && (t1.y >= -1.55f || t1.y <= 1.8f) && left==true)
+        if(t1.x <= 1200.0f && (t1.y >= 476.0f || t1.y <= 1000.0f) && left==true)
         {
             left = false;
             touchNum++;
         }
 
-        // ¿ÞÂÊ¿¡ ´êÀ¸¸é
-        if (t1.x >= 1.6f && (t1.y >= -1.55f || t1.y <= 1.8f) && left == false)
+        // ¿À¸¥ÂÊ¿¡ ´êÀ¸¸é
+        if (t1.x >= 1800.0f && (t1.y >= 476.0f || t1.y <= 1000.0f) && left == false)
         {
             left = true;
             touchNum++;
@@ -53,6 +54,23 @@ public class TissueController : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
         }
 
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        defaultposition = this.transform.position;
+        stain.SetActive(true);      // ¾ó·è º¸ÀÌ±â
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        Vector2 currentPos = Input.mousePosition;
+        this.transform.position = currentPos;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        this.transform.position = defaultposition;
     }
 
 
