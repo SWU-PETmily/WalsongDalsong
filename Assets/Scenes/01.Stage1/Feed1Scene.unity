@@ -1067,12 +1067,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c306b3836e40047871e6e29dc91d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bg: {fileID: 1926314564}
   feed1: {fileID: 645957521}
   feed2: {fileID: 546264229}
   btnDog: {fileID: 602369288}
   bowlWater: {fileID: 767015734}
   closeBag: {fileID: 21300000, guid: 7da29b9eb221c864799e7c6d259564ea, type: 3}
   openBag: {fileID: 21300000, guid: 52cbb19955518db448c319b006638d75, type: 3}
+  imgShadowY: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
+  imgShadowN: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
   BowlAnimatior: {fileID: 541902519}
 --- !u!50 &954912796
 Rigidbody2D:
@@ -6218,9 +6221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43e6b5a02a763141ba369b22c2a291e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bg: {fileID: 1926314564}
   btnDog: {fileID: 602369288}
   closeWater: {fileID: 21300000, guid: 5a3e6eacf177471479a21fddef777d56, type: 3}
   openWater: {fileID: 21300000, guid: 7d0850d9cb2f35c4baa47d469992dbc0, type: 3}
+  imgShadowY: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
+  imgShadowN: {fileID: 21300000, guid: 5da83c841630b4945becdc03156d0d79, type: 3}
   BowlWaterAnimatior: {fileID: 767015740}
 --- !u!95 &1585349784
 Animator:
@@ -6271,6 +6277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfc4e1188d61ba4438773721df1dabc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bg: {fileID: 1926314564}
   bowlFeed: {fileID: 541902513}
   bowlWater: {fileID: 767015734}
   btnDog: {fileID: 602369288}
@@ -6278,6 +6285,7 @@ MonoBehaviour:
   bgBlack: {fileID: 962277183}
   particle: {fileID: 1462553779}
   txtDone: {fileID: 142300409}
+  imgShadowN: {fileID: 21300000, guid: 61fa4507f2e677140beba97d7666719e, type: 3}
 --- !u!4 &1621940415
 Transform:
   m_ObjectHideFlags: 0

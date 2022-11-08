@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public GameObject bg;           // 배경
     public GameObject feed1;        // 사료알1
     public GameObject feed2;        // 사료알2
     public GameObject btnDog;        // 강아지버튼
@@ -13,6 +14,8 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public static Vector2 defaultposition;
     public Sprite closeBag;         // 닫은 사료봉투 이미지
     public Sprite openBag;          // 열린 사료봉투 이미지
+    public Sprite imgShadowY;         // 배경 그림자 있는 이미지(사료)
+    public Sprite imgShadowN;         // 배경 그림자 없는 이미지(사료)
     private Animator FeedingAnimator;
     public Animator BowlAnimatior;
     Vector3 destination = new Vector3(1000, 900, 0);         // 사료봉투 이동 위치
@@ -43,6 +46,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             // 충돌이 없었다면
             defaultposition = this.transform.position;
             this.GetComponent<Image>().sprite = openBag;
+            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
             this.transform.localEulerAngles = rotationMove;     // 봉투 기울이기
         }
     }
@@ -60,6 +64,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             Vector2 currentPos = Input.mousePosition;
             this.transform.position = currentPos;
             this.GetComponent<Image>().sprite = openBag;
+            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
             this.transform.localEulerAngles = rotationMove;    // 봉투 기울이기
         }
     }
@@ -76,6 +81,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             // 충돌이 없었다면
             this.transform.position = defaultposition;
             this.GetComponent<Image>().sprite = closeBag;
+            bg.GetComponent<SpriteRenderer>().sprite = imgShadowY;         // 배경 그림자 생기기
             this.transform.localEulerAngles = rotationStop;     // 봉투 바로 세우기
         }
     }
@@ -91,6 +97,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             feed1.SetActive(true);      // 사료1 떨어지기
             feed2.SetActive(true);      // 사료2 떨어지기
             BowlAnimatior.SetBool("isBowl", true);      // 밥그릇 애니메이터 실행
+            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
 
             Invoke("ButtonActive", 4.0f);           // 버튼 활성화
             Destroy(gameObject, 4);                 // 사료 봉투 삭제

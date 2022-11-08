@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class btnDogController : MonoBehaviour
 {
+    public GameObject bg;           // 배경
     public GameObject bowlFeed;     // 사료그릇
     public GameObject bowlWater;     // 물그릇
     public GameObject btnDog;     // 강아지 버튼
@@ -11,6 +12,7 @@ public class btnDogController : MonoBehaviour
     public GameObject bgBlack;     // 검정배경
     public GameObject particle;     // 파티클
     public GameObject txtDone;     // 완료 텍스트이미지
+    public Sprite imgShadowN;         // 배경 그림자 없는 이미지(그릇)
 
 
     public void btnDogClick()
@@ -31,6 +33,7 @@ public class btnDogController : MonoBehaviour
             bgBlack.SetActive(true);
             txtDone.SetActive(true);
             particle.SetActive(true);
+            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
 
             PlayerPrefs.SetInt("feedLevel", 0);     // 식사 급수 내 단계 초기화. 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
             PlayerPrefs.SetInt("successFeed", 1);     // 식사 급수 미션 성공

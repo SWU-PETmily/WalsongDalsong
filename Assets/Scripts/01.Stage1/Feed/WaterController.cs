@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public GameObject bg;           // 배경
     public GameObject btnDog;        // 강아지버튼
     public static Vector2 defaultposition;
     public Sprite closeWater;         // 닫은 물병 이미지
     public Sprite openWater;          // 열린 물병 이미지
+    public Sprite imgShadowY;         // 배경 그림자 있는 이미지(물)
+    public Sprite imgShadowN;         // 배경 그림자 없는 이미지(물)
     private Animator WateringAnimator;
     public Animator BowlWaterAnimatior;
 
@@ -33,6 +36,8 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // 충돌이 없었다면
                 defaultposition = this.transform.position;
                 this.GetComponent<Image>().sprite = openWater;
+                bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
+
             }
         }
 
@@ -54,6 +59,8 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 Vector2 currentPos = Input.mousePosition;
                 this.transform.position = currentPos;
                 this.GetComponent<Image>().sprite = openWater;
+                bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
+
             }
         }
        
@@ -74,6 +81,8 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // 충돌이 없었다면
                 this.transform.position = defaultposition;
                 this.GetComponent<Image>().sprite = closeWater;
+                bg.GetComponent<SpriteRenderer>().sprite = imgShadowY;         // 배경 그림자 없애기
+
             }
         }
     }
@@ -87,6 +96,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             isCollision = true;
             WateringAnimator.SetBool("isWater", true);    // 물병 애니메이터 실행
             BowlWaterAnimatior.SetBool("isBowlWater", true);      // 물그릇 애니메이터 실행
+            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
 
             Invoke("ButtonActive", 4.0f);           // 버튼 활성화
             Destroy(gameObject, 4);                 // 물병 삭제
