@@ -27,6 +27,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     void Start()
     {
         FeedingAnimator = GetComponent<Animator>();
+        bg.GetComponent<SpriteRenderer>().sprite = imgShadowY;         // 배경 그림자 생기기
         feed1.SetActive(false);
         feed2.SetActive(false);
         btnDog.SetActive(false);

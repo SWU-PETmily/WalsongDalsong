@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384663397}
-  - component: {fileID: 384663396}
+  - component: {fileID: 384663398}
   m_Layer: 0
   m_Name: GameDirector
   m_TagString: Untagged
@@ -434,19 +434,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &384663396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 384663395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcfb9b36e2d38dd4ab17ff27c12d10bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gauge: {fileID: 803251238}
 --- !u!4 &384663397
 Transform:
   m_ObjectHideFlags: 0
@@ -462,6 +449,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384663398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384663395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdfb8d394d34ee4abe9b37fe1a2b8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gauge: {fileID: 803251238}
 --- !u!1 &404485591
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,8 +546,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 669504176}
-        m_TargetAssemblyTypeName: RoomBtnManager, Assembly-CSharp
+      - m_Target: {fileID: 669504178}
+        m_TargetAssemblyTypeName: Room2BtnManager, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1
         m_Arguments:
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 669504176}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomBtnManager, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1
@@ -1091,7 +1091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 669504177}
-  - component: {fileID: 669504176}
+  - component: {fileID: 669504178}
   m_Layer: 0
   m_Name: RoomBtnManager
   m_TagString: Untagged
@@ -1099,18 +1099,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &669504176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669504175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceaee285d280f144caf47b9332aa339f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &669504177
 Transform:
   m_ObjectHideFlags: 0
@@ -1126,6 +1114,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669504178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669504175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab24f6ca35d40fe43a9ba35044328d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803251237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,8 +1286,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 669504176}
-        m_TargetAssemblyTypeName: RoomBtnManager, Assembly-CSharp
+      - m_Target: {fileID: 669504178}
+        m_TargetAssemblyTypeName: Room2BtnManager, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1
         m_Arguments:
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 669504176}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomBtnManager, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1
@@ -2953,7 +2953,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 669504176}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomBtnManager, Assembly-CSharp
         m_MethodName: BtnClick
         m_Mode: 1

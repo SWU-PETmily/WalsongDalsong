@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
 
-// 게이지 관리 && 자정 지나고 접속 시 엔딩/가상부모씬으로 이동
-public class Room1Director : MonoBehaviour
+public class Room2Director : MonoBehaviour
 {
     public Image gauge;
 
@@ -24,7 +23,7 @@ public class Room1Director : MonoBehaviour
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetFloat("guage", 0.1f);
-        PlayerPrefs.SetInt("stage", 1);
+        PlayerPrefs.SetInt("stage", 2);
 
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");       // 현재 게이지 이미지 채우기
@@ -43,7 +42,7 @@ public class Room1Director : MonoBehaviour
         }
 
         // 게이지가 100에 도달하면
-        if(gauge.fillAmount >= 1.0f)
+        if (gauge.fillAmount >= 1.0f)
         {
             //스테이지 변경용 변수 초기화
             ChangeStage();
@@ -87,9 +86,9 @@ public class Room1Director : MonoBehaviour
     void increaseGaugeByFeed()
     {
         //this.gauge.GetComponent<Image>().fillAmount += 0.15f;
-        currentFill = gauge.fillAmount + 0.15f;
+        currentFill = gauge.fillAmount + 0.05f;
         PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.15f;
+        float f = PlayerPrefs.GetFloat("guage") + 0.05f;
         PlayerPrefs.SetFloat("guage", f);
 
     }
