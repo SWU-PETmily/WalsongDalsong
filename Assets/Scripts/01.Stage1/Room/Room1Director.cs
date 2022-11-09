@@ -45,6 +45,8 @@ public class Room1Director : MonoBehaviour
         // 게이지가 100에 도달하면
         if(gauge.fillAmount >= 1.0f)
         {
+            //스테이지 변경용 변수 초기화
+            ChangeStage();
             // 가을 애니메이션 보여주기
             UnityEngine.SceneManagement.SceneManager.LoadScene("SummerToWinterScene");
         }
@@ -155,5 +157,17 @@ public class Room1Director : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Parent1Scene");
             }
         }
+    }
+
+    // 스테이지 변동
+    private void ChangeStage()
+    {
+        PlayerPrefs.SetInt("stage", 2);
+        PlayerPrefs.SetInt("successFeed", 0);
+        PlayerPrefs.SetInt("successPooPeeClean", 0);
+        PlayerPrefs.SetFloat("guage", 0.0f);
+        PlayerPrefs.SetInt("goodLevel", 0);
+        PlayerPrefs.SetInt("badLevel", 0);
+        PlayerPrefs.SetInt("feedLevel", 0);
     }
 }
