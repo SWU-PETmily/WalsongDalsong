@@ -188,6 +188,8 @@ public class Parent1Advice : MonoBehaviour
     // 종료시 실행
     private void OnApplicationQuit()
     {
+        PlayerPrefs.SetString("quitSceneName", "Room1Scene");   // 종료씬 저장
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");  // 거실로 돌아가기
         QuitDateCheck(); //종료날짜시간 체크
     }
 

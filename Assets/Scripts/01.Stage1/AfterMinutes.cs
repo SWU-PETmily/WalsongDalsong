@@ -89,11 +89,15 @@ public class AfterMinutes : MonoBehaviour
             t1 = t1 * -1;
         }
 
+        // 종료한 지 30분이 지났다면
         if (t1 >=30)
         {
-            //gauge.enabled = (true);
-            good.SetActive(true);
-            return true;
+            // 처음 시작이 아니라면
+            if(lasttime != -1)
+            {
+                good.SetActive(true);
+                return true;
+            }
         }
 
         bad.SetActive(true);
@@ -111,8 +115,8 @@ public class AfterMinutes : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        PlayerPrefs.SetString("quitSceneName", "CalmingSignal");   // 종료씬 저장
         print("종료");
-
         LetsCheck();//종료시간 체크
     }
 

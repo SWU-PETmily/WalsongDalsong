@@ -35,7 +35,7 @@ public class SceneManager : MonoBehaviour
     // 종료시 실행
     private void OnApplicationQuit()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");       // 종료시 거실로 이동
+        PlayerPrefs.SetString("quitSceneName", "Room1Scene");   // 종료씬 저장
         QuitDateCheck(); //종료날짜시간 체크
         PlayerPrefs.SetInt("successPooPeeClean", 0);     // 배소변 미션 실패
     }

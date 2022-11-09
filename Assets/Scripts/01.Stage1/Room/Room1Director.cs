@@ -106,6 +106,7 @@ public class Room1Director : MonoBehaviour
     // 종료시 실행
     private void OnApplicationQuit()
     {
+        PlayerPrefs.SetString("quitSceneName", "Room1Scene");   // 종료씬 저장
         QuitDateCheck(); //종료날짜시간 체크
     }
 
@@ -140,23 +141,28 @@ public class Room1Director : MonoBehaviour
         quitTime = PlayerPrefs.GetInt("quitTime");
         int dateSpan = exeDate - quitDate;          // 날짜 차이
 
-        // 날이 바뀌었다면
-        if (quitDate != exeDate)
+        // 첫 시작이 아니라면
+        if(quitTime != -1)
         {
-            // 24시간 이상 미접속 했다면
-            if ((dateSpan == 1 && (exeTime > quitTime)) || dateSpan >= 2)
+            // 날이 바뀌었다면
+            if (quitDate != exeDate)
             {
-                // 엔딩 1 실행
-                Debug.Log("엔딩 1로 이동.");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
-            }
-            else
-            {
-                // 가상 부모 평가로 이동
-                Debug.Log("가상 부모 평가로 이동.");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Parent1Scene");
+                // 24시간 이상 미접속 했다면
+                if ((dateSpan == 1 && (exeTime > quitTime)) || dateSpan >= 2)
+                {
+                    // 엔딩 1 실행
+                    Debug.Log("엔딩 1로 이동.");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
+                }
+                else
+                {
+                    // 가상 부모 평가로 이동
+                    Debug.Log("가상 부모 평가로 이동.");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Parent1Scene");
+                }
             }
         }
+        
     }
 
     // 스테이지 변동

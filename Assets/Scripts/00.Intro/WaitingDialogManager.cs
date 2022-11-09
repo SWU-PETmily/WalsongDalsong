@@ -35,6 +35,7 @@ public class WaitingDialogManager : MonoBehaviour
                 break;
             case 5:
                 dialogBox.SetActive(false);
+                PlayerPrefs.SetInt("lasttime", -1);     // 처음 실행인 지 알기위한 변수 저장
                 UnityEngine.SceneManagement.SceneManager.LoadScene("CalmingSignal");
                 break;
             default:

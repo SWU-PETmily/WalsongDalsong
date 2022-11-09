@@ -76,6 +76,7 @@ public class Door1SceneManager : MonoBehaviour
     // 종료시 실행
     private void OnApplicationQuit()
     {
+        PlayerPrefs.SetString("quitSceneName", "Room1Scene");   // 종료씬 저장
         QuitDateCheck(); //종료날짜시간 체크
     }
 

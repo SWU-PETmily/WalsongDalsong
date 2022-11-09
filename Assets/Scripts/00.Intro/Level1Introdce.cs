@@ -37,6 +37,7 @@ public class Level1Introdce : MonoBehaviour
                 break;
             case 6:
                 dialogBox.SetActive(false);
+                PlayerPrefs.SetInt("quitTime", -1);     // 처음 실행인 지 알기위한 변수 저장
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
                 break;
             default:

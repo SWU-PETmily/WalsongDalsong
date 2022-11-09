@@ -41,7 +41,7 @@ public class FeedSceneManager : MonoBehaviour
     // 종료시 실행
     private void OnApplicationQuit()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");       // 종료시 거실로 이동
+        PlayerPrefs.SetString("quitSceneName", "Room1Scene");   // 종료씬 저장
         QuitDateCheck(); //종료날짜시간 체크
         PlayerPrefs.SetInt("feedLevel", 0);     // 식사 급수 내 단계 저장. 0=아무것도 안 함. 1=식사지급완료, 2=물지급완료.
         PlayerPrefs.SetInt("successFeed", 0);     // 식사 급수 미션 실패
