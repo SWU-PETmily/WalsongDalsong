@@ -113,7 +113,7 @@ public class AfterMinutes : MonoBehaviour
 
     }
 
-    private void OnApplicationQuit()
+    private void OnApplicationPause()
     {
         PlayerPrefs.SetString("quitSceneName", "CalmingSignal");   // 종료씬 저장
         print("종료");

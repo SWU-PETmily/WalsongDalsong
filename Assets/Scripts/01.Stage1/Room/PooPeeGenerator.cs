@@ -31,7 +31,7 @@ public class PooPeeGenerator : MonoBehaviour
         else
         {
             // 소변 코루틴 시작
-            StartCoroutine("PeeRoutine");
+            StartCoroutine("PooRoutine");
         }
     
     }

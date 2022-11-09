@@ -8,6 +8,9 @@ public class GameStart : MonoBehaviour
 
     void Start()
     {
+        //22.11.09 임시변수
+        //PlayerPrefs.SetString("quitSceneName", "nothing");
+
         // 게임 클리어 횟수 확인 및 저장
         if (!PlayerPrefs.HasKey("gameClearNumber"))
             PlayerPrefs.SetInt("gameClearNumber", 0);
