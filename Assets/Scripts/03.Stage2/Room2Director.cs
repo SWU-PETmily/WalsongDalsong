@@ -103,7 +103,7 @@ public class Room2Director : MonoBehaviour
     }
 
     // 종료시 실행
-    private void OnApplicationQuit()
+    private void OnApplicationPause()
     {
         PlayerPrefs.SetString("quitSceneName", "Room2Scene");   // 종료씬 저장
         QuitDateCheck(); //종료날짜시간 체크
