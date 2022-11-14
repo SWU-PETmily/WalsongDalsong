@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgTable: {fileID: 1926314564}
   imgDayBg: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
-  imgNightBg: {fileID: 21300000, guid: dba3b6fbc48c2ad4da1215cd8e564d61, type: 3}
+  imgNightBg: {fileID: 21300000, guid: 015792aa7b1e3ca4db26e40ad21e6124, type: 3}
   isDay: 1
 --- !u!4 &443332447
 Transform:
@@ -6285,6 +6285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg: {fileID: 1926314564}
+  imgDayBg: {fileID: 21300000, guid: 61fa4507f2e677140beba97d7666719e, type: 3}
+  imgNightBg: {fileID: 21300000, guid: a638bf157df57c8428a58a12d1223562, type: 3}
+  isDay: 1
   bowlFeed: {fileID: 541902513}
   bowlWater: {fileID: 767015734}
   btnDog: {fileID: 602369288}

@@ -145,14 +145,6 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         // 낮밤 확인 후 배경 변경
         FeedSceneManager feedSceneManager = GameObject.Find("SceneManager").GetComponent<FeedSceneManager>();
         isDay = feedSceneManager.isDay;
-        if (isDay == true)
-        {
-            bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowY;         // 배경 그림자 생기기 - 낮
-        }
-        else
-        {
-            bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowY;         // 배경 그림자 생기기 - 밤
-        }
     }
 
     // Update is called once per frame
