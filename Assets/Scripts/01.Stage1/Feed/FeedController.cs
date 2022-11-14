@@ -14,8 +14,11 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public static Vector2 defaultposition;
     public Sprite closeBag;         // 닫은 사료봉투 이미지
     public Sprite openBag;          // 열린 사료봉투 이미지
-    public Sprite imgShadowY;         // 배경 그림자 있는 이미지(사료)
-    public Sprite imgShadowN;         // 배경 그림자 없는 이미지(사료)
+    public Sprite imgDayShadowY;         // 배경 그림자 있는 낮 이미지(사료)
+    public Sprite imgDayShadowN;         // 배경 그림자 없는 낮 이미지(사료)
+    public Sprite imgNightShadowY;         // 배경 그림자 있는 밤 이미지(사료)
+    public Sprite imgNightShadowN;         // 배경 그림자 없는 밤 이미지(사료)
+    public bool isDay;
     private Animator FeedingAnimator;
     public Animator BowlAnimatior;
     Vector3 destination = new Vector3(1000, 900, 0);         // 사료봉투 이동 위치
@@ -27,12 +30,23 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     void Start()
     {
         FeedingAnimator = GetComponent<Animator>();
-        bg.GetComponent<SpriteRenderer>().sprite = imgShadowY;         // 배경 그림자 생기기
         feed1.SetActive(false);
         feed2.SetActive(false);
         btnDog.SetActive(false);
         bowlWater.SetActive(false);
         PlayerPrefs.SetInt("feedLevel", 0);     // 식사 급수 내 단계 저장. 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
+
+        // 낮밤 확인 후 배경 변경
+        FeedSceneManager feedSceneManager = GameObject.Find("SceneManager").GetComponent<FeedSceneManager>();
+        isDay = feedSceneManager.isDay;
+        if (isDay== true)
+        {
+            bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowY;         // 배경 그림자 생기기 - 낮
+        }
+        else
+        {
+            bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowY;         // 배경 그림자 생기기 - 밤
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -47,7 +61,14 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             // 충돌이 없었다면
             defaultposition = this.transform.position;
             this.GetComponent<Image>().sprite = openBag;
-            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
+            if (isDay == true)
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowN;         // 배경 그림자 없애기 - 낮
+            }
+            else
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowN;       // 배경 그림자 없애기 - 밤
+            }
             this.transform.localEulerAngles = rotationMove;     // 봉투 기울이기
         }
     }
@@ -65,7 +86,14 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             Vector2 currentPos = Input.mousePosition;
             this.transform.position = currentPos;
             this.GetComponent<Image>().sprite = openBag;
-            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
+            if (isDay == true)
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowN;         // 배경 그림자 없애기 - 낮
+            }
+            else
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowN;       // 배경 그림자 없애기 - 밤
+            }
             this.transform.localEulerAngles = rotationMove;    // 봉투 기울이기
         }
     }
@@ -82,7 +110,14 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             // 충돌이 없었다면
             this.transform.position = defaultposition;
             this.GetComponent<Image>().sprite = closeBag;
-            bg.GetComponent<SpriteRenderer>().sprite = imgShadowY;         // 배경 그림자 생기기
+            if (isDay == true)
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowY;         // 배경 그림자 생기기 - 낮
+            }
+            else
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowY;        // 배경 그림자 생기기 - 밤
+            }
             this.transform.localEulerAngles = rotationStop;     // 봉투 바로 세우기
         }
     }
@@ -98,7 +133,14 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             feed1.SetActive(true);      // 사료1 떨어지기
             feed2.SetActive(true);      // 사료2 떨어지기
             BowlAnimatior.SetBool("isBowl", true);      // 밥그릇 애니메이터 실행
-            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
+            if (isDay == true)
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowN;         // 배경 그림자 없애기 - 낮
+            }
+            else
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowN;       // 배경 그림자 없애기 - 밤
+            }
 
             Invoke("ButtonActive", 4.0f);           // 버튼 활성화
             Destroy(gameObject, 4);                 // 사료 봉투 삭제

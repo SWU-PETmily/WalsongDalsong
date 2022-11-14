@@ -11,8 +11,11 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public static Vector2 defaultposition;
     public Sprite closeWater;         // 닫은 물병 이미지
     public Sprite openWater;          // 열린 물병 이미지
-    public Sprite imgShadowY;         // 배경 그림자 있는 이미지(물)
-    public Sprite imgShadowN;         // 배경 그림자 없는 이미지(물)
+    public Sprite imgDayShadowY;         // 배경 그림자 있는 낮 이미지(물)
+    public Sprite imgDayShadowN;         // 배경 그림자 없는 낮 이미지(물)
+    public Sprite imgNightShadowY;         // 배경 그림자 있는 밤 이미지(물)
+    public Sprite imgNightShadowN;         // 배경 그림자 없는 밤 이미지(물)
+    public bool isDay;
     private Animator WateringAnimator;
     public Animator BowlWaterAnimatior;
 
@@ -36,8 +39,14 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // 충돌이 없었다면
                 defaultposition = this.transform.position;
                 this.GetComponent<Image>().sprite = openWater;
-                bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
-
+                if (isDay == true)
+                {
+                    bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowN;         // 배경 그림자 없애기 - 낮
+                }
+                else
+                {
+                    bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowN;       // 배경 그림자 없애기 - 밤
+                }
             }
         }
 
@@ -59,7 +68,14 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 Vector2 currentPos = Input.mousePosition;
                 this.transform.position = currentPos;
                 this.GetComponent<Image>().sprite = openWater;
-                bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
+                if (isDay == true)
+                {
+                    bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowN;         // 배경 그림자 없애기 - 낮
+                }
+                else
+                {
+                    bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowN;       // 배경 그림자 없애기 - 밤
+                }
 
             }
         }
@@ -81,8 +97,14 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // 충돌이 없었다면
                 this.transform.position = defaultposition;
                 this.GetComponent<Image>().sprite = closeWater;
-                bg.GetComponent<SpriteRenderer>().sprite = imgShadowY;         // 배경 그림자 없애기
-
+                if (isDay == true)
+                {
+                    bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowY;         // 배경 그림자 생기기 - 낮
+                }
+                else
+                {
+                    bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowY;        // 배경 그림자 생기기 - 밤
+                }
             }
         }
     }
@@ -95,9 +117,15 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             Debug.Log("collision!!!");
             isCollision = true;
             WateringAnimator.SetBool("isWater", true);    // 물병 애니메이터 실행
-            BowlWaterAnimatior.SetBool("isBowlWater", true);      // 물그릇 애니메이터 실행
-            bg.GetComponent<SpriteRenderer>().sprite = imgShadowN;         // 배경 그림자 없애기
-
+            BowlWaterAnimatior.SetBool("isBowlWater", true);      // 물그릇 애니메이터 실행  
+            if (isDay == true)
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowN;         // 배경 그림자 없애기 - 낮
+            }
+            else
+            {
+                bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowN;       // 배경 그림자 없애기 - 밤
+            }
             Invoke("ButtonActive", 4.0f);           // 버튼 활성화
             Destroy(gameObject, 4);                 // 물병 삭제
         }
@@ -114,6 +142,17 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     void Start()
     {
         WateringAnimator = GetComponent<Animator>();
+        // 낮밤 확인 후 배경 변경
+        FeedSceneManager feedSceneManager = GameObject.Find("SceneManager").GetComponent<FeedSceneManager>();
+        isDay = feedSceneManager.isDay;
+        if (isDay == true)
+        {
+            bg.GetComponent<SpriteRenderer>().sprite = imgDayShadowY;         // 배경 그림자 생기기 - 낮
+        }
+        else
+        {
+            bg.GetComponent<SpriteRenderer>().sprite = imgNightShadowY;         // 배경 그림자 생기기 - 밤
+        }
     }
 
     // Update is called once per frame

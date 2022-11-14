@@ -315,6 +315,7 @@ MonoBehaviour:
   bgTable: {fileID: 1926314564}
   imgDayBg: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
   imgNightBg: {fileID: 21300000, guid: dba3b6fbc48c2ad4da1215cd8e564d61, type: 3}
+  isDay: 1
 --- !u!4 &443332447
 Transform:
   m_ObjectHideFlags: 0
@@ -1074,8 +1075,11 @@ MonoBehaviour:
   bowlWater: {fileID: 767015734}
   closeBag: {fileID: 21300000, guid: 7da29b9eb221c864799e7c6d259564ea, type: 3}
   openBag: {fileID: 21300000, guid: 52cbb19955518db448c319b006638d75, type: 3}
-  imgShadowY: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
-  imgShadowN: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
+  imgDayShadowY: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
+  imgDayShadowN: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
+  imgNightShadowY: {fileID: 21300000, guid: 015792aa7b1e3ca4db26e40ad21e6124, type: 3}
+  imgNightShadowN: {fileID: 21300000, guid: 0da37ba6373e37343bd5fbdf0fa42080, type: 3}
+  isDay: 0
   BowlAnimatior: {fileID: 541902519}
 --- !u!50 &954912796
 Rigidbody2D:
@@ -6225,8 +6229,11 @@ MonoBehaviour:
   btnDog: {fileID: 602369288}
   closeWater: {fileID: 21300000, guid: 5a3e6eacf177471479a21fddef777d56, type: 3}
   openWater: {fileID: 21300000, guid: 7d0850d9cb2f35c4baa47d469992dbc0, type: 3}
-  imgShadowY: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
-  imgShadowN: {fileID: 21300000, guid: 5da83c841630b4945becdc03156d0d79, type: 3}
+  imgDayShadowY: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
+  imgDayShadowN: {fileID: 21300000, guid: 130b00fccc4219f4692a23b01bc242a8, type: 3}
+  imgNightShadowY: {fileID: 21300000, guid: 0da37ba6373e37343bd5fbdf0fa42080, type: 3}
+  imgNightShadowN: {fileID: 21300000, guid: a0cbde8a7a4dcb04a969e18ba787f1fa, type: 3}
+  isDay: 0
   BowlWaterAnimatior: {fileID: 767015740}
 --- !u!95 &1585349784
 Animator:

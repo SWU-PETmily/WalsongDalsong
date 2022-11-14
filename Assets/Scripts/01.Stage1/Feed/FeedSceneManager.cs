@@ -10,6 +10,7 @@ public class FeedSceneManager : MonoBehaviour
     public GameObject bgTable;      // 배경 오브젝트
     public Sprite imgDayBg;         // 낮 배경 이미지
     public Sprite imgNightBg;          // 밤 배경 이미지
+    public bool isDay = true;          // 낮 확인 변수
 
     // Start is called before the first frame update
     void Start()
@@ -29,11 +30,13 @@ public class FeedSceneManager : MonoBehaviour
         {
             // 낮이라면
             bgTable.GetComponent<SpriteRenderer>().sprite = imgDayBg;
+            isDay = true;
         }
         else
         {
             // 밤이라면
             bgTable.GetComponent<SpriteRenderer>().sprite = imgNightBg;
+            isDay = false;
         }
 
     }
