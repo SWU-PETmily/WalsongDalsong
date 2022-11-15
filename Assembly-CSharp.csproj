@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\00.Intro\NamingStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\Door1SceneManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TouchTheDog.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyDayNightController.cs" />
