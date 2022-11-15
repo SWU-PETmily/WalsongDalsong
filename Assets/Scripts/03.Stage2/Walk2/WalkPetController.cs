@@ -30,7 +30,7 @@ public class WalkPetController : MonoBehaviour
             animator.SetTrigger("Left");
             */
             animator.SetInteger("Direction", 2);
-            moveVelocity = new Vector3(-80f, 0, 0);
+            moveVelocity = new Vector3(-0.5f, 0, 0);
             transform.position += moveVelocity * moveSpeed * Time.deltaTime;
             wasLeft = true;
         }
@@ -44,7 +44,7 @@ public class WalkPetController : MonoBehaviour
             animator.SetTrigger("Right");
             */
             animator.SetInteger("Direction", 4);
-            moveVelocity = new Vector3(+80f, 0, 0);
+            moveVelocity = new Vector3(+0.5f, 0, 0);
             transform.position += moveVelocity * moveSpeed * Time.deltaTime;
             wasLeft = false;
         }
