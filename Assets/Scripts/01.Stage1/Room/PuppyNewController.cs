@@ -43,131 +43,131 @@ public class PuppyNewController : MonoBehaviour
 
         // pos2-오른쪽으로 이동
         animator.ResetTrigger("SitTrigger");    // 이동 트리거
-        animator.SetTrigger("RightDayTrigger");    // 이동 트리거
+        animator.SetTrigger("RightTrigger");    // 이동 트리거
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("RightDayTrigger");    // 이동 트리거
+        animator.ResetTrigger("RightTrigger");    // 이동 트리거
         animator.SetTrigger("SitTrigger");    // 이동 트리거
         yield return new WaitForSeconds(delaySit);
 
         // pos3-오른쪽 아래로 이동
         animator.ResetTrigger("SitTrigger");    
-        animator.SetTrigger("RightDownDayTrigger");
+        animator.SetTrigger("RightDownTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("RightDownDayTrigger");   
+        animator.ResetTrigger("RightDownTrigger");   
         animator.SetTrigger("SitTrigger"); 
         yield return new WaitForSeconds(delaySit);
 
         // pos4-오른쪽 위로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightUpDayTrigger");
+        animator.SetTrigger("RightUpTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("RightUpDayTrigger");  
+        animator.ResetTrigger("RightUpTrigger");  
         animator.SetTrigger("SitTrigger");  
         yield return new WaitForSeconds(delaySit);
 
         // pos5-왼쪽으로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftDayTrigger");
+        animator.SetTrigger("LeftTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("LeftDayTrigger");
+        animator.ResetTrigger("LeftTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
         // pos6-왼쪽으로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftDayTrigger");
+        animator.SetTrigger("LeftTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("LeftDayTrigger");
+        animator.ResetTrigger("LeftTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
         // pos7-왼쪽으로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftDayTrigger");
+        animator.SetTrigger("LeftTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("LeftDayTrigger");
+        animator.ResetTrigger("LeftTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
         // pos8-왼쪽 아래로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftDownDayTrigger");
+        animator.SetTrigger("LeftDownTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("LeftDownDayTrigger");
+        animator.ResetTrigger("LeftDownTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
         // pos9-왼쪽 위로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftUpDayTrigger");
+        animator.SetTrigger("LeftUpTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("LeftUpDayTrigger");
+        animator.ResetTrigger("LeftUpTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
         // pos10-오른쪽으로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightDayTrigger");
+        animator.SetTrigger("RightTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("RightDayTrigger");
+        animator.ResetTrigger("RightTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
         // pos11-오른쪽으로 이동
         animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightDayTrigger");
+        animator.SetTrigger("RightTrigger");
         ChangePosition();
         isMove = true;
         yield return new WaitForSeconds(delayWalk);
 
         // 앉아있기
         isMove = false;
-        animator.ResetTrigger("RightDayTrigger");
+        animator.ResetTrigger("RightTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
 
