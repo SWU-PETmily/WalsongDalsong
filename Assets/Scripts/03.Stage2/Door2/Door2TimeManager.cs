@@ -19,6 +19,8 @@ public class Door2TimeManager : MonoBehaviour
     public Sprite img_day_pet;
     public Sprite img_night_pet;
 
+    public bool isDay = true;          // ≥∑ »Æ¿Œ ∫Øºˆ
+
     void Start()
     {
         ChangeDayNighte();          // ≥∑π„ ∫Ø∞Ê
@@ -35,13 +37,15 @@ public class Door2TimeManager : MonoBehaviour
         {
             // ≥∑¿Ã∂Û∏È
             this.background.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
-            this.pet.GetComponent<SpriteRenderer>().sprite = this.img_day_pet;
+            this.pet.GetComponent<Image>().sprite = this.img_day_pet;
+            isDay = true;
         }
         else
         {
             // π„¿Ã∂Û∏È
             this.background.GetComponent<SpriteRenderer>().sprite = this.img_night_bg;
-            this.pet.GetComponent<SpriteRenderer>().sprite = this.img_night_pet;
+            this.pet.GetComponent<Image>().sprite = this.img_night_pet;
+            isDay = false;
         }
 
     }
