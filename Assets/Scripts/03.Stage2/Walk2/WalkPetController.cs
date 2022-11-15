@@ -14,10 +14,22 @@ public class WalkPetController : MonoBehaviour
 
     bool wasLeft = true;
 
+    // 성공 오브젝트
+    public GameObject btnBack;     // 뒤로가기 버튼
+    public GameObject btnRight;     // 오른쪽 버튼
+    public GameObject btnLeft;     // 왼쪽 버튼
+    public GameObject bgBlack;     // 검정배경
+    public GameObject particle;     // 파티클
+    public GameObject txtDone;     // 완료 텍스트이미지
+    bool isDone = false;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        bgBlack.SetActive(false);
+        txtDone.SetActive(false);
+        particle.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,12 +62,32 @@ public class WalkPetController : MonoBehaviour
                 animator.SetInteger("Direction", 3);
             }
         }
+
+        if (isDone)
+        {
+            moveVelocity = new Vector3(-1.0f, 0, 0);
+            transform.position += moveVelocity * moveSpeed * Time.deltaTime;
+        }
     }
 
     // 눈 강아지와 충돌 시
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("goal");
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
+        btnLeft.SetActive(false);
+        btnRight.SetActive(false);
+        btnBack.SetActive(false);
+        bgBlack.SetActive(true);
+        txtDone.SetActive(true);
+        particle.SetActive(true);
+        isDone = true;
+        PlayerPrefs.SetInt("successWalk", 1);     // 식사 급수 미션 성공
+        Invoke("ChangeScene", 5.0f);           // 장면 전환
+    }
+
+    // 장면 전환
+    void ChangeScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
     }
 }
