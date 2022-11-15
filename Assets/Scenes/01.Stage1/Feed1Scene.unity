@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgTable: {fileID: 1926314564}
   imgDayBg: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
-  imgNightBg: {fileID: 21300000, guid: 015792aa7b1e3ca4db26e40ad21e6124, type: 3}
+  imgNightBg: {fileID: 21300000, guid: 2e92feabc90386f458fa85866391e8ef, type: 3}
   isDay: 1
 --- !u!4 &443332447
 Transform:
@@ -1077,8 +1077,8 @@ MonoBehaviour:
   openBag: {fileID: 21300000, guid: 52cbb19955518db448c319b006638d75, type: 3}
   imgDayShadowY: {fileID: 21300000, guid: 1c86c24e390b147419da0992490a0441, type: 3}
   imgDayShadowN: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
-  imgNightShadowY: {fileID: 21300000, guid: 015792aa7b1e3ca4db26e40ad21e6124, type: 3}
-  imgNightShadowN: {fileID: 21300000, guid: 0da37ba6373e37343bd5fbdf0fa42080, type: 3}
+  imgNightShadowY: {fileID: 21300000, guid: 2e92feabc90386f458fa85866391e8ef, type: 3}
+  imgNightShadowN: {fileID: 21300000, guid: f70f4a905b68a9c49912b48d670ad0f9, type: 3}
   isDay: 0
   BowlAnimatior: {fileID: 541902519}
 --- !u!50 &954912796
@@ -6231,8 +6231,8 @@ MonoBehaviour:
   openWater: {fileID: 21300000, guid: 7d0850d9cb2f35c4baa47d469992dbc0, type: 3}
   imgDayShadowY: {fileID: 21300000, guid: 80ae5cd4a090b3747ab4e5a3f481fcf7, type: 3}
   imgDayShadowN: {fileID: 21300000, guid: 130b00fccc4219f4692a23b01bc242a8, type: 3}
-  imgNightShadowY: {fileID: 21300000, guid: 0da37ba6373e37343bd5fbdf0fa42080, type: 3}
-  imgNightShadowN: {fileID: 21300000, guid: a0cbde8a7a4dcb04a969e18ba787f1fa, type: 3}
+  imgNightShadowY: {fileID: 21300000, guid: f70f4a905b68a9c49912b48d670ad0f9, type: 3}
+  imgNightShadowN: {fileID: 21300000, guid: 50e7a3461c156244eaa1f2352aa5f4a3, type: 3}
   isDay: 0
   BowlWaterAnimatior: {fileID: 767015740}
 --- !u!95 &1585349784
@@ -6295,7 +6295,7 @@ MonoBehaviour:
   bgBlack: {fileID: 962277183}
   particle: {fileID: 1462553779}
   txtDone: {fileID: 142300409}
-  imgShadowN: {fileID: 21300000, guid: 61fa4507f2e677140beba97d7666719e, type: 3}
+  imgShadowN: {fileID: 21300000, guid: 9308dd3291b83f9449b5dc0ed12d9778, type: 3}
 --- !u!4 &1621940415
 Transform:
   m_ObjectHideFlags: 0
@@ -6426,7 +6426,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 99fe1ab661ec87c4e8d3ec24f97e5be0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a75536c0a2d917048a3205a624b6ea81, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
