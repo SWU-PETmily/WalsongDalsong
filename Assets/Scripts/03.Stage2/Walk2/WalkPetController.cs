@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class WalkPetController : MonoBehaviour
 {
@@ -23,12 +25,6 @@ public class WalkPetController : MonoBehaviour
     {
         if (LeftMove)
         {
-            /*
-            animator.ResetTrigger("Right");
-            animator.ResetTrigger("StopLeft");
-            animator.ResetTrigger("StopRight");
-            animator.SetTrigger("Left");
-            */
             animator.SetInteger("Direction", 2);
             moveVelocity = new Vector3(-0.5f, 0, 0);
             transform.position += moveVelocity * moveSpeed * Time.deltaTime;
@@ -37,12 +33,6 @@ public class WalkPetController : MonoBehaviour
 
         if (RightMove)
         {
-            /*
-            animator.ResetTrigger("Left");
-            animator.ResetTrigger("StopLeft");
-            animator.ResetTrigger("StopRight");
-            animator.SetTrigger("Right");
-            */
             animator.SetInteger("Direction", 4);
             moveVelocity = new Vector3(+0.5f, 0, 0);
             transform.position += moveVelocity * moveSpeed * Time.deltaTime;
@@ -60,5 +50,12 @@ public class WalkPetController : MonoBehaviour
                 animator.SetInteger("Direction", 3);
             }
         }
+    }
+
+    // 눈 강아지와 충돌 시
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("goal");
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
     }
 }

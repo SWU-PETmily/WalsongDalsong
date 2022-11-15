@@ -65,7 +65,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/02.Autumn/SummerToWinterScene.unity
     guid: 59868ab0e088105429e1ef32b2646486
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/03.Stage2/Room2Scene.unity
     guid: 598c9262cd7213648b7f6e9f440bc8ce
   - enabled: 0
@@ -74,7 +74,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/03.Stage2/Door2Scene.unity
     guid: 1b9421ca398240845b2b06f6c6413020
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/03.Stage2/WalkOutsideScene.unity
     guid: dbe5a2e7920bd5a4ebef300bfc16dae3
   - enabled: 0

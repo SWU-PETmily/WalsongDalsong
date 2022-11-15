@@ -19,11 +19,13 @@ public class Room2Director : MonoBehaviour
     void Start()
     {
         // 임시 변수
+        /*
         PlayerPrefs.SetInt("feedNum", 0);
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetFloat("guage", 0.1f);
         PlayerPrefs.SetInt("stage", 2);
+        */
 
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");       // 현재 게이지 이미지 채우기
@@ -67,6 +69,11 @@ public class Room2Director : MonoBehaviour
         {
             increaseGaugeByFeed();
         }
+        // 산책 완료했을 시, 완료 횟수가 2 이하라면
+        else if (PlayerPrefs.GetInt("successWalk") == 1 && PlayerPrefs.GetInt("walkNum") <= 2)
+        {
+            increaseGaugeByWalk();
+        }
 
         /*
         // 배변 완료했을 시, 완료 횟수가 5 이하라면
@@ -85,21 +92,27 @@ public class Room2Director : MonoBehaviour
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
-        //this.gauge.GetComponent<Image>().fillAmount += 0.15f;
-        currentFill = gauge.fillAmount + 0.05f;
-        PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.05f;
-        PlayerPrefs.SetFloat("guage", f);
+        currentFill = gauge.fillAmount + 0.05f;           // 게이지 채우기
+        float f = PlayerPrefs.GetFloat("guage") + 0.05f;  // 게이지값 가져오기
+        PlayerPrefs.SetFloat("guage", f);                 // 게이지값 저장하기
 
+        PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
+
+        int i = PlayerPrefs.GetInt("feedNum") + 1;      // 식사급수 횟수 가져오기
+        PlayerPrefs.SetInt("feedNum", i);               // 식사급수 횟수 저장하기
     }
 
-    // 배소변 게이지 상승
-    void increaseGaugeByPooPee()
+    // 산책 게이지 상승
+    void increaseGaugeByWalk()
     {
-        this.gauge.GetComponent<Image>().fillAmount += 0.05f;
-        PlayerPrefs.SetInt("successPooPeeClean", 0);             // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.1f;
-        PlayerPrefs.SetFloat("guage", f);
+        currentFill = gauge.fillAmount + 0.05f;           // 게이지 채우기
+        float f = PlayerPrefs.GetFloat("guage") + 0.05f;  // 게이지값 가져오기
+        PlayerPrefs.SetFloat("guage", f);                 // 게이지값 저장하기
+
+        PlayerPrefs.SetInt("successWalk", 0);             // 미션완료 초기화
+
+        int i = PlayerPrefs.GetInt("walkNum") + 1;      // 산책 횟수 가져오기
+        PlayerPrefs.SetInt("walkNum", i);               // 산책 횟수 저장하기
     }
 
     // 종료시 실행

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class WalkBtnController : MonoBehaviour
 {
@@ -31,5 +33,11 @@ public class WalkBtnController : MonoBehaviour
     public void RightBtnUp()
     {
         walkPetController.RightMove = false;
+    }
+
+    public void BackBtnClick()
+    {
+        PlayerPrefs.SetInt("successWalk", 0);     // 식사 급수 미션 실패
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
     }
 }
