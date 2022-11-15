@@ -24,16 +24,13 @@ public class AfterMinutes : MonoBehaviour
 
     void Start()
     {
-        //bad.SetActive(false);
-        //good.SetActive(false);
         gauge.fillAmount = 0.0f;
         dialogBox.SetActive(false);
         bgblack.SetActive(false);
-        //gauge.enabled = (false);
 
         LetsCheckAgain();//시작시간 체크
 
-        //anim.SetBool("IsAnxious", true);
+        PlayerPrefs.SetString("quitSceneName", "CalmingSignal");   // 종료씬 저장
         StartCoroutine(WaitForIt(3.0f));
 
     }
@@ -115,10 +112,10 @@ public class AfterMinutes : MonoBehaviour
 
     private void OnApplicationPause()
     {
-        PlayerPrefs.SetString("quitSceneName", "CalmingSignal");   // 종료씬 저장
-        print("종료");
+        Debug.Log("OnApplicationPause");
         LetsCheck();//종료시간 체크
     }
+
 
     public void btnClick()
     {

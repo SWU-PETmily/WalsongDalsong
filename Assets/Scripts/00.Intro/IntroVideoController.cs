@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class IntroVideoController : MonoBehaviour
 {
@@ -46,5 +47,6 @@ public class IntroVideoController : MonoBehaviour
     {
         video3.Stop();
         Debug.Log("doneVideo");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MomWaitingTutorialScene");
     }
 }
