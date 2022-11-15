@@ -28,22 +28,10 @@ public class PuppyNewController : MonoBehaviour
 
     void Update()
     {
-        /*
-        Move();     // 움직이기
-
-        if (isDelay == false)
-        {
-            isDelay = true;
-            ChangePosition();       // 좌표 위치 바꾸기
-            StartCoroutine(WaitForIt());    // 코루틴 실행
-        }
-        */
         if (isMove == true)
         {
             Move();
         }
-
-
     }
 
     // 게임 시작 후 30초 뒤 배소변
@@ -185,41 +173,19 @@ public class PuppyNewController : MonoBehaviour
 
     }
 
-
-
     // 강아지 위치 이동
     void Move()
     {
-
         transform.position = Vector2.MoveTowards(transform.position, puppyPos[puppyNum].transform.position, speed * Time.deltaTime);
-
     }
 
     // 강아지 목표 좌표 변경
     void ChangePosition()
     {
-        /*
-        if (transform.position == puppyPos[puppyNum].transform.position)
-            puppyNum++;
-
-        if (puppyNum == puppyPos.Length)
-            puppyNum = 0;
-        */
         puppyNum++;
         if (puppyNum == puppyPos.Length)
             puppyNum = 0;
         Debug.Log(puppyNum);
-    }
-
-    // 대기 코루틴 선언
-    IEnumerator WaitForIt()
-    {
-        //animator.SetTrigger("RightDayTrigger");    // 이동 트리거
-        Debug.Log("RightTrigger");
-        yield return new WaitForSeconds(delayWalk);
-        //animator.SetTrigger("SitTrigger");    // 이동 트리거
-        Debug.Log("SitTrigger");
-        isDelay = false;
     }
 
 }
