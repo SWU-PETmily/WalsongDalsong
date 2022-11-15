@@ -15,6 +15,8 @@ public class Item2Controller : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public bool isSnell = false;          // 목줄 확인 변수
     public bool isBag = false;          // 배변 봉투 확인 변수
 
+    bool isCollision = false;           // 충돌확인 변수
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         defaultposition = this.transform.position;
@@ -28,7 +30,18 @@ public class Item2Controller : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        this.transform.position = defaultposition;
+
+        if (isCollision)
+        {
+            // 충돌이 있었다면
+            this.transform.position = new Vector3(4000, 900, 0);
+        }
+        else
+        {
+            // 충돌이 없었다면
+            this.transform.position = defaultposition;
+        }
+        
     }
 
     // 강아지와 충돌 시
@@ -56,7 +69,7 @@ public class Item2Controller : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 {
                     pet.GetComponent<Image>().sprite = imgNightSnell;       // 강아지 이미지 변경
                 }
-                gameObject.SetActive(false);                     // 아이템 삭제
+                isCollision = true;                            // 아이템 숨기기
                 isSnell = true;                         // 목줄 확인
             }
         }
@@ -67,7 +80,7 @@ public class Item2Controller : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (other.CompareTag("pet"))
             {
                 Debug.Log("배변봉투와 강아지 부딪힘");
-                gameObject.SetActive(false);                      // 아이템 삭제
+                isCollision = true;                             // 아이템 숨기기
                 isBag = true;                         // 배변 봉투 확인
             }
         }
