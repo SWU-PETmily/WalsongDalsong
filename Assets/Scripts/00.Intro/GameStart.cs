@@ -66,6 +66,9 @@ public class GameStart : MonoBehaviour
             case "Room1Scene":
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
                 break;
+            case "Room2Tutorial":
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Tutorial");
+                break;
             case "Room2Scene":
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
                 break;

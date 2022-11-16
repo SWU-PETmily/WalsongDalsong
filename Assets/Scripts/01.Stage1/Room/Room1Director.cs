@@ -20,11 +20,13 @@ public class Room1Director : MonoBehaviour
     void Start()
     {
         // 임시 변수
+        /*
         PlayerPrefs.SetInt("feedNum", 0);
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetFloat("guage", 0.1f);
         PlayerPrefs.SetInt("stage", 1);
+        */
 
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");       // 현재 게이지 이미지 채우기
@@ -68,40 +70,17 @@ public class Room1Director : MonoBehaviour
         {
             increaseGaugeByFeed();
         }
-
-        /*
-        // 배변 완료했을 시, 완료 횟수가 5 이하라면
-        else if (PlayerPrefs.GetInt("successPooPeeClean") == 1 && PlayerPrefs.GetInt("pooCleaningNum") <= 5)
-        {
-            increaseGaugeByPooPee();
-        }
-        // 소변 완료했을 시, 완료 횟수가 5 이하라면
-        else if (PlayerPrefs.GetInt("successPooPeeClean") == 1 && PlayerPrefs.GetInt("peeCleaningNum") <= 5)
-        {
-            increaseGaugeByPooPee();
-        }
-        */
     }
 
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
-        //this.gauge.GetComponent<Image>().fillAmount += 0.15f;
         currentFill = gauge.fillAmount + 0.15f;
         PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
         float f = PlayerPrefs.GetFloat("guage") + 0.15f;
         PlayerPrefs.SetFloat("guage", f);
-
     }
 
-    // 배소변 게이지 상승
-    void increaseGaugeByPooPee()
-    {
-        this.gauge.GetComponent<Image>().fillAmount += 0.05f;
-        PlayerPrefs.SetInt("successPooPeeClean", 0);             // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.1f;
-        PlayerPrefs.SetFloat("guage", f);
-    }
 
     // 종료시 실행
     private void OnApplicationPause()
@@ -169,12 +148,6 @@ public class Room1Director : MonoBehaviour
     private void ChangeStage()
     {
         PlayerPrefs.SetInt("stage", 2);
-        Debug.Log(PlayerPrefs.GetInt("stage"));
-        PlayerPrefs.SetInt("successFeed", 0);
-        PlayerPrefs.SetInt("successPooPeeClean", 0);
-        PlayerPrefs.SetFloat("guage", 0.0f);
-        PlayerPrefs.SetInt("goodLevel", 0);
-        PlayerPrefs.SetInt("badLevel", 0);
-        PlayerPrefs.SetInt("feedLevel", 0);
+        PlayerPrefs.SetString("quitSceneName", "Room2Tutorial");           // 종료 씬
     }
 }
