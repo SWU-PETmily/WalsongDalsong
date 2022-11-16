@@ -47,12 +47,12 @@ public class FeedSceneManager : MonoBehaviour
         // 스테이지 2라면
         if (PlayerPrefs.GetInt("stage") == 2)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
             PlayerPrefs.SetString("quitSceneName", "Room2Scene");   // 종료씬 저장
         }
         else
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
             PlayerPrefs.SetString("quitSceneName", "Room1Scene");   // 종료씬 저장
         }
 

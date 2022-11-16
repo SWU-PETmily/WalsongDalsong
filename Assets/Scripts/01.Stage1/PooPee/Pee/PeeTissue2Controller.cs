@@ -12,6 +12,12 @@ public class PeeTissue2Controller : MonoBehaviour
     public GameObject stain;
     public GameObject tissueBox;
 
+    public GameObject bgBlack;     // 검정배경
+    public GameObject particle;     // 파티클
+    public GameObject txtDone;     // 완료 텍스트이미지
+
+    Vector3 destination = new Vector3(3500, 900, 0);         // 티슈 이동 위치
+
     // Update is called once per frame
     void Update()
     {
@@ -35,7 +41,8 @@ public class PeeTissue2Controller : MonoBehaviour
         if (touchNum >= totalNum)
         {
             // 게임오브젝트 삭제
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            this.transform.position = destination;
             Destroy(water);
             Destroy(stain);
             Destroy(tissueBox);
@@ -45,9 +52,19 @@ public class PeeTissue2Controller : MonoBehaviour
             PlayerPrefs.SetInt("peeCleaningNum", num);
             // 미션 성공 알림
             PlayerPrefs.SetInt("successPooPeeClean", 1);
-            // 씬 전환
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
 
+            // 성공 파티클
+            bgBlack.SetActive(true);
+            txtDone.SetActive(true);
+            particle.SetActive(true);
+            // 씬 전환
+            Invoke("ChangeScene", 5.0f);           // 장면 전환
         }
+    }
+
+    // 장면 전환
+    void ChangeScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
     }
 }

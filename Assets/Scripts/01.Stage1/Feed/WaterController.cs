@@ -18,6 +18,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public bool isDay;
     private Animator WateringAnimator;
     public Animator BowlWaterAnimatior;
+    AudioSource audioSource;                                        //오디오소스
 
     Vector3 destination = new Vector3(1800, 970, 0);         // 물병 이동 위치
 
@@ -115,6 +116,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (other.CompareTag("bowl"))
         {
             Debug.Log("collision!!!");
+            this.audioSource.Play();                                    //오디오 실행
             isCollision = true;
             WateringAnimator.SetBool("isWater", true);    // 물병 애니메이터 실행
             BowlWaterAnimatior.SetBool("isBowlWater", true);      // 물그릇 애니메이터 실행  
@@ -141,6 +143,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = this.gameObject.GetComponent<AudioSource>();   //오디오소스
         WateringAnimator = GetComponent<Animator>();
         // 낮밤 확인 후 배경 변경
         FeedSceneManager feedSceneManager = GameObject.Find("SceneManager").GetComponent<FeedSceneManager>();

@@ -25,10 +25,13 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     Vector3 rotationStop = new Vector3(0, 0, 0);         // 0도
     Vector3 rotationMove = new Vector3(0, 0, -40);         // 40도
 
-    bool isCollision = false;           // 충돌확인 변수
+    public bool isCollision = false;           // 충돌확인 변수
+
+    AudioSource audioSource;                                        //오디오소스
 
     void Start()
     {
+        audioSource = this.gameObject.GetComponent<AudioSource>();   //오디오소스
         FeedingAnimator = GetComponent<Animator>();
         feed1.SetActive(false);
         feed2.SetActive(false);
@@ -128,6 +131,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (other.CompareTag("bowl"))
         {
             Debug.Log("collision!!!");
+            this.audioSource.Play();                                    //오디오 실행
             isCollision = true;
             FeedingAnimator.SetBool("isFeed", true);    // 사료봉투 애니메이터 실행
             feed1.SetActive(true);      // 사료1 떨어지기
