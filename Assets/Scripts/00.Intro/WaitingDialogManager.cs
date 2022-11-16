@@ -8,7 +8,6 @@ public class WaitingDialogManager : MonoBehaviour
 {
     public Text dialogText;
     public GameObject dialogBox;
-
     public int dialogNum;
 
     void Start()
