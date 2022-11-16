@@ -18,7 +18,14 @@ public class PeeTissue2Controller : MonoBehaviour
 
     Vector3 destination = new Vector3(3500, 900, 0);         // 티슈 이동 위치
 
-    // Update is called once per frame
+    AudioSource audioSource;                                        //오디오소스
+    public AudioClip audioErase;                            //닦는 소리 오디오 클립
+
+    void Start()
+    {
+        audioSource = this.gameObject.GetComponent<AudioSource>();   //오디오소스
+    }
+
     void Update()
     {
         // 충돌 판정
@@ -27,6 +34,8 @@ public class PeeTissue2Controller : MonoBehaviour
         // 왼쪽에 닿으면
         if (t1.x <= -1 && (t1.y >= -1.55f || t1.y <= 1.8f) && left == true)
         {
+            audioSource.clip = audioErase;
+            this.audioSource.Play();                                    //오디오 실행
             left = false;
             touchNum++;
         }

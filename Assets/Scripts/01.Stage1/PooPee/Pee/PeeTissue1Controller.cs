@@ -11,9 +11,14 @@ public class PeeTissue1Controller : MonoBehaviour
     public GameObject stain;
     public GameObject tissueBox;
     public GameObject spray;
+    AudioSource audioSource;                                        //오디오소스
+    public AudioClip audioErase;                            //닦는 소리 오디오 클립
 
+    void Start()
+    {
+        audioSource = this.gameObject.GetComponent<AudioSource>();   //오디오소스
+    }
 
-    // Update is called once per frame
     void Update()
     {
         // 충돌 판정
@@ -22,6 +27,8 @@ public class PeeTissue1Controller : MonoBehaviour
         // 왼쪽에 닿으면
         if (t1.x <= -1 && (t1.y >= -1.55f || t1.y <= 1.8f) && left == true)
         {
+            audioSource.clip = audioErase;
+            this.audioSource.Play();                                    //오디오 실행
             left = false;
             touchNum++;
         }
