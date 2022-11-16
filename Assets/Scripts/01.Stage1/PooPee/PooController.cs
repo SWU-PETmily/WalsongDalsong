@@ -10,14 +10,17 @@ public class PooController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public GameObject trashCan;
     public GameObject spray;
     public GameObject stain;
+    AudioSource audioSource;                                        //오디오소스
 
     // 바꿀 이미지
     public Sprite img_garbage_open;
     public Sprite img_garbage;
 
+
     void Start()
     {
         spray.SetActive(false);
+        audioSource = this.gameObject.GetComponent<AudioSource>();   //오디오소스
     }
 
     void Update()
@@ -33,6 +36,7 @@ public class PooController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (d < r1 + r2 + 500.0f)
         {
             // 쓰레기통 열기
+            StartCoroutine(StartAudio());
             this.trashCan.GetComponent<Image>().sprite = this.img_garbage_open;
         }
         else
@@ -44,6 +48,7 @@ public class PooController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (d < r1 + r2+150.0f)
         {
             // 충돌 시 배변 삭제
+            this.audioSource.Play();                                    //오디오 실행
             Destroy(gameObject);
             this.trashCan.GetComponent<Image>().sprite = this.img_garbage;
             Destroy(this.trashCan.GetComponent<Image>());
@@ -51,6 +56,12 @@ public class PooController : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         }
 
+    }
+
+    IEnumerator StartAudio()
+    {
+        this.audioSource.Play();                                    //오디오 실행
+        yield return new WaitForSeconds(3);
     }
 
     public void OnBeginDrag(PointerEventData eventData)

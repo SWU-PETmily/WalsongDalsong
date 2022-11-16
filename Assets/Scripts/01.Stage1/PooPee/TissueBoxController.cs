@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class TissueBoxController : MonoBehaviour
 {
-
     public GameObject tissue;           // ∆ºΩ¥ «— ¿Â
     bool tissueBoxTouch = false;
-
 
     // Update is called once per frame
     void Update()
