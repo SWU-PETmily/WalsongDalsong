@@ -57,6 +57,7 @@ public class Room2Tutorial : MonoBehaviour
         PlayerPrefs.SetInt("stage", 2);                             // 스테이지
         PlayerPrefs.SetFloat("guage", 0.0f);                         // 게이지
         PlayerPrefs.SetString("quitSceneName", "Room2Scene");           // 종료 씬
+        PlayerPrefs.SetInt("quitTime", -1);                         // 첫 날 종료 저장
 
         // 미션 성공 저장
         PlayerPrefs.SetInt("successFeed", 0);                        // 식사급수 미션 성공=1, 미션 실패=0

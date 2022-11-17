@@ -33,8 +33,8 @@ public class btnDogController : MonoBehaviour
             bowlWater.SetActive(false);
             btnDog.SetActive(false);
             btnBack.SetActive(false);
-            bgBlack.SetActive(true);
             txtDone.SetActive(true);
+            bgBlack.SetActive(true);
             particle.SetActive(true);
          
             // ³·¹ã È®ÀÎ ÈÄ ¹è°æ º¯°æ

@@ -49,4 +49,9 @@ public class IntroVideoController : MonoBehaviour
         Debug.Log("doneVideo");
         UnityEngine.SceneManagement.SceneManager.LoadScene("MomWaitingTutorialScene");
     }
+
+    public void skipBtnClick()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MomWaitingTutorialScene");
+    }
 }
