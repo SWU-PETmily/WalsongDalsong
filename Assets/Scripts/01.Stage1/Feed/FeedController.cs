@@ -11,6 +11,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public GameObject feed2;        // 사료알2
     public GameObject btnDog;        // 강아지버튼
     public GameObject bowlWater;     // 물그릇
+    public GameObject posFeed;       // 사료봉투 이동 위치
     public static Vector2 defaultposition;
     public Sprite closeBag;         // 닫은 사료봉투 이미지
     public Sprite openBag;          // 열린 사료봉투 이미지
@@ -21,7 +22,6 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public bool isDay;
     private Animator FeedingAnimator;
     public Animator BowlAnimatior;
-    Vector3 destination = new Vector3(1000, 900, 0);         // 사료봉투 이동 위치
     Vector3 rotationStop = new Vector3(0, 0, 0);         // 0도
     Vector3 rotationMove = new Vector3(0, 0, -40);         // 40도
 
@@ -57,7 +57,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (isCollision)
         {
             // 충돌이 있었다면
-            this.transform.position = destination;      // 봉투 위치 고정
+            this.transform.position = posFeed.transform.position;      // 봉투 위치 고정
         }
         else
         {
@@ -81,7 +81,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (isCollision)
         {
             // 충돌이 있었다면
-            this.transform.position = destination;      // 봉투 위치 고정
+            this.transform.position = posFeed.transform.position;      // 봉투 위치 고정
         }
         else
         {
@@ -106,7 +106,7 @@ public class FeedController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         if (isCollision)
         {
             // 충돌이 있었다면
-            this.transform.position = destination;      // 봉투 위치 고정
+            this.transform.position = posFeed.transform.position;      // 봉투 위치 고정
         }
         else
         {

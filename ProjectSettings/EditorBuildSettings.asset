@@ -47,7 +47,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/01.Stage1/Poo1Scene.unity
     guid: 228c8e867e96ccc4e914562bc5440b48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/01.Stage1/PooNoScene.unity
     guid: b0723a236e6d4bb4aa3090656fc02d08
   - enabled: 0

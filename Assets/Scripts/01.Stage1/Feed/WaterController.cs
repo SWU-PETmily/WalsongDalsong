@@ -8,6 +8,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     public GameObject bg;           // 배경
     public GameObject btnDog;        // 강아지버튼
+    public GameObject posBottle;       // 물병 이동 위치
     public static Vector2 defaultposition;
     public Sprite closeWater;         // 닫은 물병 이미지
     public Sprite openWater;          // 열린 물병 이미지
@@ -20,8 +21,6 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public Animator BowlWaterAnimatior;
     AudioSource audioSource;                                        //오디오소스
 
-    Vector3 destination = new Vector3(1800, 970, 0);         // 물병 이동 위치
-
     bool isFeeding = false;             // 사료 완료 확인 변수
     bool isCollision = false;           // 충돌확인 변수
 
@@ -33,7 +32,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (isCollision)
             {
                 // 충돌이 있었다면
-                this.transform.position = destination;      // 물병 위치 고정
+                this.transform.position = posBottle.transform.position;      // 물병 위치 고정
             }
             else
             {
@@ -61,7 +60,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (isCollision)
             {
                 // 충돌이 있었다면
-                this.transform.position = destination;      // 물병 위치 고정
+                this.transform.position = posBottle.transform.position;      // 물병 위치 고정
             }
             else
             {
@@ -91,7 +90,7 @@ public class WaterController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             if (isCollision)
             {
                 // 충돌이 있었다면
-                this.transform.position = destination;      // 물병 위치 고정
+                this.transform.position = posBottle.transform.position;      // 물병 위치 고정
             }
             else
             {
