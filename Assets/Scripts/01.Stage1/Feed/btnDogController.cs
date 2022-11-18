@@ -13,7 +13,6 @@ public class btnDogController : MonoBehaviour
     public GameObject btnDog;     // 강아지 버튼
     public GameObject btnBack;     // 뒤로가기 버튼
     public GameObject bgBlack;     // 검정배경
-    public GameObject particle;     // 파티클
     public GameObject txtDone;     // 완료 텍스트이미지
     public Sprite imgShadowN;         // 배경 그림자 없는 이미지(그릇)
 
@@ -33,9 +32,8 @@ public class btnDogController : MonoBehaviour
             bowlWater.SetActive(false);
             btnDog.SetActive(false);
             btnBack.SetActive(false);
-            txtDone.SetActive(true);
             bgBlack.SetActive(true);
-            particle.SetActive(true);
+            txtDone.SetActive(true);
          
             // 낮밤 확인 후 배경 변경
             FeedSceneManager feedSceneManager = GameObject.Find("SceneManager").GetComponent<FeedSceneManager>();

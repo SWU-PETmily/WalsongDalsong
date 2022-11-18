@@ -13,7 +13,6 @@ public class PeeTissue2Controller : MonoBehaviour
     public GameObject tissueBox;
 
     public GameObject bgBlack;     // 검정배경
-    public GameObject particle;     // 파티클
     public GameObject txtDone;     // 완료 텍스트이미지
 
     Vector3 destination = new Vector3(3500, 900, 0);         // 티슈 이동 위치
@@ -65,7 +64,6 @@ public class PeeTissue2Controller : MonoBehaviour
             // 성공 파티클
             bgBlack.SetActive(true);
             txtDone.SetActive(true);
-            particle.SetActive(true);
             // 씬 전환
             Invoke("ChangeScene", 5.0f);           // 장면 전환
         }

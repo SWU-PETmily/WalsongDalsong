@@ -19,7 +19,6 @@ public class WalkPetController : MonoBehaviour
     public GameObject btnRight;     // 오른쪽 버튼
     public GameObject btnLeft;     // 왼쪽 버튼
     public GameObject bgBlack;     // 검정배경
-    public GameObject particle;     // 파티클
     public GameObject txtDone;     // 완료 텍스트이미지
     public GameObject snow;     // 눈 파티클
     bool isDone = false;
@@ -30,7 +29,6 @@ public class WalkPetController : MonoBehaviour
         animator = GetComponent<Animator>();
         bgBlack.SetActive(false);
         txtDone.SetActive(false);
-        particle.SetActive(false);
     }
 
     // Update is called once per frame
@@ -80,7 +78,6 @@ public class WalkPetController : MonoBehaviour
         btnBack.SetActive(false);
         bgBlack.SetActive(true);
         txtDone.SetActive(true);
-        particle.SetActive(true);
         snow.SetActive(false);
         isDone = true;
         PlayerPrefs.SetInt("successWalk", 1);     // 식사 급수 미션 성공

@@ -18,7 +18,6 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     public GameObject btnBack;
 
     public GameObject bgBlack;     // 검정배경
-    public GameObject particle;     // 파티클
     public GameObject txtDone;     // 완료 텍스트이미지
 
     AudioSource audioSource;                                        //오디오소스
@@ -65,7 +64,6 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
             // 성공 파티클
             bgBlack.SetActive(true);
             txtDone.SetActive(true);
-            particle.SetActive(true);
 
             // 하루 배변 치우기 횟수 증가
             int num = PlayerPrefs.GetInt("pooCleaningNum")+1;
