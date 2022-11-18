@@ -59,10 +59,13 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\btnDogController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\PooController.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Door2\Door2TimeManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue2Controller.cs" />
     <Compile Include="Assets\Scripts\00.Intro\DialogManager.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SceneManager.cs" />
     <Compile Include="Assets\Scripts\00.Intro\WaitingDialogManager.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\IntroVideoController.cs" />
     <Compile Include="Assets\Scripts\02.Autumn\AutumnDirector.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyControllerTrial3.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue1Controller.cs" />
@@ -71,8 +74,12 @@
     <Compile Include="Assets\Scenes\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\Room1Director.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\MouseBehavior.cs" />
+    <Compile Include="Assets\Scripts\04.Ending\ParentEnding1.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Door2\Item2Controller.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2Tutorial.cs" />
     <Compile Include="Assets\Scripts\00.Intro\NamingStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkBtnController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\Door1SceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TouchTheDog.cs" />
@@ -82,12 +89,16 @@
     <Compile Include="Assets\Scripts\00.Intro\Naming.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\WaterAndFoodUp.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\CardController.cs" />
-    <Compile Include="Assets\Scripts\03.Stage2\Room2Director.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2Director.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\WaterController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feeding.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Walk2\CameraController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkPetController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\ItemController.cs" />
-    <Compile Include="Assets\Scripts\03.Stage2\Room2BtnManager.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2BtnManager.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Puppy2Controller.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Door2SceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\Parent1Advice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSprayController.cs" />
@@ -95,7 +106,9 @@
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyMoveController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewDayNight.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\ParentFeedAdvice.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedAudioManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeGenerator.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\RoomBtnManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedController.cs" />
@@ -105,6 +118,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\Waterbottle2Move.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SprayController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Level1Introdce.cs" />
+    <Compile Include="Assets\Scripts\04.Ending\Ending1Director.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -364,6 +378,9 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -372,9 +389,6 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
@@ -783,6 +797,10 @@
       <Project>{16DC638C-088E-7C21-9423-4B4693C693AB}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.AdaptivePerformance.Samsung.Android.Editor.csproj">
+      <Project>{90C6A4A5-4BF6-2B1A-CD80-08009AF59118}</Project>
+      <Name>Unity.AdaptivePerformance.Samsung.Android.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
       <Project>{91F3F620-3D8D-7679-FBFF-5F3951317F00}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
@@ -975,6 +993,10 @@
       <Project>{655AF60D-FC6D-3A07-BF11-30A2D59066E7}</Project>
       <Name>Unity.AdaptivePerformance.Profiler.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.AdaptivePerformance.Simulator.VRR.Extension.csproj">
+      <Project>{BFBA9695-24AE-3520-0BE9-C87F89ABC9E7}</Project>
+      <Name>Unity.AdaptivePerformance.Simulator.VRR.Extension</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
       <Project>{50CA86B1-3583-C1BE-147E-4C111DB83067}</Project>
       <Name>Unity.2D.SpriteShape.Runtime</Name>
@@ -982,6 +1004,10 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{9DB8A579-4B2E-0C98-B29B-4EB2534F40A0}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AdaptivePerformance.Samsung.Android.csproj">
+      <Project>{C8CF9402-45D9-18F0-CD18-B38AAB15D1CA}</Project>
+      <Name>Unity.AdaptivePerformance.Samsung.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
