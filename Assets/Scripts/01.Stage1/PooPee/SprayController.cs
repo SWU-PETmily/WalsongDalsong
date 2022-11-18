@@ -10,6 +10,7 @@ public class SprayController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     GameObject stain;
     public GameObject water;
     public GameObject tissue;
+    public GameObject posSpray;       // 스프레이 이동 위치
 
     // 바꿀 이미지
     public Sprite img_spray_ing;
@@ -22,7 +23,6 @@ public class SprayController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     bool actSpray = false;
 
     private Animator animator;
-    Vector3 destination = new Vector3(1990,1060, 0);         // 스프레이 이동 위치
     Vector3 rotation = new Vector3(0, 0, 40);         // 스프레이  기울기
     bool isCollision = false;                    // 충돌 확인 변수
 
@@ -50,7 +50,7 @@ public class SprayController : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (d < r1 + r2+300.0f)
         {
             isCollision = true;
-            this.transform.position = destination;       //스프레이 이동
+            this.transform.position = posSpray.transform.position;       //스프레이 이동
             this.transform.localEulerAngles = rotation;        //스프레이 기울이기
             this.animator.SetTrigger("SprayTrigger");          // 애니메이션 실행
             water.SetActive(true);      //물방울 보이기
