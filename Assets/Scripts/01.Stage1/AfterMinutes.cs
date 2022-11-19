@@ -110,7 +110,7 @@ public class AfterMinutes : MonoBehaviour
 
     }
 
-    private void OnApplicationPause()
+    private void OnApplicationQuit()
     {
         Debug.Log("OnApplicationPause");
         LetsCheck();//종료시간 체크
