@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSprayController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyMoveController.cs" />
+    <Compile Include="Assets\Scenes\00.Intro\QuitTest.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewDayNight.cs" />
