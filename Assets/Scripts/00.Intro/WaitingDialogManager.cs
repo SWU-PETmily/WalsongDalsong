@@ -9,6 +9,7 @@ public class WaitingDialogManager : MonoBehaviour
     public Text dialogText;
     public GameObject dialogBox;
     public int dialogNum;
+    int dt1;
 
     void Start()
     {
@@ -30,15 +31,24 @@ public class WaitingDialogManager : MonoBehaviour
                 dialogText.text = "우리를 반기지 않는다고 성급히 다가가거나 쓰다듬으려고 하면 사람을 더 무서워할 수 있으니 30분만 기다려보자!";
                 break;
             case 4:
-                dialogText.text = "30분 동안 게임을 종료하고 기다려주면 돼. 중간에 게임을 실행하면 강아지가 겁 먹어서 처음부터 다시 기다려야 하니 주의해줘!";
+                dialogText.text = "30분 동안 게임을 종료하고 기다려주면 돼.";
                 break;
             case 5:
                 dialogBox.SetActive(false);
-                PlayerPrefs.SetInt("lasttime", -1);     // 처음 실행인 지 알기위한 변수 저장
+                LetsCheck();
+                PlayerPrefs.SetString("quitSceneName", "CalmingSignal");   // 종료씬 저장
                 UnityEngine.SceneManagement.SceneManager.LoadScene("CalmingSignal");
                 break;
             default:
                 break;
         }
+    }
+
+    private void LetsCheck()
+    {
+        Debug.Log("종료 시간 : " + System.DateTime.Now.ToString());
+        dt1 = int.Parse(System.DateTime.Now.ToString("HHmm"));
+        PlayerPrefs.SetInt("lasttime", dt1);
+
     }
 }

@@ -19,7 +19,6 @@ public class AfterMinutes : MonoBehaviour
     //public Animator anim;
     //public Animator anim2;
 
-    int dt1;
     int dt2;
 
     void Start()
@@ -30,7 +29,7 @@ public class AfterMinutes : MonoBehaviour
 
         LetsCheckAgain();//시작시간 체크
 
-        PlayerPrefs.SetString("quitSceneName", "CalmingSignal");   // 종료씬 저장
+
         StartCoroutine(WaitForIt(3.0f));
 
     }
@@ -56,14 +55,6 @@ public class AfterMinutes : MonoBehaviour
 
     }
 
-
-    private void LetsCheck()
-    {
-        Debug.Log("종료 시간 : " + System.DateTime.Now.ToString());
-        dt1 = int.Parse(System.DateTime.Now.ToString("HHmm"));
-        PlayerPrefs.SetInt("lasttime", dt1);
-
-    }
 
     private void LetsCheckAgain()
     {
@@ -108,12 +99,6 @@ public class AfterMinutes : MonoBehaviour
         bgblack.SetActive(true);
 
 
-    }
-
-    private void OnApplicationQuit()
-    {
-        Debug.Log("OnApplicationPause");
-        LetsCheck();//종료시간 체크
     }
 
 

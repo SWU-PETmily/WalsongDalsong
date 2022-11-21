@@ -41,11 +41,17 @@ public class QuitTest : MonoBehaviour
         */
     }
 
+    public void quitBtnClick()
+    {
+        Application.Quit();
+    }
 
     void OnApplicationQuit()
 
     {
-        PlayerPrefs.SetString("quitTest", "quitSuccess");
+        PlayerPrefs.SetString("quitTest", "0");
+        
+        /*
         Application.CancelQuit();
 
 #if !UNITY_EDITOR
@@ -53,6 +59,7 @@ public class QuitTest : MonoBehaviour
         System.Diagnostics.Process.GetCurrentProcess().Kill();
 
 #endif
-
+        */
     }
+        
 }

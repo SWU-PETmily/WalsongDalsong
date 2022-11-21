@@ -8,22 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/00.Intro/QuitTest.unity
     guid: 37a56ec7ef96db049bb3cb201a15434b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/00.Intro/LogoScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/00.Intro/IntroVideo1.unity
     guid: 7378be55bfe931d4eb78f125fb27c3bd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/00.Intro/MomWaitingTutorialScene.unity
     guid: 3ff7b2c16dd1efe43a8cceec01ad7acc
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/00.Intro/CalmingSignal.unity
     guid: c8f74f2b44007ea4fb173f171b0ac992
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/00.Intro/MomNamingTutorialScene.unity
     guid: bc353da86895c4147b758cc05d9312f2
   - enabled: 0
