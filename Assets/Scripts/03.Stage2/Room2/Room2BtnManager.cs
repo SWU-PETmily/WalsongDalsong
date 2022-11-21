@@ -80,13 +80,13 @@ public class Room2BtnManager : MonoBehaviour
     }
 
     // 저장 버튼 클릭시
-    public void SaveBtnClick()
+    private void SaveBtnClick()
     {
         QuitDateCheck(); //종료날짜시간 체크
     }
 
     // 종료 버튼 클릭시
-    public void QuitBtnClick()
+    private void QuitBtnClick()
     {
         QuitDateCheck();
         Application.Quit();
