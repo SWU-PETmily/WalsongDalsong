@@ -8,6 +8,8 @@ public class RoomBtnManager : MonoBehaviour
 {
     int exeTime;              // 실행한 시간
     int feedNum;              // 식사 횟수
+    int quitDate;             // 종료한 날짜
+    int quitTime;             // 종료한 시간
 
     // 버튼 클릭 이벤트
     public void BtnClick()
@@ -42,11 +44,11 @@ public class RoomBtnManager : MonoBehaviour
                 break;
             // 저장
             case "btn_save":
-                GameSave();
+                SaveBtnClick();
                 break;
-            // 타이틀화면
-            case "btn_home":
-                //SceneManager.LoadScene("Door1Scene");
+            // 종료
+            case "btn_quit":
+                QuitBtnClick();
                 break;
             default:
                 break;
@@ -76,16 +78,30 @@ public class RoomBtnManager : MonoBehaviour
         return false;
     }
 
-    // 게임 저장
-    public void GameSave()
+    // 저장 버튼 클릭시
+    public void SaveBtnClick()
     {
-        // 저장사항
-        // 식사/배변/산책 여부
+        QuitDateCheck(); //종료날짜시간 체크
     }
 
-    // 게임 로드
-    public void GameLoad()
+    // 종료 버튼 클릭시
+    public void QuitBtnClick()
     {
+        QuitDateCheck();
+        Application.Quit();
+    }
+
+    // 종료 날짜 시간 체크
+    private void QuitDateCheck()
+    {
+        quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
+        quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
+
+        Debug.Log("종료 날짜 : " + quitDate);
+        Debug.Log("종료 시간 : " + quitTime);
+
+        PlayerPrefs.SetInt("quitDate", quitDate);
+        PlayerPrefs.SetInt("quitTime", quitTime);
 
     }
 }
