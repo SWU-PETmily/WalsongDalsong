@@ -136,26 +136,6 @@ public class Room2Director : MonoBehaviour
         PlayerPrefs.SetInt("walkNum", i);               // 산책 횟수 저장하기
     }
 
-    // 종료시 실행
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.SetString("quitSceneName", "Room2Scene");   // 종료씬 저장
-        QuitDateCheck(); //종료날짜시간 체크
-    }
-
-    // 종료 날짜 시간 체크
-    private void QuitDateCheck()
-    {
-        quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
-        quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
-
-        Debug.Log("종료 날짜 : " + quitDate);
-        Debug.Log("종료 시간 : " + quitTime);
-
-        PlayerPrefs.SetInt("quitDate", quitDate);
-        PlayerPrefs.SetInt("quitTime", quitTime);
-
-    }
 
     // 시작 날짜 시간 체크
     private void ExeDateCheck()
