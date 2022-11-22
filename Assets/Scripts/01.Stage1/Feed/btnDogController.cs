@@ -16,7 +16,6 @@ public class btnDogController : MonoBehaviour
     public GameObject txtDone;     // 완료 텍스트이미지
     public Sprite imgShadowN;         // 배경 그림자 없는 이미지(그릇)
 
-
     public void btnDogClick()
     {
         if (PlayerPrefs.GetInt("feedLevel") == 1)

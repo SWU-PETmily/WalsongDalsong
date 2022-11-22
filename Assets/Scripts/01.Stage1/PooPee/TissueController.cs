@@ -54,7 +54,6 @@ public class TissueController : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         if(touchNum >= totalNum)
         {
             // 게임오브젝트 삭제
-            //Destroy(gameObject);
             this.transform.position = destination;
             Destroy(water);
             Destroy(stain);
