@@ -39,6 +39,7 @@ public class Room1Director : MonoBehaviour
     void Update()
     {
         controlGauge();     // 게이지 조정
+ 
         if (gauge.fillAmount < currentFill)
         {
             gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime);
