@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PuppyNewController : MonoBehaviour
 {
@@ -9,10 +11,10 @@ public class PuppyNewController : MonoBehaviour
     int puppyNum = 0;   // 위치 순서
 
     public bool isDelay;
-    public float delaySit = 5.0f;  //딜레이 시간
+    public float delaySit = 10.0f;  //딜레이 시간
     public float delayWalk = 7.0f;  //딜레이 시간
 
-
+    AudioSource audioSource;        //오디오소스
     private Animator animator;
 
     bool isMove = false;
@@ -21,8 +23,8 @@ public class PuppyNewController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = this.gameObject.GetComponent<AudioSource>();   //오디오소스
         StartCoroutine(MoveStart());    // 코루틴 실행
-
 
     }
 
@@ -38,6 +40,7 @@ public class PuppyNewController : MonoBehaviour
     IEnumerator MoveStart()
     {
         // 앉아있기
+        this.audioSource.Play();              //오디오 실행
         animator.SetTrigger("SitTrigger");    // 이동 트리거
         yield return new WaitForSeconds(delaySit);              // 첫 시작 대기
 
@@ -50,6 +53,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("RightTrigger");    // 이동 트리거
         animator.SetTrigger("SitTrigger");    // 이동 트리거
         yield return new WaitForSeconds(delaySit);
@@ -63,6 +67,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("RightDownTrigger");   
         animator.SetTrigger("SitTrigger"); 
         yield return new WaitForSeconds(delaySit);
@@ -76,6 +81,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("RightUpTrigger");  
         animator.SetTrigger("SitTrigger");  
         yield return new WaitForSeconds(delaySit);
@@ -89,6 +95,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("LeftTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
@@ -102,6 +109,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("LeftTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
@@ -115,6 +123,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("LeftTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
@@ -128,6 +137,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("LeftDownTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
@@ -141,6 +151,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("LeftUpTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
@@ -154,6 +165,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("RightTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
@@ -167,6 +179,7 @@ public class PuppyNewController : MonoBehaviour
 
         // 앉아있기
         isMove = false;
+        this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("RightTrigger");
         animator.SetTrigger("SitTrigger");
         yield return new WaitForSeconds(delaySit);
