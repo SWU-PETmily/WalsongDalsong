@@ -2271,10 +2271,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6f1f87dd90c604d9229599eb399189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spray: {fileID: 0}
+  spray: {fileID: 1815019413}
   tissueBox: {fileID: 1429867573}
-  water: {fileID: 0}
-  tissue: {fileID: 0}
+  water: {fileID: 1725187117}
+  tissue: {fileID: 2036293025}
 --- !u!4 &1990094219
 Transform:
   m_ObjectHideFlags: 0

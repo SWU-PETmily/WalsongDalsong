@@ -20,12 +20,6 @@ public class SceneManager : MonoBehaviour
         tissue.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void BtnBack()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("PooNoScene");
