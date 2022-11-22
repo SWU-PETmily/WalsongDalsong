@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\PadBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Parent2Advice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewDayNight.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\ParentFeedAdvice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedAudioManager.cs" />
