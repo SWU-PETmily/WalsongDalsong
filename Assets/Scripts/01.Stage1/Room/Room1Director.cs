@@ -19,15 +19,6 @@ public class Room1Director : MonoBehaviour
 
     void Start()
     {
-        // 임시 변수
-        /*
-        PlayerPrefs.SetInt("feedNum", 0);
-        PlayerPrefs.SetInt("pooCleaningNum", 0);
-        PlayerPrefs.SetInt("peeCleaningNum", 0);
-        PlayerPrefs.SetFloat("guage", 0.1f);
-        PlayerPrefs.SetInt("stage", 1);
-        */
-
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");       // 현재 게이지 이미지 채우기
         currentFill = PlayerPrefs.GetFloat("guage");            // 현재 게이지
@@ -62,7 +53,6 @@ public class Room1Director : MonoBehaviour
         increaseGaugeByFeed();
     }
 
-
     // 게이지 변동
     void controlGauge()
     {
@@ -93,8 +83,6 @@ public class Room1Director : MonoBehaviour
         int i = PlayerPrefs.GetInt("feedNum") + 1;      // 식사급수 횟수 가져오기
         PlayerPrefs.SetInt("feedNum", i);               // 식사급수 횟수 저장하기
     }
-
-   
 
     // 시작 날짜 시간 체크
     private void ExeDateCheck()

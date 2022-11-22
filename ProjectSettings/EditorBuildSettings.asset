@@ -92,6 +92,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/03.Stage2/WalkOutsideScene.unity
     guid: dbe5a2e7920bd5a4ebef300bfc16dae3
+  - enabled: 1
+    path: Assets/Scenes/03.Stage2/Parent2Scene.unity
+    guid: 548ff07febfbc0344bd6260008f45219
   - enabled: 0
     path: Assets/Scenes/04.Ending/ParentEnding1.unity
     guid: bb2f4c0c8e58dc344800cac8875ff040

@@ -18,15 +18,6 @@ public class Room2Director : MonoBehaviour
 
     void Start()
     {
-        // 임시 변수
-        /*
-        PlayerPrefs.SetInt("feedNum", 0);
-        PlayerPrefs.SetInt("pooCleaningNum", 0);
-        PlayerPrefs.SetInt("peeCleaningNum", 0);
-        PlayerPrefs.SetFloat("guage", 0.1f);
-        PlayerPrefs.SetInt("stage", 2);
-        */
-
         Debug.Log(PlayerPrefs.GetFloat("guage"));
         gauge.fillAmount = PlayerPrefs.GetFloat("guage");       // 현재 게이지 이미지 채우기
         currentFill = PlayerPrefs.GetFloat("guage");            // 현재 게이지
@@ -64,9 +55,7 @@ public class Room2Director : MonoBehaviour
                 // 꿈 엔딩
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Ending3");
             }
-
         }
-
     }
 
     // btn
@@ -74,7 +63,6 @@ public class Room2Director : MonoBehaviour
     {
         increaseGaugeByFeed();
     }
-
 
     // 게이지 변동
     void controlGauge()
@@ -189,7 +177,7 @@ public class Room2Director : MonoBehaviour
                 {
                     // 가상 부모 평가로 이동
                     Debug.Log("가상 부모 평가로 이동.");
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Parent1Scene");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Parent2Scene");
                 }
             }
         } 
