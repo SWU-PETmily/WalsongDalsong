@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SceneManager.cs" />
     <Compile Include="Assets\Scripts\00.Intro\WaitingDialogManager.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Touch\TouchPetController.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Poo2\Poo2Controller.cs" />
     <Compile Include="Assets\Scripts\00.Intro\IntroVideoController.cs" />
     <Compile Include="Assets\Scripts\02.Autumn\AutumnDirector.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyControllerTrial3.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\MouseBehavior.cs" />
     <Compile Include="Assets\Scripts\04.Ending\ParentEnding1.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Door2\Item2Controller.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Poo2\PadController.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2Tutorial.cs" />
     <Compile Include="Assets\Scripts\00.Intro\NamingStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="Assets\Scripts\03.Stage2\Walk2\CameraController.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkPetController.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Door2\Door2PetController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\ItemController.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2BtnManager.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Puppy2Controller.cs" />
@@ -106,6 +110,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyMoveController.cs" />
     <Compile Include="Assets\Scenes\00.Intro\QuitTest.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Poo2\PadBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewDayNight.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\ParentFeedAdvice.cs" />
