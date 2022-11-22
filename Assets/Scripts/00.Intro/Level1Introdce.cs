@@ -65,6 +65,7 @@ public class Level1Introdce : MonoBehaviour
         PlayerPrefs.SetInt("successFeed", 0);                        // 식사급수 미션 성공=1, 미션 실패=0
         PlayerPrefs.SetInt("successPooPeeClean", 0);              // 배소변 미션 성공=1, 미션 실패=0
         PlayerPrefs.SetInt("successWalk", 0);                         // 산책 미션 성공=1, 미션 실패=0
+        PlayerPrefs.SetInt("successTouch", 0);                         // 쓰다듬기 성공 = 1, 미션 실패=0
 
         // 식사급수 내 변수
         PlayerPrefs.SetInt("feedLevel", 0);                        // 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료

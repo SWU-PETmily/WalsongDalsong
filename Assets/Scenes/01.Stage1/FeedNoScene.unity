@@ -557,6 +557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb9639ccb11e6440bb72f0040d915b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bg: {fileID: 1813520432}
+  bgSummer: {fileID: 21300000, guid: 43571a32954927340b3d318946feac5a, type: 3}
+  bgWinter: {fileID: 21300000, guid: fc917bbe50b0f1c4fad496ec5283ff14, type: 3}
 --- !u!4 &1889087725
 Transform:
   m_ObjectHideFlags: 0
