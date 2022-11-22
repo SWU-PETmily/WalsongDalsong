@@ -446,8 +446,9 @@ GameObject:
   - component: {fileID: 253864402}
   - component: {fileID: 253864403}
   - component: {fileID: 253864404}
-  - component: {fileID: 253864405}
   - component: {fileID: 253864406}
+  - component: {fileID: 253864408}
+  - component: {fileID: 253864407}
   m_Layer: 0
   m_Name: puppyDay
   m_TagString: Untagged
@@ -588,9 +589,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7400000, guid: 42e740a0613eece43a4d57205b324465, type: 2}
-          m_TargetAssemblyTypeName: UnityEngine.AnimationClip, UnityEngine
-          m_MethodName: 
+        - m_Target: {fileID: 384663398}
+          m_TargetAssemblyTypeName: Room2Director, Assembly-CSharp
+          m_MethodName: TouchPet
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -600,19 +601,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!65 &253864405
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253864398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.48, y: 14.4, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &253864406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -709,6 +697,53 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &253864407
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253864398}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 11.48, y: 14.4}
+    newSize: {x: 11.48, y: 14.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11.48, y: 14.4}
+  m_EdgeRadius: 0
+--- !u!50 &253864408
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253864398}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &324057965
 GameObject:
   m_ObjectHideFlags: 0

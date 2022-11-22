@@ -80,12 +80,12 @@ public class Room2Director : MonoBehaviour
     void controlGauge()
     {
         // 식사급수 완료했을 시, 완료 횟수가 2 이하라면
-        if (PlayerPrefs.GetInt("successFeed") == 1 && PlayerPrefs.GetInt("feedNum") <= 2)
+        if (PlayerPrefs.GetInt("successFeed") == 1 && PlayerPrefs.GetInt("feedNum") < 2)
         {
             increaseGaugeByFeed();
         }
         // 산책 완료했을 시, 완료 횟수가 2 이하라면
-        else if (PlayerPrefs.GetInt("successWalk") == 1 && PlayerPrefs.GetInt("walkNum") <= 2)
+        else if (PlayerPrefs.GetInt("successWalk") == 1 && PlayerPrefs.GetInt("walkNum") < 2)
         {
             increaseGaugeByWalk();
         }
@@ -97,6 +97,11 @@ public class Room2Director : MonoBehaviour
             PlayerPrefs.SetInt("pooCleaningNum", i);               // 대소변 횟수 저장하기
         }
 
+        // 쓰다듬기 완료했을 시, 완료 횟수가 2 이하라면
+        if (PlayerPrefs.GetInt("successTouch") == 1 && PlayerPrefs.GetInt("touchingNum") < 2)
+        {
+            increaseGaugeByTouch();
+        }
         /*
         // 배변 완료했을 시, 완료 횟수가 5 이하라면
         else if (PlayerPrefs.GetInt("successPooPeeClean") == 1 && PlayerPrefs.GetInt("pooCleaningNum") <= 5)
@@ -137,6 +142,18 @@ public class Room2Director : MonoBehaviour
         PlayerPrefs.SetInt("walkNum", i);               // 산책 횟수 저장하기
     }
 
+    // 쓰다듬기 게이지 상승
+    void increaseGaugeByTouch()
+    {
+        currentFill = gauge.fillAmount + 0.05f;           // 게이지 채우기
+        float f = PlayerPrefs.GetFloat("guage") + 0.05f;  // 게이지값 가져오기
+        PlayerPrefs.SetFloat("guage", f);                 // 게이지값 저장하기
+
+        PlayerPrefs.SetInt("successTouch", 0);             // 미션완료 초기화
+
+        int i = PlayerPrefs.GetInt("touchingNum") + 1;      // 산책 횟수 가져오기
+        PlayerPrefs.SetInt("touchingNum", i);               // 산책 횟수 저장하기
+    }
 
     // 시작 날짜 시간 체크
     private void ExeDateCheck()
@@ -175,10 +192,7 @@ public class Room2Director : MonoBehaviour
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Parent1Scene");
                 }
             }
-        }
-
-
-            
+        } 
     }
 
     // 엔딩1. 사용자 변수 초기화

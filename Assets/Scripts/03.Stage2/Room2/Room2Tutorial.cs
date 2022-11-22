@@ -30,7 +30,7 @@ public class Room2Tutorial : MonoBehaviour
                 dialogText.text = "처음에 불안했던 모습은 찾아볼 수 없으니까 이젠 " + petName + "와(과) 믿음을 쌓아보도록 하자.";
                 break;
             case 3:
-                dialogText.text = "이제 드디어 " + petName + "(이)랑 산책을 나갈 수 있고, 쓰다듬을 수도 있어.";
+                dialogText.text = "이제 드디어 " + petName + "(이)랑 산책을 나갈 수 있고, 터치하면 쓰다듬을 수도 있어.";
                 break;
             case 4:
                 dialogText.text = "믿음 게이지는 식사 챙기기, 쓰다듬기, 산책하기를 통해 올릴 수 있어. 모두 하루에 두 번씩은 해 줘야 한단다.";
@@ -53,6 +53,10 @@ public class Room2Tutorial : MonoBehaviour
     // 2단계 변수 세팅
     void SettingNum()
     {
+        // 하루 미션 횟수 초기화(산책, 쓰다듬기만)
+        PlayerPrefs.SetInt("touchingNum", 0);                         // 하루 쓰다듬기 횟수
+        PlayerPrefs.SetInt("walkNum", 0);                             // 하루 산책 횟수
+
         // 게임 클리어 횟수 확인 및 저장                            
         PlayerPrefs.SetInt("stage", 2);                             // 스테이지
         PlayerPrefs.SetFloat("guage", 0.0f);                         // 게이지
@@ -62,7 +66,8 @@ public class Room2Tutorial : MonoBehaviour
         // 미션 성공 저장
         PlayerPrefs.SetInt("successFeed", 0);                        // 식사급수 미션 성공=1, 미션 실패=0
         PlayerPrefs.SetInt("successPooPeeClean", 0);              // 배소변 미션 성공=1, 미션 실패=0
-        PlayerPrefs.SetInt("successWalk", 0);                         // 산책 미션 성공=1, 미션 실패=0               
+        PlayerPrefs.SetInt("successWalk", 0);                         // 산책 미션 성공=1, 미션 실패=0
+        PlayerPrefs.SetInt("successTouch", 0);                         // 쓰다듬기 성공 = 1, 미션 실패=0
 
         // 부모 칭찬 레벨 저장
         PlayerPrefs.SetInt("goodLevel", 1);                          // 가상 부모 칭찬 레벨
