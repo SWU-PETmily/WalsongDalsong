@@ -56,7 +56,6 @@ public class btnDogController : MonoBehaviour
     // 장면 전환
     void ChangeScene()
     {
-
         // 스테이지 2라면
         if (PlayerPrefs.GetInt("stage") == 2)
         {
@@ -65,7 +64,6 @@ public class btnDogController : MonoBehaviour
         else
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
-
         }
     }
 

@@ -24,11 +24,12 @@ public class Parent2Advice : MonoBehaviour
     void Start()
     {
         // 임시 변수
-        PlayerPrefs.SetInt("goodLevel", 2);
-        PlayerPrefs.SetInt("badLevel", 2);
+        PlayerPrefs.SetInt("goodLevel", 1);
+        PlayerPrefs.SetInt("badLevel", 1);
         PlayerPrefs.SetInt("feedNum", 2);
         PlayerPrefs.SetInt("pooCleaningNum", 4);
-        PlayerPrefs.SetInt("walkNum", 1);
+        PlayerPrefs.SetInt("walkNum", 2);
+        PlayerPrefs.SetInt("stage", 2);
 
 
         petName = PlayerPrefs.GetString("name");

@@ -8,6 +8,14 @@ public class CardClickController : MonoBehaviour
 {
     public void btnClick()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+        // 스테이지 2라면
+        if (PlayerPrefs.GetInt("stage") == 2)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+        }
     }
 }

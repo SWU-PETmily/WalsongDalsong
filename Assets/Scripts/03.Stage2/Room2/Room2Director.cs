@@ -172,7 +172,7 @@ public class Room2Director : MonoBehaviour
                     // 엔딩 1 실행
                     Debug.Log("엔딩 1로 이동.");
                     EndingReset();             // 사용자 변수 초기화
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("ParentEnding1");
                 }
                 else
                 {
