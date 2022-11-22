@@ -27,8 +27,8 @@ public class Parent1Advice : MonoBehaviour
 
         GoodOrBad();    // 칭찬 or 경고 분류
         showDialog();   // 첫 번째 구문 보여주기    
-        ResetNum();     // 하루 변수 초기화
         QuitDateCheck();    // 종료 시간 재설정
+       
     }
 
     // 버튼 클릭 함수
@@ -140,9 +140,9 @@ public class Parent1Advice : MonoBehaviour
             }
             PlayerPrefs.SetInt("goodLevel", level + 1);
         }
-        // 경고라면
-        else
+        else if(good == false)
         {
+            // 경고라면
             level = PlayerPrefs.GetInt("badLevel");
             if (level == 1)
             {
@@ -158,6 +158,7 @@ public class Parent1Advice : MonoBehaviour
             }
             PlayerPrefs.SetInt("badLevel", level + 1);
         }
+        ResetNum();     // 하루 변수 초기화
     }
 
     // 하루 먹이주기, 배소변관리, 쓰다듬기 횟수 리셋

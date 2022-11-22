@@ -13,13 +13,13 @@ public class Room2Tutorial : MonoBehaviour
 
     void Start()
     {
-        petName = PlayerPrefs.GetString("name");
-        dialogNum = 0;
         SettingNum();                   // 2단계 게이지 전부 세팅
+        dialogNum = 0;
     }
 
     public void ChangeText()
     {
+        petName = PlayerPrefs.GetString("name");
         dialogNum = dialogNum + 1;
         switch (dialogNum)
         {
@@ -54,6 +54,8 @@ public class Room2Tutorial : MonoBehaviour
     void SettingNum()
     {
         // 하루 미션 횟수 초기화(산책, 쓰다듬기만)
+        //PlayerPrefs.SetInt("feedNum", 0);                             // 하루 먹이주기 횟수
+        //PlayerPrefs.SetInt("pooCleaningNum", 0);                      // 하루 배변치우기  횟수
         PlayerPrefs.SetInt("touchingNum", 0);                         // 하루 쓰다듬기 횟수
         PlayerPrefs.SetInt("walkNum", 0);                             // 하루 산책 횟수
 

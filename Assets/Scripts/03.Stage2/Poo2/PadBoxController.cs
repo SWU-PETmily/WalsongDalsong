@@ -13,8 +13,6 @@ public class PadBoxController : MonoBehaviour
     {
         // 패드박스를 터치했다면
         newPad.SetActive(true);              // 새 패드 생성              
-        int num = PlayerPrefs.GetInt("pooCleaningNum") + 1;     // 하루 배변 치우기 횟수 증가
-        PlayerPrefs.SetInt("pooCleaningNum", num);
         // 미션 성공 알림
         PlayerPrefs.SetInt("successPooPeeClean", 1);
         Invoke("DoneTxtActive", 1.0f);        // 완료 문구 생성
