@@ -19,7 +19,7 @@ public class Door2TimeManager : MonoBehaviour
     public Sprite img_day_pet;
     public Sprite img_night_pet;
 
-    public bool isDay = true;          // 낮 확인 변수
+    public bool isDay;          // 낮 확인 변수
 
     void Start()
     {
