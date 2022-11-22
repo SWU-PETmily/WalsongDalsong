@@ -40,13 +40,13 @@ public class ItemController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             isDay = timeManager.isDay;
             if (isDay)
             {
-                Destroy(gameObject);
                 petAnimator.SetTrigger("isDaySnell");    // 낮 목줄 애니메이션 실행
+                Destroy(gameObject);
             }
             else
             {
+                petAnimator.SetTrigger("isNightSnell");    // 밤 목줄 애니메이션 실행
                 Destroy(gameObject);
-                petAnimator.SetTrigger("iNightSnell");    // 밤 목줄 애니메이션 실행
             }
             
         }

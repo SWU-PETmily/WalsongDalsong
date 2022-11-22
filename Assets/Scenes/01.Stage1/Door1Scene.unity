@@ -1161,10 +1161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hh: 0
-  DoorDayNightAnimator: {fileID: 0}
+  DoorDayNightAnimator: {fileID: 1232040718}
   isDay: 0
   background: {fileID: 1958835047}
-  pet: {fileID: 0}
+  pet: {fileID: 1232040711}
   img_day_bg: {fileID: 21300000, guid: 5d3d3c2979ea60d40a79c957ee6dd5c2, type: 3}
   img_night_bg: {fileID: 21300000, guid: cfe90a1ca457b4146b1c1cb076f78242, type: 3}
 --- !u!4 &1335683291
