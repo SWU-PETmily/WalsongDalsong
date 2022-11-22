@@ -20,13 +20,15 @@ public class Door2PetController : MonoBehaviour
 
     void Start()
     {
-        // ≥∑π„ »Æ¿Œ »ƒ ¿ÃπÃ¡ˆ ∫Ø∞Ê
-        Door2TimeManager door2TimeManager = GameObject.Find("TimeManager").GetComponent<Door2TimeManager>();
-        isDay = door2TimeManager.isDay;
+
     }
 
     void Update()
     {
+        // ≥∑π„ »Æ¿Œ »ƒ ¿ÃπÃ¡ˆ ∫Ø∞Ê
+        Door2TimeManager door2TimeManager = GameObject.Find("TimeManager").GetComponent<Door2TimeManager>();
+        isDay = door2TimeManager.isDay;
+
         // ∏Ò¡Ÿ »Æ¿Œ ∫Øºˆ
         Item2Controller item2Controller1 = GameObject.Find("snell").GetComponent<Item2Controller>();
         isSnell = item2Controller1.isSnell;
@@ -43,18 +45,18 @@ public class Door2PetController : MonoBehaviour
             }
             else
             {
-                if (isSnell == true)
+                if (isSnell == true && isClothes == false)
                 {
                     this.gameObject.GetComponent<Image>().sprite = imgDaySnell;       // ≥∑ ∏Ò¡Ÿ
                 }
-                else if (isClothes == true)
+                else if (isSnell == false && isClothes == true)
                 {
                     this.gameObject.GetComponent<Image>().sprite = imgDayClothes;       // ≥∑ ø 
                 }
             }
         }
         // π„¿Ã∂Û∏È
-        else
+        else if(isDay == false)
         {
             if (isSnell == true && isClothes == true)
             {
