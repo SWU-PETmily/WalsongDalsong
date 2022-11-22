@@ -9,14 +9,16 @@ public class Puppy2Controller : MonoBehaviour
     int puppyNum = 0;   // 위치 순서
 
     public bool isDelay;
-    public float delaySit = 5.0f;  //딜레이 시간
-    public float delayWalk = 7.0f;  //딜레이 시간
+    public float delaySit = 5.0f;  // 딜레이 시간
+    public float delayWalk = 7.0f;  // 딜레이 시간
 
-    AudioSource audioSource;        //오디오소스
-    private Animator animator;
+    AudioSource audioSource;        // 오디오소스
+    private Animator animator;      // 애니메이터
 
-    bool isMove = false;
-    bool isChangePos = false;
+    bool isMove = false;            // 움직임 여부 저장 변수
+    bool isChangePos = false;       // 이동 위치 변경 저장 변수
+    public GameObject posPoo;       // 배변 생성 위치
+    public GameObject prefabPoo;         // 배소변 프리팹
 
     void Start()
     {
@@ -76,8 +78,9 @@ public class Puppy2Controller : MonoBehaviour
         isMove = true;
         yield return new WaitForSeconds(5.0f);
 
-        // 앉아있기
+        // 앉아있기 (배변 지점)
         isMove = false;
+        Instantiate(prefabPoo, posPoo.transform.position, posPoo.transform.rotation);    // 배변 프리팹 생성
         this.audioSource.Play();              //오디오 실행
         animator.ResetTrigger("RightUpTrigger");
         animator.SetTrigger("SitTrigger");
