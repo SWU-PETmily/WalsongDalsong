@@ -41,7 +41,7 @@ public class Room2Director : MonoBehaviour
             // 현재 경고레벨 확인
             int badLevel = PlayerPrefs.GetInt("badLevel");
             // 엔딩용 변수 초기화
-            Ending1Reset();
+            EndingReset();               // 사용자 변수 초기화
 
             // 한 번이라도 경고를 받았다면
             if (badLevel >= 2)
@@ -171,21 +171,37 @@ public class Room2Director : MonoBehaviour
                 {
                     // 엔딩 1 실행
                     Debug.Log("엔딩 1로 이동.");
+                    EndingReset();             // 사용자 변수 초기화
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
                 }
                 else
                 {
-                    // 가상 부모 평가로 이동
-                    Debug.Log("가상 부모 평가로 이동.");
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Parent2Scene");
+                    // 경고를 3회 초과했다면
+                    int level = PlayerPrefs.GetInt("badLevel");
+                    if(level == 4)
+                    {
+                        // 엔딩 2 실행
+                        Debug.Log("엔딩 2로 이동.");
+                        EndingReset();             // 사용자 변수 초기화
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Ending2");
+                    }
+                    else
+                    {
+                        // 가상 부모 평가로 이동
+                        Debug.Log("가상 부모 평가로 이동.");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Parent2Scene");
+                    }
                 }
             }
         } 
     }
 
     // 엔딩1. 사용자 변수 초기화
-    void Ending1Reset()
+    void EndingReset()
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString("quitSceneName", "nothing");           // 종료 씬
+        /*
         // 게임 클리어 횟수 확인 및 저장                            
         PlayerPrefs.SetInt("stage", 1);                             // 스테이지
         PlayerPrefs.SetFloat("guage", 0.0f);                         // 게이지
@@ -211,5 +227,6 @@ public class Room2Director : MonoBehaviour
         // 부모 칭찬 레벨 저장
         PlayerPrefs.SetInt("goodLevel", 1);                          // 가상 부모 칭찬 레벨
         PlayerPrefs.SetInt("badLevel", 1);                           // 가상 부모 경고 레벨         
+        */
     }
 }

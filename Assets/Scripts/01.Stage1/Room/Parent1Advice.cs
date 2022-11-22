@@ -45,6 +45,7 @@ public class Parent1Advice : MonoBehaviour
         GoodOrBad();    // 칭찬 or 경고 분류
         showDialog();   // 첫 번째 구문 보여주기    
         ResetNum();     // 하루 변수 초기화
+        QuitDateCheck();    // 종료 시간 재설정
     }
 
     // 버튼 클릭 함수
@@ -183,6 +184,19 @@ public class Parent1Advice : MonoBehaviour
         PlayerPrefs.SetInt("pooCleaningNum", 0);
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetInt("touchingNum", 0);
+    }
+
+    // 종료 시간 재설정
+    private void QuitDateCheck()
+    {
+        int quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
+        int quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
+
+        Debug.Log("종료 날짜 : " + quitDate);
+        Debug.Log("종료 시간 : " + quitTime);
+
+        PlayerPrefs.SetInt("quitDate", quitDate);
+        PlayerPrefs.SetInt("quitTime", quitTime);
     }
 
 }

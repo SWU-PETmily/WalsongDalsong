@@ -132,9 +132,12 @@ public class Room1Director : MonoBehaviour
         PlayerPrefs.SetString("quitSceneName", "Room2Tutorial");           // 종료 씬
     }
 
-    // 엔딩1. 사용자 변수 초기화
+    // 사용자 변수 초기화
     void Ending1Reset()
     {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetString("quitSceneName", "nothing");           // 종료 씬
+        /*
         // 게임 클리어 횟수 확인 및 저장                            
         PlayerPrefs.SetInt("stage", 1);                             // 스테이지
         PlayerPrefs.SetFloat("guage", 0.0f);                         // 게이지
@@ -160,5 +163,6 @@ public class Room1Director : MonoBehaviour
         // 부모 칭찬 레벨 저장
         PlayerPrefs.SetInt("goodLevel", 1);                          // 가상 부모 칭찬 레벨
         PlayerPrefs.SetInt("badLevel", 1);                           // 가상 부모 경고 레벨         
+        */
     }
 }

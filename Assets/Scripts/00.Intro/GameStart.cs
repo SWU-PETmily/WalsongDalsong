@@ -70,12 +70,18 @@ public class GameStart : MonoBehaviour
             PlayerPrefs.SetInt("successPooPeeClean", 0);
         if (!PlayerPrefs.HasKey("successWalk"))                         // 산책 미션 성공=1, 미션 실패=0
             PlayerPrefs.SetInt("successWalk", 0);
+        if (!PlayerPrefs.HasKey("successTouch"))                         // 쓰다듬기 성공 = 1, 미션 실패=0
+            PlayerPrefs.SetInt("successTouch", 0);
 
         // 부모 칭찬 레벨 저장
         if (!PlayerPrefs.HasKey("goodLevel"))                           // 가상 부모 칭찬 레벨
-            PlayerPrefs.SetInt("goodLevel", 0);
+            PlayerPrefs.SetInt("goodLevel", 1);
         if (!PlayerPrefs.HasKey("badLevel"))                            // 가상 부모 경고 레벨
-            PlayerPrefs.SetInt("badLevel", 0);
+            PlayerPrefs.SetInt("badLevel", 1);
+
+        // 식사급수 게임 내 변수 저장
+        if (!PlayerPrefs.HasKey("feedLevel"))                            // 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
+            PlayerPrefs.SetInt("feedLevel", 0);
 
 
         Debug.Log(PlayerPrefs.GetInt("gameClearNumber"));

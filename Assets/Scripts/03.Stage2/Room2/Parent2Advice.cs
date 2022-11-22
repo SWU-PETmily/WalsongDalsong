@@ -24,11 +24,11 @@ public class Parent2Advice : MonoBehaviour
     void Start()
     {
         // 임시 변수
-        PlayerPrefs.SetInt("goodLevel", 1);
-        PlayerPrefs.SetInt("badLevel", 1);
-        PlayerPrefs.SetInt("feedNum", 3);
+        PlayerPrefs.SetInt("goodLevel", 2);
+        PlayerPrefs.SetInt("badLevel", 2);
+        PlayerPrefs.SetInt("feedNum", 2);
         PlayerPrefs.SetInt("pooCleaningNum", 4);
-        PlayerPrefs.SetInt("walkNum", 3);
+        PlayerPrefs.SetInt("walkNum", 1);
 
 
         petName = PlayerPrefs.GetString("name");
@@ -37,6 +37,7 @@ public class Parent2Advice : MonoBehaviour
         GoodOrBad();    // 칭찬 or 경고 분류
         showDialog();   // 첫 번째 구문 보여주기    
         ResetNum();     // 하루 변수 초기화
+        QuitDateCheck();    // 종료 시간 재설정
     }
 
     // 버튼 클릭 함수
@@ -100,11 +101,11 @@ public class Parent2Advice : MonoBehaviour
             level = PlayerPrefs.GetInt("badLevel");
             if (level == 1)
             {
-                dialogText.text = "너는 가족과 친구들이 있지만 " + petName + "(이)에게는 우리 가족 밖에 없단다. 그러니 우리가 책임을 가지고 돌봐줘야 해.";
+                dialogText.text = petName+"을(를) 돌보는 걸 잊었구나... 하루에 식사를 2회, 배소변 처리 4회, 산책 2회는 꼭 해주어야 한단다!";
             }
             else if (level == 2)
             {
-                dialogText.text = "이러면 안돼. 네가 강아지를 데려온 만큼 책임을 다해야지.";
+                dialogText.text = "너는 가족과 친구들이 있지만 " + petName + "(이)에게는 우리 가족 밖에 없단다. 그러니 우리가 책임을 가지고 돌봐줘야 해.";
             }
             else
             {
@@ -122,5 +123,18 @@ public class Parent2Advice : MonoBehaviour
         PlayerPrefs.SetInt("peeCleaningNum", 0);
         PlayerPrefs.SetInt("touchingNum", 0);
         PlayerPrefs.SetInt("walkNum", 0);
+    }
+
+    // 종료 시간 재설정
+    private void QuitDateCheck()
+    {
+        int quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
+        int quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
+
+        Debug.Log("종료 날짜 : " + quitDate);
+        Debug.Log("종료 시간 : " + quitTime);
+
+        PlayerPrefs.SetInt("quitDate", quitDate);
+        PlayerPrefs.SetInt("quitTime", quitTime);
     }
 }
