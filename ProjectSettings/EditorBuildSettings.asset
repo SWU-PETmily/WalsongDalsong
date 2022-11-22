@@ -80,6 +80,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/03.Stage2/Feed2Scene.unity
     guid: ebe3c686b558a9c47868d698ff69b1c5
+  - enabled: 1
+    path: Assets/Scenes/03.Stage2/Poo2Scene.unity
+    guid: fa0394832c0d53f4e8c08d5a5875b068
   - enabled: 0
     path: Assets/Scenes/03.Stage2/Door2Scene.unity
     guid: 1b9421ca398240845b2b06f6c6413020
