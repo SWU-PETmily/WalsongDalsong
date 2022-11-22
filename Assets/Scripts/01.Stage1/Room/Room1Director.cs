@@ -70,15 +70,27 @@ public class Room1Director : MonoBehaviour
         {
             increaseGaugeByFeed();
         }
+
+        // 대소변 완료했을 시,
+        if (PlayerPrefs.GetInt("successPooPeeClean") == 1)
+        {
+            PlayerPrefs.SetInt("successPooPeeClean", 0);             // 미션완료 초기화
+            int i = PlayerPrefs.GetInt("pooCleaningNum") + 1;      // 대소변 횟수 가져오기
+            PlayerPrefs.SetInt("pooCleaningNum", i);               // 대소변 횟수 저장하기
+        }
     }
 
     // 식사급수 게이지 상승
     void increaseGaugeByFeed()
     {
-        currentFill = gauge.fillAmount + 0.15f;
+        currentFill = gauge.fillAmount + 0.15f;           // 게이지 채우기
+        float f = PlayerPrefs.GetFloat("guage") + 0.15f;  // 게이지값 가져오기
+        PlayerPrefs.SetFloat("guage", f);                 // 게이지값 저장하기
+
         PlayerPrefs.SetInt("successFeed", 0);             // 미션완료 초기화
-        float f = PlayerPrefs.GetFloat("guage") + 0.15f;
-        PlayerPrefs.SetFloat("guage", f);
+
+        int i = PlayerPrefs.GetInt("feedNum") + 1;      // 식사급수 횟수 가져오기
+        PlayerPrefs.SetInt("feedNum", i);               // 식사급수 횟수 저장하기
     }
 
 

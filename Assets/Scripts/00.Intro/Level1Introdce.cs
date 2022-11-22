@@ -22,7 +22,7 @@ public class Level1Introdce : MonoBehaviour
         switch (dialogNum)
         {
             case 1:
-                dialogText.text = "하루에 밥주기 2회, 배변 처리 2회, 소변 처리 2회를 완료해야 그 날 할 일을 모두 한거야.";
+                dialogText.text = "하루에 밥 주기 2회, 대소변 처리 4회를 완료해야 그 날 할 일을 모두 한거야.";
                 break;
             case 2:
                 dialogText.text = "밥을 주면 유대감 게이지를 상승시킬 수 있어. 배소변 처리는 꼭 해줘야 하지만 그걸로 게이지가 오르지 않아.";
@@ -70,8 +70,8 @@ public class Level1Introdce : MonoBehaviour
         PlayerPrefs.SetInt("feedLevel", 0);                        // 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
 
         // 부모 칭찬 레벨 저장
-        PlayerPrefs.SetInt("goodLevel", 0);                          // 가상 부모 칭찬 레벨
-        PlayerPrefs.SetInt("badLevel", 0);                           // 가상 부모 경고 레벨              
+        PlayerPrefs.SetInt("goodLevel", 1);                          // 가상 부모 칭찬 레벨
+        PlayerPrefs.SetInt("badLevel", 1);                           // 가상 부모 경고 레벨              
 
     }
 }

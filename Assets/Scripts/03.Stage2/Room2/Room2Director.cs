@@ -74,6 +74,13 @@ public class Room2Director : MonoBehaviour
         {
             increaseGaugeByWalk();
         }
+        // 대소변 완료했을 시,
+        if (PlayerPrefs.GetInt("successPooPeeClean") == 1)
+        {
+            PlayerPrefs.SetInt("successPooPeeClean", 0);             // 미션완료 초기화
+            int i = PlayerPrefs.GetInt("pooCleaningNum") + 1;      // 대소변 횟수 가져오기
+            PlayerPrefs.SetInt("pooCleaningNum", i);               // 대소변 횟수 저장하기
+        }
 
         /*
         // 배변 완료했을 시, 완료 횟수가 5 이하라면

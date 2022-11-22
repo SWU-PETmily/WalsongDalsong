@@ -36,9 +36,12 @@ public class Room2Tutorial : MonoBehaviour
                 dialogText.text = "믿음 게이지는 식사 챙기기, 쓰다듬기, 산책하기를 통해 올릴 수 있어. 모두 하루에 두 번씩은 해 줘야 한단다.";
                 break;
             case 5:
-                dialogText.text = "앞으로도 전처럼만 잘 해주면 돼! 엄마는 네가 잘 해낼 거라고 믿어~";
+                dialogText.text = "대소변 처리도 전과 마찬가지로 하루에 네 번은 꼭 해줘야 해. 게이지가 상승하지 않는다고 게을리 하면 안된단다.";
                 break;
             case 6:
+                dialogText.text = "앞으로도 전처럼만 잘 해주면 돼! 엄마는 네가 잘 해낼 거라고 믿어~";
+                break;
+            case 7:
                 dialogBox.SetActive(false);
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
                 break;
@@ -61,8 +64,8 @@ public class Room2Tutorial : MonoBehaviour
         PlayerPrefs.SetInt("successWalk", 0);                         // 산책 미션 성공=1, 미션 실패=0               
 
         // 부모 칭찬 레벨 저장
-        PlayerPrefs.SetInt("goodLevel", 0);                          // 가상 부모 칭찬 레벨
-        PlayerPrefs.SetInt("badLevel", 0);                           // 가상 부모 경고 레벨              
+        PlayerPrefs.SetInt("goodLevel", 1);                          // 가상 부모 칭찬 레벨
+        PlayerPrefs.SetInt("badLevel", 1);                           // 가상 부모 경고 레벨              
             
     }
 }

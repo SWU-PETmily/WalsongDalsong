@@ -23,13 +23,14 @@ public class Parent1Advice : MonoBehaviour
 
     void Start()
     {
-       
         // 임시 변수
+        /*
         PlayerPrefs.SetInt("goodLevel", 2);
         PlayerPrefs.SetInt("badLevel", 1);
         PlayerPrefs.SetInt("feedNum", 3);
         PlayerPrefs.SetInt("pooCleaningNum", 3);
         PlayerPrefs.SetInt("peeCleaningNum", 3);
+        */
 
         petName = PlayerPrefs.GetString("name");
         dialogNum = 0;
@@ -104,7 +105,7 @@ public class Parent1Advice : MonoBehaviour
                 dialogText.text = "돌보는 방법이 헷갈리는 거 같으니 다시 얘기해줄게.";
                 break;
             case 2:
-                dialogText.text = "하루에 식사를 2회, 배변 처리를 2회, 소변 처리를 2회 해주어야 한단다!";
+                dialogText.text = "하루에 식사를 2회, 배소변 처리 4회 해주어야 한단다!";
                 break;
             case 3:
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
@@ -123,7 +124,7 @@ public class Parent1Advice : MonoBehaviour
         // int touchingNum = PlayerPrefs.GetInt("touchingNum");
 
         // 칭찬 조건을 충족한다면
-        if (feedNum>=2 && pooCleaningNum >=2 && peeCleaningNum >= 2)
+        if (feedNum>=2 && pooCleaningNum >=4)
         {
             mom.GetComponent<Image>().sprite = this.momSmile;  // 웃는 이미지로 변경
             good = true;
