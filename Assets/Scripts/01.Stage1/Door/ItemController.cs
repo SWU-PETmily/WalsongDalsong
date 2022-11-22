@@ -8,7 +8,7 @@ public class ItemController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 {
     public static Vector2 defaultposition;
     public bool isCollision = false;           // 충돌확인 변수
-    private Animator animator;
+    public Animator petAnimator;
     public bool isDay;
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -40,11 +40,13 @@ public class ItemController : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             isDay = timeManager.isDay;
             if (isDay)
             {
-                animator.SetTrigger("isDaySnell");    // 낮 목줄 애니메이션 실행
+                Destroy(gameObject);
+                petAnimator.SetTrigger("isDaySnell");    // 낮 목줄 애니메이션 실행
             }
             else
             {
-                animator.SetTrigger("iNightSnell");    // 밤 목줄 애니메이션 실행
+                Destroy(gameObject);
+                petAnimator.SetTrigger("iNightSnell");    // 밤 목줄 애니메이션 실행
             }
             
         }
