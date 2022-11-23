@@ -15,10 +15,11 @@ public class CameraController : MonoBehaviour
 */
 
     //22
-    public GameObject pet;
+    public GameObject dayPet;
+    public GameObject nightPet;
     Transform tr;
     public float limitMinX, limitMaxX, limitMinY, limitMaxY;
-
+    public bool isDay;          // ³· È®ÀÎ º¯¼ö
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,19 @@ public class CameraController : MonoBehaviour
         */
 
         ///22
-        tr = pet.transform;
+        //tr = pet.transform;
+
+        // ³·¹ã È®ÀÎ ÈÄ Æê ÄÁÆ®·Ñ·¯ º¯°æ
+        WalkSceneManager walkSceneManager = GameObject.Find("SceneManager").GetComponent<WalkSceneManager>();
+        isDay = walkSceneManager.isDay;
+        if (isDay == true)
+        {
+            tr = dayPet.transform;
+        }
+        else
+        {
+            tr = nightPet.transform;
+        }
 
         //3333333333333
         //this.pet = GameObject.Find("petNew");

@@ -1,40 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class WalkSceneManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public DateTime nowTime;
+    public int hh;
+    public bool isDay;          // 낮 확인 변수
+
+    // 낮밤 바뀔 배경 요소
+    public GameObject background;
+    public GameObject dayPet;
+    public GameObject nightPet;
+
+    // 바꿀 이미지
+    public Sprite img_day_bg;
+    public Sprite img_night_bg;
+
     void Start()
     {
-        
+        ChangeDayNighte();          // 낮밤 변경
     }
 
-    // Update is called once per frame
-    void Update()
+    // 낮밤 배경 이미지 변경 함수
+    public void ChangeDayNighte()
     {
-        
-    }
+        nowTime = DateTime.Now;
+        hh = nowTime.Hour;
 
-    // 종료시 실행
-    private void OnApplicationPause()
-    {
-        PlayerPrefs.SetString("quitSceneName", "Room2Scene");   // 종료씬 저장
-        QuitDateCheck(); //종료날짜시간 체크
-        PlayerPrefs.SetInt("successWalk", 0);     // 식사 급수 미션 실패
-    }
+        if (7 <= hh && hh < 19)
 
-    // 종료 날짜 시간 체크
-    private void QuitDateCheck()
-    {
-        int quitDate = int.Parse(System.DateTime.Now.ToString("yyyyMMdd"));
-        int quitTime = int.Parse(System.DateTime.Now.ToString("HHmm"));
-
-        Debug.Log("종료 날짜 : " + quitDate);
-        Debug.Log("종료 시간 : " + quitTime);
-
-        PlayerPrefs.SetInt("quitDate", quitDate);
-        PlayerPrefs.SetInt("quitTime", quitTime);
+        {
+            // 낮이라면
+            this.background.GetComponent<SpriteRenderer>().sprite = this.img_day_bg;
+            dayPet.SetActive(true);
+            nightPet.SetActive(false);
+            isDay = true;
+        }
+        else
+        {
+            // 밤이라면
+            this.background.GetComponent<SpriteRenderer>().sprite = this.img_night_bg;
+            dayPet.SetActive(false);
+            nightPet.SetActive(true);
+            isDay = false;
+        }
 
     }
 }

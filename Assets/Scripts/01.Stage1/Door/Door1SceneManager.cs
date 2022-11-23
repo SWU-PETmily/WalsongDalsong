@@ -18,7 +18,6 @@ public class Door1SceneManager : MonoBehaviour
     public GameObject btnBack;          // 뒤로가기 버튼
     public GameObject btnGrip;          // 손잡이 버튼
     public GameObject snell;            // 목줄
-    public GameObject footbag;          // 배변봉투
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +27,9 @@ public class Door1SceneManager : MonoBehaviour
         dialogBox.SetActive(false);
         // 강아지 이름 가져오기
         petName = PlayerPrefs.GetString("name");
+        Debug.Log(petName);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     // 대화 넘기기 버튼
     public void BtnNextDialog()
@@ -47,7 +42,6 @@ public class Door1SceneManager : MonoBehaviour
         btnBack.SetActive(true);
         btnGrip.SetActive(true);
         snell.SetActive(true);
-        footbag.SetActive(true);
     }
 
     // 뒤로가기 버튼
@@ -59,6 +53,8 @@ public class Door1SceneManager : MonoBehaviour
     // 문 버튼
     public void BtnGrip()
     {
+        // 대화창 텍스트 변경
+        dialogText.text = "강아지 첫 산책은 3개월이 지나기 전에 하는 게 좋다고 하지만 " + petName + "(이)가 무서워하니까 조금 시간을 주자.";
         // 가상부모 대화창 보이기
         bgBlack.SetActive(true);
         dialogBox.SetActive(true);
@@ -67,10 +63,6 @@ public class Door1SceneManager : MonoBehaviour
         btnBack.SetActive(false);
         btnGrip.SetActive(false);
         snell.SetActive(false);
-        footbag.SetActive(false);
-
-        // 대화창 텍스트 변경
-        dialogText.text = "강아지 첫 산책은 3개월이 지나기 전에 하는 게 좋다고 하지만 " + petName + "(이)가 무서워하니까 조금 시간을 주자.";
     }
 
 }

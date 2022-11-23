@@ -6,13 +6,24 @@ using UnityEngine.EventSystems;
 
 public class WalkBtnController : MonoBehaviour
 {
-    public GameObject pet;
+    public GameObject dayPet;
+    public GameObject nightPet;
     WalkPetController walkPetController;
+    public bool isDay;          // ³· È®ÀÎ º¯¼ö
 
-    // Start is called before the first frame update
     void Start()
     {
-        walkPetController = pet.GetComponent<WalkPetController>();
+        // ³·¹ã È®ÀÎ ÈÄ Æê ÄÁÆ®·Ñ·¯ º¯°æ
+        WalkSceneManager walkSceneManager = GameObject.Find("SceneManager").GetComponent<WalkSceneManager>();
+        isDay = walkSceneManager.isDay;
+        if (isDay == true)
+        {
+            walkPetController = dayPet.GetComponent<WalkPetController>();
+        }
+        else
+        {
+            walkPetController = nightPet.GetComponent<WalkPetController>();
+        }
     }
 
     public void LeftBtnDown()

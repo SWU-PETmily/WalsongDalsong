@@ -8,12 +8,6 @@ public class PooPeeController : MonoBehaviour
 {
     // GameObject poo;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,8 +28,14 @@ public class PooPeeController : MonoBehaviour
                 if(touchObject == "Poo1Prefab(Clone)" || touchObject == "Poo2Prefab(Clone)")
                 {
                     // 배변을 터치했다면
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("Poo1Scene");
-
+                    if (PlayerPrefs.GetInt("stage") == 2)
+                    {
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Poo2Scene");
+                    }
+                    else
+                    {
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Poo1Scene");
+                    }
                 }
                 else if(touchObject == "Pee1Prefab(Clone)" || touchObject == "Pee2Prefab(Clone)")
                 {
@@ -44,8 +44,11 @@ public class PooPeeController : MonoBehaviour
                 }
                 else if(touchObject == "puppyDay" || touchObject == "puppyNight")
                 {
-                    // 강아지를 터치했다면
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("TouchPetScene");
+                    if (PlayerPrefs.GetInt("stage") == 2)
+                    {
+                        // 강아지를 터치했다면
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("TouchPetScene");
+                    }      
                 }
 
             }
