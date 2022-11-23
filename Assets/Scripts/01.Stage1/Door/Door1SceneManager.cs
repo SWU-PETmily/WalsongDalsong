@@ -61,8 +61,8 @@ public class Door1SceneManager : MonoBehaviour
 
         // UI ¼û±â±â
         btnBack.SetActive(false);
-        btnGrip.SetActive(false);
-        snell.SetActive(false);
+        //btnGrip.SetActive(false);
+        //snell.SetActive(false);
     }
 
 }

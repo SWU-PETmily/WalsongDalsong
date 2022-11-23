@@ -74,12 +74,12 @@ public class Door2SceneManager : MonoBehaviour
 
             // UI 숨기기
             btnBack.SetActive(false);
-            btnGrip.SetActive(false);
-            snell.SetActive(false);
-            footbag.SetActive(false);
+            //btnGrip.SetActive(false);
+            //snell.SetActive(false);
+            //footbag.SetActive(false);
 
             // 대화창 텍스트 변경
-            dialogText.text = "산책을 하려면 목줄과 배변봉투를 모두 챙겨야해.";
+            dialogText.text = "산책을 하려면 목줄과 옷을 모두 챙겨야해.";
         }
     }
 
