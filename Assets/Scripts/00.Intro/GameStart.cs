@@ -8,6 +8,8 @@ public class GameStart : MonoBehaviour
 
     void Start()
     {
+        // PlayerPrefs.DeleteAll();
+
         //22.11.09 임시변수
         //PlayerPrefs.SetString("quitSceneName", "nothing");
         // 게임 클리어 횟수 확인 및 저장
@@ -83,8 +85,6 @@ public class GameStart : MonoBehaviour
         if (!PlayerPrefs.HasKey("feedLevel"))                            // 0=아무것도 안 함. 1=식사지급완료, 2=식사 치우기. 3=물지급완료
             PlayerPrefs.SetInt("feedLevel", 0);
 
-
-        Debug.Log(PlayerPrefs.GetInt("gameClearNumber"));
     }
 
     public void Change()

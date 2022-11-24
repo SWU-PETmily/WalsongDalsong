@@ -12,7 +12,7 @@ public class Parent1Advice : MonoBehaviour
     public GameObject dialogBox;
     public GameObject mom;
 
-    public int dialogNum;       // 대사 번호
+    int dialogNum =0;       // 대사 번호
     public bool good = true;    // 칭찬/경고
     public int level;           // 칭찬/경고 단계
     string petName;      // 펫이름
@@ -23,24 +23,7 @@ public class Parent1Advice : MonoBehaviour
 
     void Start()
     {
-        // 임시 변수
-        /*
-        PlayerPrefs.SetInt("goodLevel", 2);
-        PlayerPrefs.SetInt("badLevel", 1);
-        PlayerPrefs.SetInt("feedNum", 3);
-        PlayerPrefs.SetInt("pooCleaningNum", 3);
-        PlayerPrefs.SetInt("peeCleaningNum", 3);
-        */
-
         petName = PlayerPrefs.GetString("name");
-        dialogNum = 0;
-
-        // 가상 부모 칭찬 레벨 없다면
-        if (!PlayerPrefs.HasKey("goodLevel"))
-            PlayerPrefs.SetInt("goodLevel", 1);
-        // 가상 부모 경고 레벨 없다면
-        if (!PlayerPrefs.HasKey("badLevel"))
-            PlayerPrefs.SetInt("badLevel", 1);
 
         GoodOrBad();    // 칭찬 or 경고 분류
         showDialog();   // 첫 번째 구문 보여주기    
@@ -91,6 +74,7 @@ public class Parent1Advice : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Card1Scene");
                 break;
             default:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Card1Scene");
                 break;
         }
     }
@@ -111,6 +95,7 @@ public class Parent1Advice : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
                 break;
             default:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
                 break;
         }
     }
@@ -120,11 +105,9 @@ public class Parent1Advice : MonoBehaviour
     {
         int feedNum = PlayerPrefs.GetInt("feedNum");
         int pooCleaningNum = PlayerPrefs.GetInt("pooCleaningNum");
-        int peeCleaningNum = PlayerPrefs.GetInt("peeCleaningNum");
-        // int touchingNum = PlayerPrefs.GetInt("touchingNum");
 
         // 칭찬 조건을 충족한다면
-        if (feedNum>=2 && pooCleaningNum >=4)
+        if (feedNum>=1 && pooCleaningNum >=1)
         {
             mom.GetComponent<Image>().sprite = this.momSmile;  // 웃는 이미지로 변경
             good = true;

@@ -23,15 +23,6 @@ public class Parent2Advice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // 임시 변수
-        PlayerPrefs.SetInt("goodLevel", 1);
-        PlayerPrefs.SetInt("badLevel", 1);
-        PlayerPrefs.SetInt("feedNum", 2);
-        PlayerPrefs.SetInt("pooCleaningNum", 4);
-        PlayerPrefs.SetInt("walkNum", 2);
-        PlayerPrefs.SetInt("stage", 2);
-
-
         petName = PlayerPrefs.GetString("name");
         dialogNum = 0;
 
@@ -59,11 +50,10 @@ public class Parent2Advice : MonoBehaviour
     {
         int feedNum = PlayerPrefs.GetInt("feedNum");
         int pooCleaningNum = PlayerPrefs.GetInt("pooCleaningNum");
-        // int peeCleaningNum = PlayerPrefs.GetInt("peeCleaningNum");
         int walkNum = PlayerPrefs.GetInt("walkNum");
 
         // 칭찬 조건을 충족한다면
-        if (feedNum >= 2 && pooCleaningNum >= 4 && walkNum >= 2)
+        if (feedNum >= 1 && pooCleaningNum >= 1 && walkNum >= 1)
         {
             mom.GetComponent<Image>().sprite = this.momSmile;  // 웃는 이미지로 변경
             good = true;

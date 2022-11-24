@@ -65,7 +65,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/01.Stage1/Parent1Scene.unity
     guid: 309025acdfb381143adedc9b8a36b361
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/01.Stage1/Card1Scene.unity
     guid: 0c09909be52672b49a0ea108c5da6091
   - enabled: 1
