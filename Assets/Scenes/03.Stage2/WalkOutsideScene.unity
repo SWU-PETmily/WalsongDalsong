@@ -6628,7 +6628,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 57a8af2578a561a4199c93fbe2cbd320, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -6702,8 +6702,8 @@ MonoBehaviour:
   bgBlack: {fileID: 442851148}
   txtDone: {fileID: 1382487132}
   snow: {fileID: 364587493}
-  leftCollider: {fileID: 0}
-  rightCollider: {fileID: 0}
+  leftCollider: {fileID: 1873864889}
+  rightCollider: {fileID: 1867095674}
 --- !u!212 &1831710763
 SpriteRenderer:
   m_ObjectHideFlags: 0
