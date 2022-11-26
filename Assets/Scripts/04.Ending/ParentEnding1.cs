@@ -19,6 +19,7 @@ public class ParentEnding1 : MonoBehaviour
 
     public void ChangeText()
     {
+        petName = PlayerPrefs.GetString("name");
         dialogNum = dialogNum + 1;
         switch (dialogNum)
         {
