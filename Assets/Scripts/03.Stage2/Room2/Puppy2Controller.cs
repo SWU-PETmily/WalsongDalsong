@@ -16,7 +16,6 @@ public class Puppy2Controller : MonoBehaviour
     private Animator animator;      // 애니메이터
 
     bool isMove = false;            // 움직임 여부 저장 변수
-    bool isChangePos = false;       // 이동 위치 변경 저장 변수
     public GameObject posPoo;       // 배변 생성 위치
     public GameObject prefabPoo;         // 배소변 프리팹
 
@@ -48,7 +47,7 @@ public class Puppy2Controller : MonoBehaviour
         animator.SetTrigger("RightTrigger");    // 이동 트리거
         ChangePosition();
         isMove = true;
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(4.5f);
 
         // 앉아있기
         isMove = false;

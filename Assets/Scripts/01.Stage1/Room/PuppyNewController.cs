@@ -18,7 +18,6 @@ public class PuppyNewController : MonoBehaviour
     private Animator animator;
 
     bool isMove = false;
-    bool isChangePos = false;
 
     void Start()
     {
