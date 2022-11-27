@@ -95,7 +95,7 @@ public class Parent2Advice : MonoBehaviour
             }
             else if (level == 2)
             {
-                dialogText.text = "너는 가족과 친구들이 있지만 " + petName + "(이)에게는 우리 가족 밖에 없단다. 그러니 우리가 책임을 가지고 돌봐줘야 해.";
+                dialogText.text = "너에게는 가족과 친구들이 있지만 " + petName + "(이)에게는 우리 가족이 세상의 전부야. 그러니 우리가 책임을 가지고 돌봐줘야 해.";
             }
             else
             {

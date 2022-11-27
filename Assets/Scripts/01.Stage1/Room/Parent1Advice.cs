@@ -89,7 +89,7 @@ public class Parent1Advice : MonoBehaviour
                 dialogText.text = "돌보는 방법이 헷갈리는 거 같으니 다시 얘기해줄게.";
                 break;
             case 2:
-                dialogText.text = "하루에 식사를 2회, 배소변 처리 4회 해주어야 한단다!";
+                dialogText.text = "하루에 식사를 2회, 대소변 처리를 4회 해주어야 한단다!";
                 break;
             case 3:
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
@@ -146,7 +146,7 @@ public class Parent1Advice : MonoBehaviour
             level = PlayerPrefs.GetInt("badLevel");
             if (level == 1)
             {
-                dialogText.text = " 강아지를 돌볼 때는 세심한 관심이 필요해. 이 점 주의해주렴!";
+                dialogText.text = "강아지를 돌볼 때는 세심한 관심이 필요해. 이 점 주의해주렴!";
             }
             else if (level == 2)
             {
