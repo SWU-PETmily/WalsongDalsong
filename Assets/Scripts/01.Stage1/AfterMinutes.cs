@@ -107,5 +107,9 @@ public class AfterMinutes : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MomNamingTutorialScene");
     }
 
+    public void QuitBtnClick()
+    {
+        Application.Quit();
+    }
 
 }
