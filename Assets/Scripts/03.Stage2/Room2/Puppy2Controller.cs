@@ -42,147 +42,69 @@ public class Puppy2Controller : MonoBehaviour
         animator.SetTrigger("SitTrigger");    // 이동 트리거
         yield return new WaitForSeconds(delaySit);              // 첫 시작 대기
 
-        // pos2-오른쪽으로 이동
-        animator.ResetTrigger("SitTrigger");    // 이동 트리거
-        animator.SetTrigger("RightTrigger");    // 이동 트리거
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(4.5f);
+        while (true)
+        {
+            // pos2-오른쪽으로 이동
+            animator.ResetTrigger("SitTrigger");    // 이동 트리거
+            animator.SetTrigger("RightTrigger");    // 이동 트리거
+            ChangePosition();
+            isMove = true;
+            yield return new WaitForSeconds(4.5f);
 
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("RightTrigger");    // 이동 트리거
-        animator.SetTrigger("SitTrigger");    // 이동 트리거
-        yield return new WaitForSeconds(delaySit);
+            // pos3-오른쪽 아래로 이동
+            animator.ResetTrigger("RightTrigger");
+            animator.SetTrigger("RightDownTrigger");
+            ChangePosition();
+            yield return new WaitForSeconds(delayWalk);
 
-        // pos3-오른쪽 아래로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightDownTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
 
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("RightDownTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
+            // pos4-오른쪽 위로 이동
+            animator.ResetTrigger("RightDownTrigger");
+            animator.SetTrigger("RightUpTrigger");
+            ChangePosition();
+            yield return new WaitForSeconds(5.0f);
 
-        // pos4-오른쪽 위로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightUpTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(5.0f);
+            // 앉아있기 (배변 지점)
+            isMove = false;
+            Instantiate(prefabPoo, posPoo.transform.position, posPoo.transform.rotation);    // 배변 프리팹 생성
+            this.audioSource.Play();              //오디오 실행
+            animator.ResetTrigger("RightUpTrigger");
+            animator.SetTrigger("SitTrigger");
+            yield return new WaitForSeconds(delaySit);
 
-        // 앉아있기 (배변 지점)
-        isMove = false;
-        Instantiate(prefabPoo, posPoo.transform.position, posPoo.transform.rotation);    // 배변 프리팹 생성
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("RightUpTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
+            // pos5-왼쪽으로 이동
+            animator.ResetTrigger("SitTrigger");
+            animator.SetTrigger("LeftTrigger");
+            ChangePosition();
+            isMove = true;
+            yield return new WaitForSeconds(18.0f);
 
-        // pos5-왼쪽으로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
+            // pos6-왼쪽 아래로 이동
+            animator.ResetTrigger("LeftTrigger");
+            animator.SetTrigger("LeftDownTrigger");
+            ChangePosition();
+            yield return new WaitForSeconds(delayWalk);
 
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("LeftTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
+            // pos7-왼쪽 위로 이동
+            animator.ResetTrigger("LeftDownTrigger");
+            animator.SetTrigger("LeftUpTrigger");
+            ChangePosition();
+            yield return new WaitForSeconds(6.0f);
 
-        // pos6-왼쪽으로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
+            // pos8-오른쪽으로 이동
+            animator.ResetTrigger("LeftUpTrigger");
+            animator.SetTrigger("RightTrigger");
+            ChangePosition();
+            yield return new WaitForSeconds(14.0f);
 
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("LeftTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
-
-        // pos7-왼쪽으로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
-
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("LeftTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
-
-        // pos8-왼쪽 아래로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftDownTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
-
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("LeftDownTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
-
-        // pos9-왼쪽 위로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("LeftUpTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
-
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("LeftUpTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
-
-        // pos10-오른쪽으로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
-
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("RightTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
-
-        // pos11-오른쪽으로 이동
-        animator.ResetTrigger("SitTrigger");
-        animator.SetTrigger("RightTrigger");
-        ChangePosition();
-        isMove = true;
-        yield return new WaitForSeconds(delayWalk);
-
-        // 앉아있기
-        isMove = false;
-        this.audioSource.Play();              //오디오 실행
-        animator.ResetTrigger("RightTrigger");
-        animator.SetTrigger("SitTrigger");
-        yield return new WaitForSeconds(delaySit);
-
+            // 앉아있기
+            isMove = false;
+            this.audioSource.Play();              //오디오 실행
+            animator.ResetTrigger("RightTrigger");
+            animator.SetTrigger("SitTrigger");
+            ChangePosition();
+            yield return new WaitForSeconds(delaySit);
+        }
     }
 
     // 강아지 위치 이동
