@@ -153,7 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hh: 0
+  ss: 0
   isDay: 0
+  snowman: {fileID: 2121676180}
+  posSnowman1: {fileID: 1506028119}
+  posSnowman2: {fileID: 1106635621}
   background: {fileID: 976331528}
   dayPet: {fileID: 1794438178}
   nightPet: {fileID: 1831710758}
@@ -439,6 +443,8 @@ MonoBehaviour:
   bgBlack: {fileID: 0}
   txtDone: {fileID: 0}
   snow: {fileID: 0}
+  leftCollider: {fileID: 0}
+  rightCollider: {fileID: 0}
 --- !u!95 &272968593
 Animator:
   serializedVersion: 4
@@ -5671,6 +5677,8 @@ MonoBehaviour:
   bgBlack: {fileID: 0}
   txtDone: {fileID: 0}
   snow: {fileID: 0}
+  leftCollider: {fileID: 0}
+  rightCollider: {fileID: 0}
 --- !u!114 &1076284683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6450,6 +6458,8 @@ MonoBehaviour:
   bgBlack: {fileID: 442851148}
   txtDone: {fileID: 1382487132}
   snow: {fileID: 364587493}
+  leftCollider: {fileID: 1873864889}
+  rightCollider: {fileID: 1867095674}
 --- !u!212 &1794438181
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6692,6 +6702,8 @@ MonoBehaviour:
   bgBlack: {fileID: 442851148}
   txtDone: {fileID: 1382487132}
   snow: {fileID: 364587493}
+  leftCollider: {fileID: 0}
+  rightCollider: {fileID: 0}
 --- !u!212 &1831710763
 SpriteRenderer:
   m_ObjectHideFlags: 0

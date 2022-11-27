@@ -21,6 +21,8 @@ public class WalkPetController : MonoBehaviour
     public GameObject bgBlack;     // 검정배경
     public GameObject txtDone;     // 완료 텍스트이미지
     public GameObject snow;     // 눈 파티클
+    public GameObject leftCollider;     // 왼쪽 배경 콜라이더
+    public GameObject rightCollider;     // 오른쪽 배경 콜라이더
     bool isDone = false;
 
     // Start is called before the first frame update
@@ -64,8 +66,18 @@ public class WalkPetController : MonoBehaviour
 
         if (isDone)
         {
-            moveVelocity = new Vector3(-1.0f, 0, 0);
-            transform.position += moveVelocity * moveSpeed * Time.deltaTime;
+            if (this.transform.position.x > 0)
+            {
+                // 우측에 있었다면
+                moveVelocity = new Vector3(1.0f, 0, 0);
+                transform.position += moveVelocity * moveSpeed * Time.deltaTime;
+            }
+            else
+            {
+                // 좌측에 있었다면
+                moveVelocity = new Vector3(-1.0f, 0, 0);
+                transform.position += moveVelocity * moveSpeed * Time.deltaTime;
+            }
         }
     }
 
@@ -79,8 +91,10 @@ public class WalkPetController : MonoBehaviour
         bgBlack.SetActive(true);
         txtDone.SetActive(true);
         snow.SetActive(false);
+        leftCollider.SetActive(false);
+        rightCollider.SetActive(false);
         isDone = true;
-        PlayerPrefs.SetInt("successWalk", 1);     // 식사 급수 미션 성공
+        PlayerPrefs.SetInt("successWalk", 1);     //  미션 성공
         Invoke("ChangeScene", 5.0f);           // 장면 전환
     }
 
