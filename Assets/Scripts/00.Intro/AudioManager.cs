@@ -5,14 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    void Start()
-    {
-        DontDestroyOnLoad(transform.gameObject);
-    }
-
     void Update()
     {
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Room1Scene")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Awake()
+    {
+        var obj = FindObjectsOfType<AudioManager>();
+        if (obj.Length == 1)
+        {
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
         {
             Destroy(gameObject);
         }
