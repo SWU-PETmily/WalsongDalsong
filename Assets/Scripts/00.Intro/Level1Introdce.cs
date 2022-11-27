@@ -38,7 +38,6 @@ public class Level1Introdce : MonoBehaviour
                 break;
             case 6:
                 dialogBox.SetActive(false);
-                PlayerPrefs.SetInt("quitTime", -1);     // 처음 실행인 지 알기위한 변수 저장
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
                 break;
             default:
@@ -53,6 +52,7 @@ public class Level1Introdce : MonoBehaviour
         PlayerPrefs.SetInt("stage", 1);                             // 스테이지
         PlayerPrefs.SetFloat("guage", 0.2f);                         // 게이지
         PlayerPrefs.SetString("quitSceneName", "Room1Scene");           // 종료 씬
+        PlayerPrefs.SetInt("quitTime", -1);     // 처음 실행인 지 알기위한 변수 저장
 
         // 미션 횟수 저장
         PlayerPrefs.SetInt("feedNum", 0);                        // 하루 먹이주기 횟수

@@ -13,6 +13,7 @@ public class TutorialSkip : MonoBehaviour
         PlayerPrefs.SetFloat("guage", 0.2f);                     // 게이지
         PlayerPrefs.SetString("quitSceneName", "Room1Scene");    // 종료 씬
         PlayerPrefs.SetString("name", "쫑이");                   // 강아지 이름
+        PlayerPrefs.SetInt("quitTime", -1);     // 처음 실행인 지 알기위한 변수 저장
 
         // 미션 횟수 저장
         PlayerPrefs.SetInt("feedNum", 0);                        // 하루 먹이주기 횟수
