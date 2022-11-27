@@ -21,6 +21,7 @@ public class WalkPetController : MonoBehaviour
     public GameObject bgBlack;     // 검정배경
     public GameObject particle;     // 파티클
     public GameObject txtDone;     // 완료 텍스트이미지
+    public GameObject snow;     // 눈 파티클
     bool isDone = false;
 
     // Start is called before the first frame update
@@ -80,6 +81,7 @@ public class WalkPetController : MonoBehaviour
         bgBlack.SetActive(true);
         txtDone.SetActive(true);
         particle.SetActive(true);
+        snow.SetActive(false);
         isDone = true;
         PlayerPrefs.SetInt("successWalk", 1);     // 식사 급수 미션 성공
         Invoke("ChangeScene", 5.0f);           // 장면 전환

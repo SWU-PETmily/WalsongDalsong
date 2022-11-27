@@ -34,7 +34,7 @@ public class Room2BtnManager : MonoBehaviour
                 break;
             // 현관
             case "btn_harness":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Door1Scene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Door2Scene");
                 break;
             // 쓰다듬기
             case "btn_touch":
@@ -60,12 +60,12 @@ public class Room2BtnManager : MonoBehaviour
         feedNum = PlayerPrefs.GetInt("feedNum");
 
         // 07~12시, 18~22시에만 1회씩 식사 급수 가능
-        if (exeTime >= 07 && exeTime <= 12 && feedNum == 0)
+        if (exeTime >= 07 && exeTime < 12 && feedNum == 0)
         {
             // 07~12시
             return true;
         }
-        else if (exeTime >= 18 && exeTime <= 22 && (feedNum == 0 || feedNum == 1))
+        else if (exeTime >= 18 && exeTime < 22 && (feedNum == 0 || feedNum == 1))
         {
             // 18~22시
             if (feedNum == 0)

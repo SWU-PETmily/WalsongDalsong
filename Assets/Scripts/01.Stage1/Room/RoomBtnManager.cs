@@ -60,11 +60,11 @@ public class RoomBtnManager : MonoBehaviour
         feedNum = PlayerPrefs.GetInt("feedNum");
 
         // 07~12시, 18~22시에만 1회씩 식사 급수 가능
-        if (exeTime>=07 && exeTime <= 12 && feedNum==0)
+        if (exeTime>=07 && exeTime < 12 && feedNum==0)
         {
             // 07~12시
             return true;
-        }else if (exeTime >= 18 && exeTime <= 22 && (feedNum==0 || feedNum==1))
+        }else if (exeTime >= 18 && exeTime < 22 && (feedNum==0 || feedNum==1))
         {
             // 18~22시
             if (feedNum == 0)

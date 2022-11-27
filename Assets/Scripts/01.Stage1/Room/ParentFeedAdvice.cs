@@ -9,6 +9,15 @@ public class ParentFeedAdvice : MonoBehaviour
 {
      public void ClickBtn()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+        int stage = PlayerPrefs.GetInt("stage");
+        if (stage == 2)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Room1Scene");
+        }
+
     }
 }
