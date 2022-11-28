@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\Poo2Controller.cs" />
     <Compile Include="Assets\Scripts\00.Intro\IntroVideoController.cs" />
     <Compile Include="Assets\Scripts\02.Autumn\AutumnDirector.cs" />
-    <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyControllerTrial3.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue1Controller.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\Door1TimeManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueController.cs" />
@@ -107,8 +106,6 @@
     <Compile Include="Assets\Scripts\01.Stage1\Room\Parent1Advice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSprayController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyController.cs" />
-    <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyMoveController.cs" />
-    <Compile Include="Assets\Scenes\00.Intro\QuitTest.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\PadBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
@@ -126,6 +123,10 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SprayController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Level1Introdce.cs" />
     <Compile Include="Assets\Scripts\04.Ending\Ending1Director.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\Room1BGM.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\TutorialSkip.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2BGM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
