@@ -8,7 +8,7 @@ public class Room2BGM : MonoBehaviour
     void Update()
     {
         Scene scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-        if (!(scene.name == "Room2Scene" || scene.name == "Door2Scene" || scene.name == "Card2Scene" || scene.name == "Feed2NoScene" || scene.name == "Parent2Scene"))
+        if (!(scene.name == "Room2Scene" || scene.name == "Door2Scene" || scene.name == "Card2Scene" || scene.name == "FeedNoScene" || scene.name == "Parent2Scene"))
         {
             // 식사급수, 대소변, 터치 씬이라면 비지엠 끊기기
             Destroy(gameObject);
