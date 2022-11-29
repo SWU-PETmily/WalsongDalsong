@@ -31,13 +31,11 @@ public class Room1Director : MonoBehaviour
     {
         controlGauge();     // 게이지 조정
  
-        if (gauge.fillAmount < currentFill)
-        {
-            gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime);
-        }
+
+        gauge.fillAmount = Mathf.Lerp(gauge.fillAmount, currentFill, Time.deltaTime);
 
         // 게이지가 100에 도달하면
-        if(gauge.fillAmount >= 1.0f)
+        if (gauge.fillAmount >= 1.0f)
         {
             //스테이지 변경용 변수 초기화
             ChangeStage();
@@ -71,6 +69,12 @@ public class Room1Director : MonoBehaviour
             int i = PlayerPrefs.GetInt("pooCleaningNum") + 1;      // 대소변 횟수 가져오기
             PlayerPrefs.SetInt("pooCleaningNum", i);               // 대소변 횟수 저장하기
         }
+
+        // 쓰다듬기를 완료했을 시,
+        if (PlayerPrefs.GetInt("successTouch") == 1)
+        {
+            decreaseGaugeByTouch();
+        }
     }
 
     // 식사급수 게이지 상승
@@ -84,6 +88,16 @@ public class Room1Director : MonoBehaviour
 
         int i = PlayerPrefs.GetInt("feedNum") + 1;      // 식사급수 횟수 가져오기
         PlayerPrefs.SetInt("feedNum", i);               // 식사급수 횟수 저장하기
+    }
+
+    // 쓰다듬기 게이지 하강
+    void decreaseGaugeByTouch()
+    {
+        currentFill = gauge.fillAmount - 0.1f;           // 게이지 채우기
+        float f = PlayerPrefs.GetFloat("guage") - 0.1f;  // 게이지값 가져오기
+        PlayerPrefs.SetFloat("guage", f);                 // 게이지값 저장하기
+
+        PlayerPrefs.SetInt("successTouch", 0);             // 미션완료 초기화
     }
 
     // 시작 날짜 시간 체크

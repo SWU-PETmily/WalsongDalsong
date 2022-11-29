@@ -444,11 +444,11 @@ GameObject:
   - component: {fileID: 994731920}
   - component: {fileID: 994731927}
   - component: {fileID: 994731926}
-  - component: {fileID: 994731924}
   - component: {fileID: 994731923}
   - component: {fileID: 994731922}
   - component: {fileID: 994731921}
   - component: {fileID: 994731928}
+  - component: {fileID: 994731929}
   m_Layer: 5
   m_Name: pet
   m_TagString: Untagged
@@ -486,9 +486,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 43ab2dac35dd3d0438377c40c13e939b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f61c33bd012292b4e8e1b5b357fd9dc4, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -619,20 +619,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 117.532776, y: 91.89103}
   m_EdgeRadius: 0
---- !u!114 &994731924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994731919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a470929fc457cf1468077138ce864f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doneBg: {fileID: 1820815391}
-  doneTxt: {fileID: 0}
 --- !u!114 &994731926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +677,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &994731929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994731919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46a27a79aaa94946899904061da7293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doneBg: {fileID: 1820815391}
 --- !u!1 &1278694264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,9 +1029,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ParentFeedAdvice, Assembly-CSharp
-        m_MethodName: ClickBtn
+      - m_Target: {fileID: 994731929}
+        m_TargetAssemblyTypeName: TouchStage1Controller, Assembly-CSharp
+        m_MethodName: DoneBtnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

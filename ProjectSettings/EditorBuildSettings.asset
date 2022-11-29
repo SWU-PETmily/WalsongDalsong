@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/00.Intro/QuitTest.unity
-    guid: 37a56ec7ef96db049bb3cb201a15434b
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/00.Intro/LogoScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
@@ -44,9 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/01.Stage1/FeedNoScene.unity
     guid: 1e9022d499b26a84f8897606d7ca896d
-  - enabled: 0
-    path: Assets/Scenes/01.Stage1/FeedingScene.unity
-    guid: 201c9d6f83631b940a91a31dbe8c6549
   - enabled: 1
     path: Assets/Scenes/01.Stage1/Poo1Scene.unity
     guid: 228c8e867e96ccc4e914562bc5440b48
@@ -59,7 +56,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/01.Stage1/Door1Scene.unity
     guid: 2581062998b7f9d418faf6bdfb985cc5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/01.Stage1/Touch1Scene.unity
     guid: 6711b0661746a2543bd342bdb1fa573f
   - enabled: 1

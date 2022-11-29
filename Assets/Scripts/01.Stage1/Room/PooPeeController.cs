@@ -48,7 +48,12 @@ public class PooPeeController : MonoBehaviour
                     {
                         // 강아지를 터치했다면
                         UnityEngine.SceneManagement.SceneManager.LoadScene("TouchPetScene");
-                    }      
+                    }
+                    else
+                    {
+                        // 강아지를 터치했다면
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("Touch1Scene");
+                    }  
                 }
 
             }
