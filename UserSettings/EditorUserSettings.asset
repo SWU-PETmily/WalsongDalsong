@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 5407505650540a0f5e080f2314725944464f4a787e7f2466797a4c60b7e1676f
-      flags: 0
-    RecentlyUsedSceneGuid-1:
-      value: 0009525151535b59595a5c7247265e441015497d7f2e77677c2b4d32e1b96d6a
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 5102515e04070d0a085e092142740b4445161a2b297c27647e7c4864b7b46460
-      flags: 0
-    RecentlyUsedSceneGuid-3:
       value: 5057575e04560d5f5c5d097413740c4414161e2f2a7e7365792d4b35e6e2373c
       flags: 0
-    RecentlyUsedSceneGuid-4:
+    RecentlyUsedSceneGuid-1:
       value: 5057525107070a0a5b0a087315255a44451640292f2d23337d781c37b5e1373b
       flags: 0
-    RecentlyUsedSceneGuid-5:
+    RecentlyUsedSceneGuid-2:
       value: 5307000551515b095b0b59204020084443164a7d2e2974687a7b4a62b3b8373e
       flags: 0
-    RecentlyUsedSceneGuid-6:
+    RecentlyUsedSceneGuid-3:
       value: 56080c055c075f090e0a5b70417009444e154f2c7a2d7f36797d4d31e1b8373d
       flags: 0
-    RecentlyUsedSceneGuid-7:
-      value: 065351550603510d0f5b597a117a5c44414f4e72287e7f682b2f4b6ae0b1376d
-      flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-4:
       value: 055004555c0151085f0d5c2645705944134f1b7a742c733178714a66e0b06260
       flags: 0
-    RecentlyUsedSceneGuid-9:
+    RecentlyUsedSceneGuid-5:
+      value: 5407515e03040c5e0c580e2114250744464e4b292a7e7e612e7b4436b0b8373c
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 065351550603510d0f5b597a117a5c44414f4e72287e7f682b2f4b6ae0b1376d
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 0753515304070c0c545c5c2014765e4413151d2c7f7876322b2a4c65e6e1316b
+      flags: 0
+    RecentlyUsedSceneGuid-8:
       value: 5a01045e5d020b5f0e0a082046755c44464f4b2c787e22317b2c496ab7b26261
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+      value: 020406515c070a0b0f575a264027094446154d7f7c787665287a1b61b1e1633b
       flags: 0
     UnityRemoteDevice:
       value: 225f4d46245b0d4902070862342649191512
