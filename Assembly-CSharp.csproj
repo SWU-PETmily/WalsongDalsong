@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\00.Intro\DialogManager.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkSceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\TutorialSkip.cs" />
     <Compile Include="Assets\Scripts\00.Intro\WaitingDialogManager.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Touch\TouchPetController.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\Poo2Controller.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\AfterMinutes.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Walk2\WalkBtnController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\Door1SceneManager.cs" />
+    <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2BGM.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\TouchTheDog.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Feed\FeedSceneManager.cs" />
@@ -100,6 +102,7 @@
     <Compile Include="Assets\Scripts\03.Stage2\Door2\Door2PetController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\ItemController.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2BtnManager.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Room\Room1BGM.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Puppy2Controller.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Door2SceneManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PooPeeController.cs" />
@@ -108,6 +111,7 @@
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\PadBoxController.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\AudioManager.cs" />
     <Compile Include="Assets\Scripts\00.Intro\GameStart.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Room2\Parent2Advice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyNewDayNight.cs" />
@@ -123,10 +127,6 @@
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\SprayController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\Level1Introdce.cs" />
     <Compile Include="Assets\Scripts\04.Ending\Ending1Director.cs" />
-    <Compile Include="Assets\Scripts\01.Stage1\Room\Room1BGM.cs" />
-    <Compile Include="Assets\Scripts\00.Intro\TutorialSkip.cs" />
-    <Compile Include="Assets\Scripts\00.Intro\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\03.Stage2\Room2\Room2BGM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
