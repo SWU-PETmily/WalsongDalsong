@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\Poo2Controller.cs" />
     <Compile Include="Assets\Scripts\00.Intro\IntroVideoController.cs" />
     <Compile Include="Assets\Scripts\02.Autumn\AutumnDirector.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\IntroDisplay.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeTissue1Controller.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Door\Door1TimeManager.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\TissueController.cs" />
@@ -109,6 +110,8 @@
     <Compile Include="Assets\Scripts\01.Stage1\Room\Parent1Advice.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\PooPee\Pee\PeeSprayController.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\Room\PuppyController.cs" />
+    <Compile Include="Assets\Scripts\01.Stage1\Touch\TouchStage1Controller.cs" />
+    <Compile Include="Assets\Scripts\00.Intro\VideoForDisplay.cs" />
     <Compile Include="Assets\Scripts\01.Stage1\FoodMove.cs" />
     <Compile Include="Assets\Scripts\03.Stage2\Poo2\PadBoxController.cs" />
     <Compile Include="Assets\Scripts\00.Intro\AudioManager.cs" />
