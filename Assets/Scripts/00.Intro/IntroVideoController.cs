@@ -18,6 +18,13 @@ public class IntroVideoController : MonoBehaviour
         canVideo1.SetActive(true);
         canVideo2.SetActive(false);
         canVideo3.SetActive(false);
+        //video1.url = Application.streamingAssetsPath + "/intro1.mp4";
+        /*
+        video1.url = "jar:file://" + Application.dataPath + "!/assets/intro1.mp4";;
+        video2.url = Application.streamingAssetsPath + "/intro2.mp4";
+        video3.url = Application.streamingAssetsPath + "/intro3.mp4";
+        */
+
         video1.loopPointReached += CheckOver1;
     }
 
