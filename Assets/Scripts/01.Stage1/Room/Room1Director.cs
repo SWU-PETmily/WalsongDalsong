@@ -40,7 +40,7 @@ public class Room1Director : MonoBehaviour
             //스테이지 변경용 변수 초기화
             ChangeStage();
             // 가을 애니메이션 보여주기
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SummerToWinterScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("ChangeStoW");
         }
 
     }

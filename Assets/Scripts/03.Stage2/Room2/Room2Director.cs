@@ -49,13 +49,13 @@ public class Room2Director : MonoBehaviour
             if (badLevel >= 2)
             {
                 // 실종 엔딩
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Ending2");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay2");
             }
             // 한 번도 경고를 안 받았다면
             else
             {
                 // 꿈 엔딩
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Ending3");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay3");
             }
         }
     }
@@ -177,7 +177,7 @@ public class Room2Director : MonoBehaviour
                         // 엔딩 2 실행
                         Debug.Log("엔딩 2로 이동.");
                         EndingReset();             // 사용자 변수 초기화
-                        UnityEngine.SceneManagement.SceneManager.LoadScene("Ending2");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay2");
                     }
                     else
                     {

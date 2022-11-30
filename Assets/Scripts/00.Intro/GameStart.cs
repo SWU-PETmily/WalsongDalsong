@@ -59,19 +59,19 @@ public class GameStart : MonoBehaviour
     public void Ending1Btn()
     {
         Ending1Reset();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay1");
     }
 
     public void Ending2Btn()
     {
         Ending1Reset();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Ending2");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay2");
     }
 
     public void Ending3Btn()
     {
         Ending1Reset();
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Ending3");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay3");
     }
 
     public void Change()
@@ -79,7 +79,7 @@ public class GameStart : MonoBehaviour
         switch (PlayerPrefs.GetString("quitSceneName"))
         {
             case "nothing":
-                UnityEngine.SceneManagement.SceneManager.LoadScene("IntroVideo1");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("IntroDisplay");
                 break;
             case "CalmingSignal":
                 UnityEngine.SceneManagement.SceneManager.LoadScene("CalmingSignal");
@@ -94,7 +94,7 @@ public class GameStart : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Room2Scene");
                 break;
             default:
-                UnityEngine.SceneManagement.SceneManager.LoadScene("IntroVideo1");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("IntroDisplay");
                 break;
         }
         

@@ -30,7 +30,7 @@ public class ParentEnding1 : MonoBehaviour
                 dialogText.text = "도저히 "+ petName + "을(를) 데리고 못 살겠으니까 다른 집으로 보낼거야.";
                 break;
             case 3:
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Ending1");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("EndingDisplay1");
                 break;
             default:
                 break;
