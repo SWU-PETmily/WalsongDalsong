@@ -7,7 +7,7 @@
   <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="700"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/182601894-833d1bd8-effd-4191-9639-a2cac4d0e8f3.png"  width="200"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="700"/>
 </p>
 
 # :bar_chart: 복용률
