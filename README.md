@@ -70,8 +70,9 @@
 # :card_index: 카밍시그널 카드
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205502200-2b46557a-e235-4d96-b00a-72c13848c00f.png"  width="500"/>
-  <img src="https://user-images.githubusercontent.com/63528205/205502211-6cacdf28-8e32-48fd-85d8-940ee66c81d2.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205502239-088fce6c-56a5-4bc5-8da4-5cad8ae73332.png"  width="500"/>
 </p>
+
 
 ---
 ## :busts_in_silhouette: 제작  
