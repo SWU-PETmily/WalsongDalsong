@@ -37,6 +37,13 @@
 </p>
 
 
+# :rice: 식사/급수 주기
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205501184-be9dc4d4-358f-442b-bd16-b4883d33b08e.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205501071-7f669563-7bcd-49bb-8a03-0fa6da2a912d.png"  width="500"/>
+</p>
+
+
 # :alarm_clock: 마이페이지-알람설정  
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/182602190-3c438d07-b8b1-4e36-adbd-b121cc634947.png"  width="200"/>
