@@ -50,6 +50,12 @@
   <img src="https://user-images.githubusercontent.com/63528205/205501405-2a20f2bc-9d57-4c69-9729-9a92ef5be940.png"  width="500"/>
 </p>
 
+# :door: 현관
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205501499-e3e74b51-3185-4f64-971c-c20991853ad4.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205501507-563c9430-86b9-4a1c-9b2f-ebd05102dfc3.png"  width="500"/>
+</p>
+
 ---
 ## :busts_in_silhouette: 제작  
 2022 디지털미디어학과 캡스톤디자인2  
