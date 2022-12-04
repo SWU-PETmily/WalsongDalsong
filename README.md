@@ -26,7 +26,7 @@
 </p>
 
 
-# :bar_chart: 복용률
+# :dog2: 인트로
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/182602107-321ee567-3bc7-4400-a65d-2d6c51c28b9d.png"  width="200"/>
 </p>
