@@ -28,8 +28,12 @@
   <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="500"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="500"/>
   <img src="https://user-images.githubusercontent.com/63528205/205499960-745dc621-c391-4717-ab0f-81e78fad0225.png"  width="500"/>
+</p>
+
+<h3>2. 이름 짓기</h3>
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205500223-5e71788b-0a8c-4451-b168-dbe4279efbaa.png"  width="500"/>
 </p>
 
 
