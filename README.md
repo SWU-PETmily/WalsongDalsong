@@ -42,7 +42,7 @@
 ---
 ## :busts_in_silhouette: 제작  
 2022 디지털미디어학과 캡스톤디자인2
-Developer - 김민정 
+Developer - 김민정  
 Design - 김리연
 
 
