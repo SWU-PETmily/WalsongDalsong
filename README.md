@@ -30,7 +30,8 @@
 <h3>1. 게임 첫 시작 시 30분 간의 종료</h3>
 실제 유기동물 입양 시 낯선 환경에 적응할 수 있도록 도와줘야 함을 의미  
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="500"/>
 </p>
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="700"/>
