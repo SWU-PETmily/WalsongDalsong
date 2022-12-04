@@ -58,8 +58,7 @@
 
 # :paw_prints: 산책
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205501499-e3e74b51-3185-4f64-971c-c20991853ad4.png"  width="500"/>
-  <img src="https://user-images.githubusercontent.com/63528205/205501507-563c9430-86b9-4a1c-9b2f-ebd05102dfc3.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205501943-8744ecd8-931f-4e30-a967-183d07088f86.png"  width="500"/>
 </p>
 
 ---
