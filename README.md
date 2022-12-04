@@ -28,7 +28,7 @@
 
 # :dog2: 인트로
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/182602107-321ee567-3bc7-4400-a65d-2d6c51c28b9d.png"  width="200"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="200"/>
 </p>
 
 
