@@ -36,8 +36,9 @@
   <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="700"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205499674-cce549fe-db04-4d1d-8c7d-2b0dd1b88986.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499960-745dc621-c391-4717-ab0f-81e78fad0225.png"  width="700"/>
 </p>
+
 
 
 # :alarm_clock: 마이페이지-알람설정  
