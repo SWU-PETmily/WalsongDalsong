@@ -63,7 +63,7 @@
 
 # :raised_hand: 쓰다듬기
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/63528205/205502060-4f5b2350-e1e2-4b8e-a6b4-79ef4420b9dc.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205502060-4f5b2350-e1e2-4b8e-a6b4-79ef4420b9dc.png"  width="500"/>
   <img src="https://user-images.githubusercontent.com/63528205/205502045-6cf09f36-da93-4763-8ccb-b21887efef2a.png"  width="500"/>
 </p>
 
