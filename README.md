@@ -15,6 +15,12 @@
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205498786-f186b03f-0135-4737-ade8-5f4f1db5b38a.png"  width="700"/>
 </p>
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205498821-a5eea4ae-54be-42ce-bbc4-bec99d979ee4.png"  width="700"/>
+</p>
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205498847-9528096e-3d5b-41ca-a73a-a10de44a79bd.png"  width="700"/>
+</p>
 
 
 # :bar_chart: 복용률
