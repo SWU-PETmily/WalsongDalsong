@@ -33,7 +33,7 @@
 
 <h3>2. 이름 짓기</h3>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205500223-5e71788b-0a8c-4451-b168-dbe4279efbaa.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205500260-efead3a5-e67d-475f-9af0-4e0cbaabcc61.png"  width="500"/>
 </p>
 
 
