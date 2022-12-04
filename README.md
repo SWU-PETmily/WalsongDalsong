@@ -4,25 +4,19 @@
 
 # :information_desk_person: 프로젝트 소개
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="500"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498749-bd87f896-2562-43fd-9943-577f39cfde69.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498786-f186b03f-0135-4737-ade8-5f4f1db5b38a.png"  width="500"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498749-bd87f896-2562-43fd-9943-577f39cfde69.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498821-a5eea4ae-54be-42ce-bbc4-bec99d979ee4.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498847-9528096e-3d5b-41ca-a73a-a10de44a79bd.png"  width="500"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498786-f186b03f-0135-4737-ade8-5f4f1db5b38a.png"  width="700"/>
-</p>
-<p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498821-a5eea4ae-54be-42ce-bbc4-bec99d979ee4.png"  width="700"/>
-</p>
-<p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498847-9528096e-3d5b-41ca-a73a-a10de44a79bd.png"  width="700"/>
-</p>
-<p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498882-8874bd70-d604-4b55-9620-181336482019.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498882-8874bd70-d604-4b55-9620-181336482019.png"  width="500"/>
 </p>
 
 
@@ -34,12 +28,9 @@
   <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="500"/>
 </p>
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="700"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499960-745dc621-c391-4717-ab0f-81e78fad0225.png"  width="500"/>
 </p>
-<p>
-  <img src="https://user-images.githubusercontent.com/63528205/205499960-745dc621-c391-4717-ab0f-81e78fad0225.png"  width="700"/>
-</p>
-
 
 
 # :alarm_clock: 마이페이지-알람설정  
