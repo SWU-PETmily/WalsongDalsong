@@ -27,6 +27,8 @@
 
 
 # :dog2: 인트로
+게임 첫 시작 시 30분 간의 종료  
+실제 유기동물 입양 시 낯선 환경에 적응할 수 있도록 도와줘야 함을 의미  
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="700"/>
 </p>
