@@ -30,6 +30,12 @@
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="700"/>
 </p>
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="700"/>
+</p>
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205499674-cce549fe-db04-4d1d-8c7d-2b0dd1b88986.png"  width="700"/>
+</p>
 
 
 # :alarm_clock: 마이페이지-알람설정  
