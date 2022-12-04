@@ -44,11 +44,10 @@
 </p>
 
 
-# :alarm_clock: 마이페이지-알람설정  
+# :poop: 배소변 치우기
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/182602190-3c438d07-b8b1-4e36-adbd-b121cc634947.png"  width="200"/>
-  <img src="https://user-images.githubusercontent.com/63528205/182861603-88124ae3-01de-4634-9411-be502b219aa9.png"  width="200"/>
-  <img src="https://user-images.githubusercontent.com/63528205/182864687-5c1aba96-f324-4c69-9a41-9d4d442e23e0.png"  width="200"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205501381-658aeabe-d11e-455d-8b3d-29518ad70c1d.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205501405-2a20f2bc-9d57-4c69-9729-9a92ef5be940.png"  width="500"/>
 </p>
 
 ---
