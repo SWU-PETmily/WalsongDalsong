@@ -4,7 +4,7 @@
 
 # :information_desk_person: 프로젝트 소개
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/183263443-d52efafe-0d60-4c93-9e4c-4f8f1bebe054.png"  width="200"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="200"/>
 </p>
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/182601894-833d1bd8-effd-4191-9639-a2cac4d0e8f3.png"  width="200"/>
