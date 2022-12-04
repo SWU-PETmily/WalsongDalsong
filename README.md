@@ -21,6 +21,9 @@
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205498847-9528096e-3d5b-41ca-a73a-a10de44a79bd.png"  width="700"/>
 </p>
+<p>
+  <img src="https://user-images.githubusercontent.com/63528205/205498882-8874bd70-d604-4b55-9620-181336482019.png"  width="700"/>
+</p>
 
 
 # :bar_chart: 복용률
