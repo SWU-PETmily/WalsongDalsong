@@ -8,8 +8,8 @@
  
 # :information_desk_person: 프로젝트 소개
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="500"/>
-  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="450"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="450"/>
 </p>
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205498749-bd87f896-2562-43fd-9943-577f39cfde69.png"  width="500"/>
