@@ -8,8 +8,8 @@
  
 # :information_desk_person: 프로젝트 소개
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="450"/>
-  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="450"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498559-af0fbd5e-ff3a-493f-b6be-206e104b18dc.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205498650-ac42e0ee-12c1-4bf3-a717-255e3f5601ec.png"  width="500"/>
 </p>
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205498749-bd87f896-2562-43fd-9943-577f39cfde69.png"  width="500"/>
@@ -28,8 +28,8 @@
 <h3>1. 게임 첫 시작 시 30분 간의 종료</h3>
 실제 유기동물 입양 시 낯선 환경에 적응할 수 있도록 도와줘야 함을 의미  
 <p>
-  <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="500"/>
-  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="500"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499555-57332e64-e638-4327-a59d-e209e09a445e.png"  width="450"/>
+  <img src="https://user-images.githubusercontent.com/63528205/205499650-15364473-7421-422d-b269-826f48b495d4.png"  width="450"/>
 </p>
 <p>
   <img src="https://user-images.githubusercontent.com/63528205/205499960-745dc621-c391-4717-ab0f-81e78fad0225.png"  width="500"/>
